@@ -1,0 +1,21 @@
+html, body {height: 100%;}
+
+p {
+    color: red;
+    font-weight: bold;
+    /* 아래처럼 사용하면 하위의 투명도를 조절할 수 없고 글씨까지 투명해짐 */
+    /* opacity 는 내부 요소가 중복으로 들어가면 곱셈 연산으로 들어감 */
+    opacity: 0.2;
+    /* 대신 아래처럼 활용하면 글씨는 그대로, 배경만 투명해짐 */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+span {
+    opacity: 0.2;
+}
+
+body {
+    background-image: url(./trip.jpg);
+    background-position: center;
+    background-size: cover;
+}

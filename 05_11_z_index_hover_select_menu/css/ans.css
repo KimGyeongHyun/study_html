@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 30px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 223, 182);
+    list-style: none;
+}
+
+#nav li {
+    position: relative;
+    padding: 10px 30px;
+    background-color: #1e4e8a;
+    margin: 0 10px;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;
+    color: white;
+    position: absolute;
+    text-align: center;
+    background-color: rgb(72, 72, 72);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: auto;
+}
+
+/* 각각의 요소에 호버가 따로따로 들어감 */
+/* li 가 호버되면 자식요소가 보여지면서 li 가 확장된다 */
+/* hover 는 같은 li 가 많더라도 hover 된 li 1개만 선택한다 */
+/* 해석 : li 중 마우스가 올라간 놈 */
+#nav li:hover .submenu{
+    display: block;
+}
+
+#nav li:hover {
+    background-color: #2d7ee1;
+}
+
+/* 아래처럼 안 하면 모든 서브메뉴의 색깔도 노란색으로 바뀜
+선택자 선택에 익숙해져야 함 */
+#nav li:hover>a{
+    color: yellow;
+}

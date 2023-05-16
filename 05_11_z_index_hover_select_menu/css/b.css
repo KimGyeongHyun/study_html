@@ -1,0 +1,46 @@
+
+.red_box {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    top: 200px;
+    left: 50px;
+    background-color: red;
+    z-index: 10;
+}
+
+.white_circle {
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 100;
+}
+
+/* 호버된 요소를 따로 부를 수 있음 */
+/* display: none 과, display: block 과 같이 요소를 화면에 제거, 표시할 수 있음 */
+.red_box:hover>.white_circle {
+    display: block;
+}
+
+.el_mother {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 500px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.el_kids {
+    position: absolute;
+    right: -50px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}

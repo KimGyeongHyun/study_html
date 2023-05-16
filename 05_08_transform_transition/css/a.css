@@ -1,0 +1,38 @@
+.my_box {
+    display: flex;
+    color: white;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin: 200px auto auto auto;
+    align-items: center;
+    justify-content: center;
+
+    /* 변화되는 시간 */
+    /* transition: 2s; */
+}
+
+.my_box:hover {
+    background-color: blue;
+
+    /* width, height 바꾼다면 margin-top 변화 없기 때문에 아래쪽으로 확장됨 */
+    /* width: 100px;
+    height: 100px; */
+
+    /* scale 은 중앙을 기준으로 크기 조정 */
+    /* transform: scale(2, 4); */
+    /* x 축만 확장 */
+    /* transform: scaleX(2); */
+
+    /* 회전 */
+    /* transform: rotate(90deg); */
+
+    /* 왜곡 */
+    /* transform: skew(50deg); */
+
+    /* 이동 */
+    /* transform: translate(100px, 100px); */
+
+    /* transform 에 2개 이상의 옵션 넣고 싶으면 띄어쓰기로 입력하기 */
+    transform: rotate(45deg) scale(1.2);
+}

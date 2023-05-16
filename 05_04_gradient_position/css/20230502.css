@@ -1,0 +1,165 @@
+/* html, body {
+    height: 100%;
+}
+body {
+    background-image: url('../img/ex2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+p {
+    color: rgb(255, 255, 0);
+    font-weight: bold;
+    background-color: #000; 
+    background-color: #fff;
+    opacity: 0.2; 
+
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.mother {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+.mother>div {
+    width: 25%;
+    display: inline-block;
+    float: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.kids1 {
+    background-color: rgba(243, 81, 32,1);
+}
+.kids2 {
+    background-color: rgba(243, 81, 32,0.6);
+}
+.kids3 {
+    background-color: rgba(243, 81, 32,0.3);
+}
+.kids4 {
+    background-color: rgba(243, 81, 32,0.1);
+} */
+
+/* i {
+    font-size: 140px;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 0 15px;
+}
+.top-left {
+    display: flex;
+    align-items: center;
+}
+.top-left>div {
+    margin-right: 10px;
+}
+.top-right {
+    display: flex;
+    align-items: center;
+}
+.top-right>* {
+    margin-left: 15px;
+}
+.top-right>i {
+    font-size: 20px;
+}
+.btn {
+    background-color: #1a73e8;
+    color: #fff;
+    border: 0;
+    padding: 8px 25px;
+    border-radius: 6px;
+}
+
+.mainbox {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 582px;
+    margin: 50px auto 0;
+    border-radius: 30px;
+    padding: 10px;
+}
+.search input {
+    font-size: 22px;
+    width: 400px;
+    border: 0;
+    outline: none;
+}
+.search input::placeholder {
+    font-size: 15px;
+}
+.xi-keyboard {
+    font-size: 23px;
+}
+
+.btn2 {
+    display: inline-block;
+    background-color: #eee;
+    border: 1px solid #eee;
+    padding: 8px 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+}
+.btn2:hover {
+    border: 1px solid gray;
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+.bottom-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eee;
+}
+
+.bottom-box>hr {
+    margin: 0;
+}
+
+.upper {
+    padding: 0 0 0 18px;
+}
+
+.below {
+    display: flex;
+    justify-content: space-between;
+}
+
+.below-left {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+}
+
+.below-right {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+}
+
+/* 위처럼 구성하기보단 박스마다 같은 padding 값을 넣는게 더 깔끔해짐 */

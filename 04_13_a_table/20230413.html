@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://github.com/KimGyeongHyun">hello</a>
+    <hr>
+    <!-- target blank 속성은 해당 링크를 새 탭에 띄움 -->
+    <!-- title 옵션은 커서를 올렸을 때 해당 문구가 뜨게 됨 -->
+    <a href="a.html" target="_blank" title="a">a로 이동하기</a>
+    <hr>
+
+    <!-- 전화 연결, 메일, 파일 다운로드(zip)-->
+    <a href="tel:01000000000">전화연결</a>
+    <a href="mailto:lake@naver.com">메일 보내기</a>
+    <a href="../country/img/sub">파일 보기</a>
+    <a href="../country/img/sub/italy.jpg" download>파일 다운로드</a>
+    <hr>
+
+    <a href="#">나중에 링크 넣을 때</a><hr>
+
+    <!-- 해당 아이디로 스크롤 이동  -->
+    <a href="#dt">data structure</a><hr>
+    <a href="#dy">dynamic programming</a><hr>
+    <a href="#dl">single responsibility principle</a><hr>
+
+
+    <h2 id="dt">리스트와 힙 자료구조 선택할 때 </h2>
+    <p>
+        정렬이 안 된 상태라면 리스트를 한번에 받아 sort 하는 것이 빠른지,
+        힙에 하나씩 기입하는 것이 빠른지 비교해보기<br>
+        (시간복잡도는 동일한 것으로 알고 있음, 백준 문제에서 리스트와 힙 정렬 문제가 나왔었는데 리스트가 더 빨랐음)<br>
+        물론 이후에 데이터를 어떻게 사용할 지가 관건
+    </p>
+    <hr>
+
+    <h2 id="dy">다이나믹 프로그래밍 수행</h2>
+    <p>
+        지금 작동방식은 str 출력 메소드로부터 계산 메소드가 불리는 형식<br>
+        다이나믹 프로그래밍을 적용한다면 :<br>
+        str 출력 메소드로부터 계산 메소드를 부르는 것보단, 계산 메소드를 모두 수행한 뒤 계산 결과를 저장하고 따로 출력하는 것이 바람직함
+    </p>
+    <hr>
+
+    <h2 id="dl">클래스마다 하는 역할 하나만 하도록 수정 필요</h2>
+    <p>
+        GameInfo 클래스는 제일 큰 클래스이며 모든 클래스를 인스턴스로 가짐<br>
+        UnitCalculator 와 PlayerCalculator 클래스는 각각의 역할에 따라 계산하고 정보를 보여줌<br>
+        하지만 위의 두 클래스는 각각의 역할에 따른 정보에 한해서만 계산할 수 있기 때문에 두 정보를 모두 필요로하는 계산의 경우 두 클래스 모두 접근 불가능함<br>
+        따라서 현재 GameInfo 클래스 안에 해당 계산을 수행하는 메소드가 존재하며, 이는 Single responsibility principle 에 어긋남
+    </p>
+    <hr>
+
+</body>
+</html>

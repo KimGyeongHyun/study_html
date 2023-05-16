@@ -1,0 +1,24 @@
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.box1 {
+    background: linear-gradient(to top left, white, rgb(245, 73, 101));
+}
+
+.box2 {
+    background-image: radial-gradient(white 40%, blue);
+}
+
+.box3{
+    background-image: conic-gradient(red 45deg, yellow 90deg, green);
+    border-radius: 50%;
+}
+
+.box4 {
+    /* 같은 색 사이의 각도는 해당 색깔이 들어감 */
+    background-image: conic-gradient(red 0deg, red 80deg, 
+    blue 80deg, blue);
+    border-radius: 50%;
+}

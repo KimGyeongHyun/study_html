@@ -1,0 +1,64 @@
+.container {
+    /* flex : 내부 block 요소들을 옆으로 나열시킴 */
+    /* 1. 요소 간 빈 칸 무시 */
+    /* 2. 자식 요소를 어떻게든 한 줄로 표현 */
+    /* 자식 요소의 width 가 같은 비율로 줄어듦 */
+    /* width: 300px; */
+    display: flex;
+    border: 3px solid red;
+    background-color: yellow;
+    height: 350px;
+
+    /* 수직 배치 */
+    /* 자식 요소들이 원래 height 를 가짐 */
+    /* align-items: flex-start; */
+    /* 기본값 */
+    /* align-items: stretch; */
+    /* 중앙 배치 */
+    /* align-items: center; */
+
+    /* flex 에서만 사용되는 속성, 배치 */
+    /* 중앙 배치 */
+    /* justify-content: center; */
+    /* 적절히 나눠놓음 */
+    /* justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly; */
+
+    /* 만약 자식 요소가 너무 크고 줄바꿈하고 싶다면 wrap 사용 */
+    /* flex-wrap: wrap; */
+}
+
+/* flex : 숫자
+width : n%
+해당 비율로 width 가 나뉨 */
+.container div:nth-child(1) {
+    flex: 1;
+    background-color: purple;
+}
+
+.container div:nth-child(2) {
+    flex: 2;
+    background-color: blue;
+}
+
+.container div:nth-child(3) {
+    flex: 1;
+    background-color: green;
+}
+
+.my {
+    margin: 100px auto;
+    display: flex;
+    width: 400px;
+    height: 150px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.my:hover {
+    background-color: red;
+}

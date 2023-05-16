@@ -1,0 +1,36 @@
+body {
+    border: 3px dashed black;
+    padding: 5px;
+}
+
+.first {
+    background-color: blue;
+    color: aliceblue;
+    text-align: right;
+    padding: 5px;
+    padding-top: 0px;
+
+}
+
+.second {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    border: 1px solid black;
+    width: 200px;
+    text-align: left;
+    list-style: none;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow_and_red {
+    color: red;
+    background-color: yellow;
+}

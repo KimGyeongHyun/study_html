@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 100px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.container>:first-child {
+    width: 200px;
+    font-size: 25px;
+}
+
+.sec-container {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.sec-container div {
+    width: 100px;
+}
+
+.sec-container>:hover {
+    color: yellow;
+}

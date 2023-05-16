@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    text-align: left;
+    margin: 30px;
+}
+
+.animals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.animal-box {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.animal-img {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center center;
+    /* 상위 요소가 flex 일 경우에도 해당 요소는 크기 조절을 하지 않는다 */
+    flex: none;
+}
+
+.img1 {background-image: url("../img/fox.png");}
+
+.img2 {background-image: url("../img/cap.png");}
+
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.lorem {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .animals {
+        flex-wrap: wrap;
+    } 
+
+    .animal-box {
+        display: block;
+        width: 500px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .animal-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .words {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.happy {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+.happy {
+    background-color: cyan;
+}

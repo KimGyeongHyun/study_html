@@ -1,0 +1,35 @@
+.happy {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+/* id 가 class 보다 우선순위 */
+#nice {
+    background-color: green;
+}
+
+/* 클래스 중제일 나중에 불린 클래스가 우선순위 */
+.happy {
+    background-color: cyan;
+}
+
+/* 부모 자식관계 명확하게 표시하면 같은 클래스 중 우선순위 */
+body>.happy {
+    color: yellow;
+}
+
+/* 클래스가 태그보다 우선순위 */
+.happy {
+    color: pink;
+}
+
+div {
+    color: white;
+}
+
+/* 같은 요소일 때 우선순위
+부모 자식 관계, 나중에 불린 것 */
+
+/* 다른 요소일 때 우선순위
+css !important 선언, html style 선언, id, class, tag, 상속 */

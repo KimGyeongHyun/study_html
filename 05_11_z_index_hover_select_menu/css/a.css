@@ -1,0 +1,36 @@
+.box {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* fixed 배치를 임의로 할 수 있음 */
+.pink {
+    top: 150px;
+    left: 150px;
+    background-color: pink;
+    /* z-index 가 크면 위로 올라옴 */
+    z-index: 5;
+}
+
+.green {
+    top: 200px;
+    left: 200px;
+    background-color: green;
+    z-index: 10;
+}
+
+.circle {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.blue {
+    top: 230px;
+    left: 160px;
+    background-color: blue;
+    z-index: 8;
+}

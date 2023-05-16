@@ -1,0 +1,104 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 10px solid blue;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    transition-delay: 2s;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+.box:hover {
+    width: 500px;
+    background-color: red;
+    margin-top: 250px;
+}
+
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 10px solid blue;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    transition: all linear 10s;
+}
+.box2:hover {
+    width: 500px;
+    border: 20px solid red;
+}
+
+
+
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+    /* animation-direction: reverse; */
+    animation-duration: 3s;
+    animation-name: happymove;
+    animation-fill-mode: forwards;
+}
+
+@keyframes happymove {
+    /* from { left: 0; top: 0; }
+    to { left: 250px; top: 200px; } */
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    50% {
+        left: 1000px;
+        top: 0px;
+    }
+    100% {
+        left: 400px;
+        top: 300px;
+    }
+}
+
+
+.ex1 {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid green;
+    border-radius: 50%;
+    margin: 50px auto;
+    animation: spin 2s linear infinite ;
+}
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.green-box {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    animation: boxmove 10s;
+}
+@keyframes boxmove {
+    0% { left: 0px; top: 0px; }
+    25% { left: 1770px; top: 0px; }
+    50% { left: 1770px; top: 820px; }
+    75% { left: 0px; top: 820px; }
+    100% { left: 0px; top: 0px; }
+}

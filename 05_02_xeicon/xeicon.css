@@ -1,0 +1,77 @@
+/* 벡터 아이콘이기 때문에 크기를 조절해도 깨지지 않음 */
+
+body {
+    /* display: flex; */
+    text-align: center;
+}
+
+.top {
+    display: flex;
+    height: 50px;
+    /* background-color: gray; */
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.inf_sto, .rig {
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    text-align: center;
+}
+
+.inf_sto>div, .rig>div, .rig>i {
+    margin: 10px;
+}
+
+.log-in {
+    background-color: blue;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 10%;
+}
+
+.g-logo {
+    margin-top: 200px;
+    justify-content: center;
+}
+
+.search-mother {
+    display: flex;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 25px;
+    width: 50%;
+    height: 40px;
+    margin: 20px auto 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons>i, .icons>img {
+    margin: 5px;
+    width: 20px;
+}
+
+.bottom {
+    display: flex;
+    margin: 20px auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom>a {
+    background-color: rgb(239, 239, 239);
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+

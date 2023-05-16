@@ -1,0 +1,70 @@
+.naver-box {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+}
+
+.naver-box a {
+    color: white;
+}
+
+.naver-box p {
+    color: yellow;
+}
+
+/* display: none, opacity: 0 의 차이
+display: none 은 요소 자체를 없애버리지만
+opacity 는 투명도 조절이기 때문에 요소가 남아있음 */
+.naver-box:hover a {
+    opacity: 0;
+}
+
+.big_box {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle_box {
+    width: 500px;
+    height: 120px;
+}
+
+.small_box {
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+/* 잘 쓰이지 않음 */
+/* 최대 가로값이 1000px 일 경우 */
+/* 즉 1000px 이하일 경우에만 작동 */
+@media only screen and (max-width: 1000px) {
+    body {background-color: pink;}
+}
+
+@media only screen and (min-width: 1000px) {
+    body {background-color: skyblue;}
+}
+
+@media only screen and (max-width: 400px) {
+    .naver-box {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .middle_box {
+        width: 250px;
+        height: 250px;
+    }
+}

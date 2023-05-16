@@ -1,0 +1,35 @@
+body {
+    background-color:cadetblue;
+}
+
+.big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.big>div {
+    width: 200px;
+    height: 200px;
+    margin: auto 10px;
+    background-size: cover;
+    background-position: center center;
+    transition: 1s;
+}
+
+.big>div:hover {
+    transform: translateY(-40px) scale(1.2);
+}
+
+.f1 {
+    background-image: url(../img/1.png);
+}
+
+.f2 {
+    background-image: url(../img/2.png);
+}
+
+.f3 {
+    background-image: url(../img/3.png);
+}
