@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.upper-box {
+    position: relative;
+    background-color: red;
+    color: white;
+    height: 200px;
+}
+
+.upper-box * {
+    padding: 10px;
+}
+
+.upper-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.upper-box i:first-child {left: 10px;}
+.upper-box i:last-child {right: 10px;}
+
+.month-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.month-box div:first-child {font-size: 30px;}
+.month-box div:last-child {font-size: 20px;}
+
+.seventh {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 40px;
+    background-color: #ccc;
+    justify-content: space-evenly;
+    place-items: center center;
+}
+
+.days {
+    padding: 10px;
+    height: 200px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center center;
+}
+
+.days div:hover {
+    background-color: red;
+    color: white;
+}

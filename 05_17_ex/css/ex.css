@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.upper-box {
+    background-color: black;
+    color: white;
+}
+
+ul {display: flex;}
+
+li {
+    padding: 20px;
+    list-style: none;
+}
+
+.upper-box ul {position: relative;}
+
+.upper-box ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: red;
+}
+
+.upper-box ul li:hover {background-color: red;}
+.upper-box ul li:hover ul {display: flex;}
+
+h2 {padding: 30px;}
+
+p {padding: 0 30px;}
