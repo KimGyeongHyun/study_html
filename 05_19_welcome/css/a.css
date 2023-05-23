@@ -1,0 +1,11 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 3px solid red;
+    /* 넘쳤을 때 스크롤 추가 */
+    overflow: scroll;
+    /* 넘어간 부분에 대해서만 스크롤 추가 */
+    /* 가로가 넘어가지 않았으므로 세로 스크롤만 추가됨 */
+    overflow: auto;
+}

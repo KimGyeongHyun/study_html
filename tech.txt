@@ -1,6 +1,25 @@
 모든 상하정렬은 flex 가 편함
+flex 요소를 상하 정렬하고 싶으면
+flex-direction: column 속성 사용하기
 
 flex 내부 요소에 flex 속성을 주면 해당 수치만큼
 가로 비율이 자동으로 맞추어짐
 내부 속성을 모두 일정하게 유지할 때 간단하게 작성하기 좋음
 flex: 1
+
+글자 넘칠때 사용할 수 있는 속성
+자동 줄 바꿈 제거
+white-space: nowrap;
+넘친 부분을 안 보이게 함
+overflow: hidden;
+넘쳤다면 뒤에 ... 붙임 (말줄임표)
+text-overflow: ellipsis;
+
+가로 값이 너무 커져 가로 스크롤이 생길때 이를 없애고 싶다면
+max-width: 100%; 선언하기
+직접 계산하는 것도 가능
+width: calc(100% - 200px);
+
+transform: translate ~ ;
+transition: 1s;
+처럼 애니메이션 초기화 없이 간단하게 애니메이션 설정 가능

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.big-box {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.person {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    background-image: url("../../img/trip.jpg");
+    /* width, height 100% 자동 맞춤 */
+    background-size: cover;
+    /* 이미지 배치 */
+    background-position: center center;
+    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.name {
+    position: absolute;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 300px;
+    height: 500px;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    transform: translateY(100%);
+    /* animation: down 0.4s forwards; */
+} 
+
+.person:hover .name {
+    /* animation: up 0.4s forwards; */
+    transform: translateY(0%);
+}
+
+/* @keyframes up {
+    from {transform: translateY(-0%);}
+    to {transform: translateY(-100%);}
+}
+
+@keyframes down {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(-0%);}
+} */
+
+/* @keyframes up {
+    from {transform: scaleY(0);}
+    to {transform: scaleY(1);}
+}
+
+@keyframes down {
+    to {transform: scaleY(1);}
+    to {transform: scaleY(0);}
+} */
+
+/* 애니메이션을 사용하는 대신 transform 과 transition 으로
+간단하게 표현할 수 있고
+현재 y 좌표에서부터 부드럽게 움직이게 할 수 있다 */

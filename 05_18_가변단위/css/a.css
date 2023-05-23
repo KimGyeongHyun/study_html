@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box6 {
+    /* em: 부모요소 기준 폰트 크기 비율 */
+    /* 기본적으로 h1 은 부모 폰트 요소의 2배의 크기를 가짐 (2em) */
+    font-size: 30px;
+}
+
+.box6 p {
+    /* box6 클래스의 3배 */
+    font-size: 3em;
+}
+
+.box6 p span {
+    /* p 의 2배 즉, box6 클래스의 6배 */
+    font-size: 2em;
+}
+
+/* rem: 최상위 요소 기준 폰트 크기 비율 */
+/* body 는 기본 16px */
+.box6 div {
+    font-size: 3rem;
+}
+
+/* font size 로 한정되지 않는다 */
+.box7 {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+}
+
+.box8 {
+    /* vw: 윈도우 창 가로 기준 퍼센트 비율 */
+    /* vh: 윈도우 창 높이 기준 퍼센트 비율 */
+    /* width, height 모드 %로 표시하면 안 들어감 */
+    /* 대신 vw, vh 는 계산해서 수치를 직접 주기 때문에 들어감 */
+    width: 20vw;
+    height: 20vh;
+    /* font size 에도 적용 가능 */
+    font-size: 2vw;
+    background-color: blue;
+}
+
+.box9 {
+    background-color: pink;
+    font-size: 30px;
+    width: 300px;
+    /* 자동 줄 바꿈 제거 */
+    white-space: nowrap;
+    /* 넘친 부분을 안 보이게 함 */
+    overflow: hidden;
+    /* 넘쳤다면 뒤에 ... 붙임 */
+    text-overflow: ellipsis;
+}

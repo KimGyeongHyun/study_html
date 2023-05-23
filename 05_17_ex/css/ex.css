@@ -20,9 +20,9 @@ li {
     list-style: none;
 }
 
-.upper-box ul {position: relative;}
+.upper-box {position: relative;}
 
-.upper-box ul li ul {
+.submenu {
     display: none;
     position: absolute;
     top: 100%;
@@ -31,9 +31,13 @@ li {
     background-color: red;
 }
 
-.upper-box ul li:hover {background-color: red;}
-.upper-box ul li:hover ul {display: flex;}
+.menu-list>li:hover {background-color: red;}
+.menu-list>li:hover>ul {display: flex;}
 
 h2 {padding: 30px;}
-
 p {padding: 0 30px;}
+
+.submenu>li:hover {
+    background-color: aliceblue;
+    color: black;
+}
