@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 두 개의 점수 박스를 가지는 큰 박스 */
+.big-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+/* 각각의 점수를 가지는 박스 */
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+/* 배경색 */
+.math {background-color: red;}
+.korea {background-color: blue;}
+.total {background-color: green;}
+.mean {background-color:  purple;}
+
+/* 글자속성 */
+.score p {font-size: 50px;}
+.math p {color: yellow;}
+.korea p {color: aqua;}
+.total p {color: chartreuse;}
+.mean p {color:deeppink;}

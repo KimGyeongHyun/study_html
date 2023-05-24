@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.video-box {
+    position: relative;
+    /* max-width: 1920px;
+    height: 56.25vw;
+    max-height: 1080px;
+    margin: auto; */
+}
+
+.my-video {
+    /* 여백이 남아있을 때의 팁 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 최소한의 가로값 */
+    min-width: 100%;
+}
+
+.text-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+}
+
+.text-box>*{
+    margin: 50px;
+}
+
+.welcome {
+    font-size: 100px;
+    font-weight: 700;
+    animation: welcome-move 5s;
+}
+
+@keyframes welcome-move {
+    0% {transform: translateY(-50%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+
+h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    border: 3px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 0;
+    animation: all linear 0.5s;
+}
+
+@keyframes change-background {
+    from {background-color: inherit;}
+    to {background-color: aqua;}
+}
+
+@keyframes change-background-2 {
+    from {background-color: aqua;}
+    to {background-color: inherit;}
+} 
+
+a:hover {
+    background-color: aqua;
+    animation: all linear 0.5s;
+}

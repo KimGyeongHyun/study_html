@@ -23,3 +23,7 @@ width: calc(100% - 200px);
 transform: translate ~ ;
 transition: 1s;
 처럼 애니메이션 초기화 없이 간단하게 애니메이션 설정 가능
+
+텍스트 내부 글자 조금만 서식 -> span 태그 사용
+
+보통 css 에서 class 쓰고 js 에서 id 사용
