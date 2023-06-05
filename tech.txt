@@ -27,3 +27,6 @@ transition: 1s;
 텍스트 내부 글자 조금만 서식 -> span 태그 사용
 
 보통 css 에서 class 쓰고 js 에서 id 사용
+js 에서 요소를 부를 때 id 이름으로 바로 부를 수 있음
+
+js function 사용시 parameter 전달하기 위해선 html 에서 함수를 부르는 것이 좋음

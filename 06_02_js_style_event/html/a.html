@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/a.css">
+</head>
+<body>
+    <h1 id="title">js 로 스타일 조작하기</h1>
+    <h2>hello</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script src="../js/style.js"></script>
+
+    <button id="btn">click</button>
+    <button id="btn2">dark mode</button>
+    <button id="eye_protect">eye-protect mode</button>
+    <!-- 직접 이벤트를 넣을 수 있음 -->
+    <!-- 가독성 때문에 잘 사용하지 않음 -->
+    <button onclick="document.querySelector('*').style.backgroundColor = 'green'">green mode</button>
+    <script src="../js/button.js"></script>
+    
+    <hr>
+
+    <div class="box">happy</div>
+    <script src="../js/div_box.js"></script>
+
+
+</body>
+</html>

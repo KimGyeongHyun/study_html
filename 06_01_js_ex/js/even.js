@@ -1,0 +1,1 @@
+for (var i = 2; i < 100; i += 2) document.getElementsByTagName("h3")[0].innerHTML += i+", "
