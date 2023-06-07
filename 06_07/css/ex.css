@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.big_box {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.menu {
+    display: flex;
+}
+
+.sm {
+    flex:1;
+    padding: 12px 20px;
+}
+
+#apple {background-color: red;}
+#grape {background-color: blue;}
+#melon {background-color: chartreuse;}
+
+#txt {
+    font-size: 30px;
+    padding: 20px;
+    background-color: red;
+    height: 200px;
+}

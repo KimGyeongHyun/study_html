@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.big_box {
+    width: 700px;
+    margin: 30px auto;
+}
+
+.upper {
+    display: flex;
+    padding: 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: goldenrod;
+}
+
+.add {
+    background-color: darkcyan;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+ul {
+    padding: 0;
+    font-size: 25px;
+    background-color: white;
+    list-style: none;
+}
+
+li {
+    padding: 20px;
+}
