@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/20230608.css">
+    <title>Document</title>
+    <style>
+        .newsection {
+            text-align: center;
+        }
+        .newsection input {
+            font-size: 40px;
+        }
+        #todotxt {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .txtbox {
+            font-size: 100px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="todo">
+        <div class="todo-header">
+            <h1>My todo list</h1>
+            <div>
+                <input type="text" id="todotxt">
+                <button onclick="addItem()">Add+</button>
+            </div>
+        </div>
+        <ul class="todo-list">
+            <li>온라인 강의 듣기</li>
+            <li>책 읽기</li>
+            <li>은행 다녀오기</li>
+            <li>자격증 신청하기</li>
+        </ul>
+    </section>
+    <script>
+        function addItem(){
+            // var item = prompt('할 일을 입력하세요.');
+            var item = todotxt.value;
+            document.querySelector('.todo-list').innerHTML += '<li>' + item + '</li>';
+
+            todotxt.value = "";
+        }
+
+
+
+    </script>
+    <hr>
+
+    <div class="newsection">
+        <input type="text" id="myname">
+        <!-- <button id="namebtn">클릭</button> -->
+        
+        <div class="txtbox"></div>
+
+        <script>
+
+            // myname.onchange = function(){
+            //     var myvalue = myname.value;
+            //     document.querySelector('.txtbox').innerHTML = myvalue;
+            // }
+
+            myname.onkeyup = function(){
+                var myvalue = myname.value;
+                document.querySelector('.txtbox').innerHTML = myvalue;
+            }
+
+
+
+            namebtn.onclick = function(){
+                var answer = document.getElementById('myname').value;
+                console.log(answer);
+                document.querySelector('.txtbox').innerHTML = answer;
+            }
+
+            
+        </script>
+
+        <input type="text" placeholder="id" id="myid">
+        <input type="password" placeholder="password" id="mypw">
+        <button onclick="logincheck()">login</button>
+
+        <script>
+            function logincheck(){
+                if(myid.value=='happy' && mypw.value=='a1234'){
+                    alert('로그인 되었습니다')
+                }
+            }
+        </script>
+
+
+    </div>
+    
+
+
+    
+    
+</body>
+</html>

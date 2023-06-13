@@ -1,0 +1,26 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border: red solid 1px;
+}
+
+.round {
+    border-radius: 20px;
+}
+
+.love {
+    background-color: hotpink;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+section {
+    width: 1000px;
+    margin: 50px auto;
+    border: 10px solid black;
+    padding: 30px;
+    font-size: 30px;
+}
