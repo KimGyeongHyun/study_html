@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+section {
+    border: 10px solid #444444;
+    margin: 20px;
+    padding: 20px;
+    width: 1000px;
+    height: 900px;
+}
+
+h1 {font-size: 40px;}
+
+p {padding: 20px;}
+
+.upper {
+    height: 820px;
+    overflow: auto;
+}
+
+/* 스크롤 바 스타일 지정 */
+.upper::-webkit-scrollbar {width: 10px;}
+.upper::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+}
+.upper::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.buttons {
+    text-align: right;
+    padding: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+/* 다크 모드 스타일 지정 */
+.dark_mode {
+    border-color: green;
+    background-color: black;
+    color: white;
+}
+.dark_mode h1 {
+    color: beige;
+}
+.dark_mode button {
+    border-color: white;
+    color: white;
+}

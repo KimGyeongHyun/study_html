@@ -4,6 +4,7 @@ body {
     background-color: #555555;
     font-weight: bold;
     font-size: 23px;
+    text-align: center;
 }
 
 p {margin: 0;}
@@ -11,21 +12,25 @@ p {margin: 0;}
 section {
     margin: auto;
     margin-top: 30px;
-    width: 300px;
+    width: 320px;
 }
 
 .big_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     border: 3px solid #888888;
-    width: 300px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     background-color: white;
     text-align: center;
 }
 
 .img {
-    position: relative;
-    width: 280px;
+    width: 260px;
     height: 340px;
     background-image: url(../img/hongkong.png);
     background-size: 280px 340px;
@@ -33,16 +38,26 @@ section {
     background-position: center center;
 }
 
-i {
+.icon {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4px;
+    left: 4px;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+i {
+    color: white;
 }
 
 .cost_box {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 15px;
@@ -55,6 +70,7 @@ i {
 #input_box {
     width: 70px;
     height: 20px;
+    font-size: 20px;
 }
 
 
@@ -62,8 +78,7 @@ i {
     border: 3px solid #888888;
     display: flex;
     justify-content: space-evenly;
-    width: 300px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     background-color: white;
 }
