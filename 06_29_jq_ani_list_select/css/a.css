@@ -1,0 +1,28 @@
+.circle {
+    position: relative;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.greenbox {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.pinkbox {
+    width: 100px;
+    height: 200px;
+    background-color: pink;
+    display: none;
+}
+
+.bluebox {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

@@ -1,0 +1,1 @@
+$('.big_c').click(function() {$('.sm_c').toggle();});

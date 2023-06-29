@@ -1,0 +1,27 @@
+* {margin: 0; padding: 0;}
+
+section {
+    background-color: black;
+    color: white;
+    height: 500px;
+}
+
+section p {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+    opacity: 0;
+}
+
+.bar {
+    margin: 30px auto;
+    width: 600px;
+    border: 10px solid white;
+    height: 50px;
+}
+
+.orange {
+    width: 0%;
+    height: 100%;
+    background-color: deeppink;
+}

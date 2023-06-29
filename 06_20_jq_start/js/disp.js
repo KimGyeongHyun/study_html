@@ -1,0 +1,1 @@
+$('.gray_circle').click(function() {$(this).hide();});

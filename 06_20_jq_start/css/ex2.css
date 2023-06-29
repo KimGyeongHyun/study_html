@@ -1,0 +1,4 @@
+section {width: 500px; font-size: 20px; }
+
+.upper { padding: 10px; background-color: red; color: white; }
+.below { padding: 10px; background-color: pink; height: 200px; }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 200px;
+            border: 3px solid black;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery.js"></script>
+
+    <div id="box">안녕하세요</div>
+    <button id="btn">추가하기</button>
+    
+    <script>
+        $('#btn').click(function(){
+            // box.innerHTML += 'A';
+            // $('#box').html('A');
+            // $('#box').append('A');
+            $('#box').prepend('B').css('background-color','yellow').css('border','3px solid red');
+        });
+        
+    </script>
+
+    <hr>
+
+    <input type="text" id="myfood">
+    <button onclick="foodAdd()">확인</button>
+
+    
+    
+    <h1>내가 좋아하는 음식</h1>
+    <ol>
+        <li>떡볶이</li>
+        <li>부대찌개</li>
+        <li>순대국</li>
+        <li>치킨</li>
+    </ol>
+
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+
+    <script>
+        function foodAdd(){
+            // var food = myfood.value;
+            $('ol').prepend('<li>'+myfood.value+'</li>');
+        };
+        $('#btn1').click(function(){
+            $('ol').append( $('ol li').first() );
+        });
+        $('#btn2').click(function(){
+            $('ol').prepend( $('ol li').last() ).find('li:first-child').css('color','red');
+        });
+    </script>
+
+    <hr>
+
+    <div class="box2">안녕</div>
+    <button id="btn3">버튼3</button>
+
+    <!-- 버튼3을 눌렀을때 box2에 A라는 글자가 추가되도록 만들어보세요 -->
+
+    <script>
+        btn3.onclick = function(){
+            // $('.box2').append('A');
+            // var txt = 'A';
+            // $('<span>A</span>').appendTo('.box2');
+            $('<span>A</span>').prependTo('.box2');
+        }
+    </script>
+
+
+
+</body>
+</html>

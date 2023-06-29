@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    <link rel='stylesheet' href='../css/a.css'>
+</head>
+<body>
+    <script src="../../jquery/jquery.js"></script>
+    <section>
+        <h3>색상과 각도를 설정 후 확인 버튼을 누르세요</h3>
+        <div class="get_info">
+            <input type="color" class="get_color1">
+            <input type="color" class="get_color2">
+            <input type="range" min="0" max="360" class="input_deg">
+            <button class="btn">확인</button>
+        </div>
+        <div class="color_box">
+            <div class="inner_box">
+                각도: <span class="s_deg">0</span><br>
+                색상: <span class="c1">0</span>, <span class="c2">0</span>
+            </div>
+        </div>
+        <div class="img_code"></div>
+    </section>
+    <script src="../js/grad.js"></script>
+</body>
+</html> 

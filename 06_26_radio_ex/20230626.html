@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/20230626.css">
+</head>
+<body>
+    <script src="./js/jquery.js"></script>
+    <section>
+        <h1>MBTI 검사지</h1>
+        <input type="text" placeholder="성함입력">
+
+        <dl>
+            <dt>1. 나는 외향적인 편이다</dt>
+            <dd>
+                <input type="radio" id="q1_1" name="q1" value="E">
+                <label for="q1_1">그렇다</label>
+                <input type="radio" id="q1_2" name="q1" value="I">
+                <label for="q1_2">아니다</label>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>2. 나는 현실주의자다</dt>
+            <dd>
+                <input type="radio" id="q2_1" name="q2" value="S">
+                <label for="q2_1">그렇다</label>
+                <input type="radio" id="q2_2" name="q2" value="N">
+                <label for="q2_2">아니다</label>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>3. 나는 논리적인 것을 좋아한다</dt>
+            <dd>
+                <input type="radio" id="q3_1" name="q3" value="T">
+                <label for="q3_1">그렇다</label>
+                <input type="radio" id="q3_2" name="q3" value="F">
+                <label for="q3_2">아니다</label>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>4. 나는 철저히 계획에 따라 움직인다</dt>
+            <dd>
+                <input type="radio" id="q4_1" name="q4" value="J">
+                <label for="q4_1">그렇다</label>
+                <input type="radio" id="q4_2" name="q4" value="P">
+                <label for="q4_2">아니다</label>
+            </dd>
+        </dl>
+
+        <button>MBTI 검사완료</button>
+    </section>
+
+    <p class="mymbti">
+        <span id="myname">000</span>님의 MBTI는 <span id="mbti">INFP</span>입니다.
+    </p>
+    <div class="bg"></div>
+
+    <script>
+        $('button').click(function(){
+            $('.mymbti').show();
+            $('.bg').show();
+
+            $('#myname').html( $('input[type="text"]').val() );
+
+
+            var q1 = $('input[name="q1"]:checked').val();
+            var q2 = $('input[name="q2"]:checked').val();
+            var q3 = $('input[name="q3"]:checked').val();
+            var q4 = $('input[name="q4"]:checked').val();
+            $('#mbti').html(q1+q2+q3+q4);
+        });
+
+        $('.bg').click(function(){
+            $(this).hide();
+            $('.mymbti').hide();
+        })
+    </script>
+</body>
+</html>

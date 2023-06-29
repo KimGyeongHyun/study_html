@@ -1,0 +1,13 @@
+section {display: flex;}
+
+.gray_circle {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    background-color: gray;
+    color: white;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 100px;
+}
