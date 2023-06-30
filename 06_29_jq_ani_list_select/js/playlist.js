@@ -1,6 +1,6 @@
 function add_cl(input_idx) {$('li').eq(input_idx).addClass('cl_bri');}
 function del_cl(input_idx) {$('li').eq(input_idx).removeClass('cl_bri');} 
-// cl_bri
+
 var idx = 0
 add_cl(idx);
 
@@ -13,7 +13,7 @@ $('#prev').click(function() {
 });
 
 $('#next').click(function() {
-    if (idx == 5) {
+    if (idx == $('li').length - 1) {
         alert("마지막 음악입니다.");
         return
     }
