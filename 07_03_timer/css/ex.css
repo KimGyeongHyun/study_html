@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0; padding: 0;
+    /* font-family: 'MBC1961GulimM'; */
+}
+
+.time_box {
+    background-color: aliceblue;
+    width: 500px;
+    height: 300px;
+    margin: 50px auto 30px auto;
+    line-height: 300px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.btn_box {
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 500px;
+    margin: auto;
+}
+
+button {
+    padding: 20px;
+    margin: 10px;
+    width: 100px;
+    color: white;
+    border: none;
+}
+
+#start {background-color: red;}
+#stop {background-color: blue;}
+#record {background-color:limegreen}
+
+.rec {
+    background-color:beige;
+    width: 500px;
+    margin: 30px auto;
+    list-style: none;
+}
+.rec li {padding: 5px;}

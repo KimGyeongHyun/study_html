@@ -1,0 +1,25 @@
+* {margin: 0; padding: 0;}
+
+.big {
+    width: 500px;   height: 300px;
+    border: 10px solid black;
+    overflow: hidden;
+    position: relative;
+    /* p fixed 사용시 position 지정을 위한 코드*/
+    /* transform: rotate(0); */
+}
+
+.big>p {
+    position: absolute; right: 0; bottom: 0;
+    padding: 30px; color: white;
+    font-size: 30px;
+}
+
+.s1, .s2, .s3 {width: 500px;  height: 300px;}
+
+.s1 {background-color: red;}
+.s2 {background-color: green;}
+.s3 {background-color: blue;}
+
+button {margin: 10px; padding: 10px;}
+

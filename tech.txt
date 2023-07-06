@@ -1,4 +1,6 @@
 lko-html-form -> 자동완성으로 사용하고 있음
+flexbox froggy -> flex 연습
+fluke -> css 연습
 
 모든 상하정렬은 flex 가 편함
 flex 요소를 상하 정렬하고 싶으면
@@ -83,6 +85,7 @@ stop() 은 현재 진행되고 있는 애니메이션을 멈춤
 토글 애니메이션에서 유용하게 사용할 수 있음
 아래 코드는 여러번 클릭해도 애니메이션이 중첩 되지 않음
 $('.pinkbox').stop().slideToggle();     // 종료시킨 후 애니메이션
+07_06/js/slide.js 참고
 
 $ 로 선택한 선택자끼리는 == 연산 불가
 
@@ -96,3 +99,15 @@ end()
 이전 요소를 가져옴
 아래 코드는 next 전의 원래 요소로 돌아가게끔 함
 $().next().addClass('a').end().removeClass('a')
+
+setInterval, setTimeout 의 경우
+대기하는 개념이 아니기 때문에
+setTimeout 을 반복문에 넣어 사용하면
+Timeout 시간동안 대기하는게 아니라
+반복문이 돈 만큼 한꺼번에 setTimeout 이 실행된다
+따라서 일정 시간만큼 반복적으로 일을 수행하려면
+반복문대신 setInterval 을 사용해야 한다
+
+특정 횟수만큼만 돌아야 할 때 
+setInterval 내부 메소드 파라미터에서 리턴하면
+interval 이 중단된다
