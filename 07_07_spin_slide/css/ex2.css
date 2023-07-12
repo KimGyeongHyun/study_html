@@ -1,0 +1,13 @@
+* {margin: 0; padding: 0; list-style: none;}
+
+section {
+    display: flex; width: 300px; height: 30px;
+    
+    margin: 30px auto;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.title {line-height: 30px; font-size: 16px; font-weight: bold;}
+.slidewrap {line-height: 30px;margin-top: -30px;}

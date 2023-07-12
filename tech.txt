@@ -111,3 +111,6 @@ Timeout 시간동안 대기하는게 아니라
 특정 횟수만큼만 돌아야 할 때 
 setInterval 내부 메소드 파라미터에서 리턴하면
 interval 이 중단된다
+
+디자인 적으로 자간을 줄이기도 함
+letter-spacing: -5px;

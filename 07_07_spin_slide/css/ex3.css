@@ -1,0 +1,39 @@
+*{margin: 0; padding: 0; background-color:grey}
+
+
+section {
+    margin: 100px auto;
+    width: 600px;
+}
+
+.border {
+    width: 500px; height: 300px;
+    border: 10px solid black;
+    overflow: hidden;
+}
+
+.big {
+    display: flex;
+    width: 2500px; height: 300px;
+    margin-left: -500px;
+}
+
+.sm {
+    width: 500px; height: 300px;
+}
+.s1 {background-color:aqua;}
+.s2 {background-color:chartreuse;}
+.s3 {background-color:dodgerblue;}
+.s4 {background-color:crimson;}
+.s5 {background-color:gold;}
+
+button {
+    margin: 10px; padding: 10px;
+    font-size: 20px; background-color: aliceblue;
+}
+
+p {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}

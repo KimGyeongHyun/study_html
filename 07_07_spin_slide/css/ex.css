@@ -1,0 +1,42 @@
+* {margin:0; padding: 0; background-color: black;}
+
+.big {
+    position: relative;
+    margin: 80px auto;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sm {
+    position: absolute;
+    width: 300px; height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.s1 {background-image: url(../../img/firewater.jpg);}
+.s2 {background-image: url(../../img/tree.jpg); display: none;}
+.s3 {background-image: url(../../img/wat.jpg); display: none;}
+
+.upslide {
+    margin: 30px auto; border: 10px solid white; 
+    width: 400px; height: 200px;
+    overflow: hidden;
+}
+
+.slidewrap {margin-top: -200px;}
+
+.us1 {width: 400px; height: 200px; background-color: aqua;}
+.us2 {width: 400px; height: 200px; background-color: red;}
+.us3 {width: 400px; height: 200px; background-color: yellow;}
+
+.btn_box {
+    display: flex; margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    font-size: 30px; margin: 10px; padding: 10px;
+    background-color: white;
+}
