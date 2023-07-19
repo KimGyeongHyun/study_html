@@ -1,5 +1,5 @@
 var slide_gap = 200;
-var gap = 2000;
+var gap = 2500;
 
 function left_spin() {
     $('.big').stop().animate({marginLeft: '-200vw'}, slide_gap, reunion_right_to_left)
@@ -16,30 +16,32 @@ function reunion_left_to_right() {
     $('.big').css('margin-left', '-100vw');
 }
 
-var interval = setInterval(left_spin, gap);
+var interval;
+
+function start_spin() {
+    clearInterval(interval);
+    interval = setInterval(left_spin, gap);
+    $('#play').removeClass("passive");
+    $('#stop').addClass("passive");
+}
+function stop_spin() {
+    clearInterval(interval);
+    $('#play').addClass("passive");
+    $('#stop').removeClass("passive");
+}
 
 function left_slide() {
-    clearInterval(interval);
     left_spin();
-    interval = setInterval(left_spin, gap);
+    start_spin();
 }
 
 function right_slide() {
-    clearInterval(interval);
     right_spin();
-    interval = setInterval(left_spin, gap);
+    start_spin();
 }
 
-function stop() {
-    clearInterval(interval);
-}
-
-function play() {
-    clearInterval(interval);
-    interval = setInterval(left_spin, gap);
-}
-
+start_spin();
 $('#left').click(left_slide);
 $('#right').click(right_slide);
-$('#stop').click(stop);
-$('#play').click(play);
+$('#stop').click(stop_spin);
+$('#play').click(start_spin);

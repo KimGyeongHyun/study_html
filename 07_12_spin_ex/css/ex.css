@@ -32,8 +32,9 @@ h1 {
 i {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0);
-    color: white;
+    color: gray;
 }
+.back>i {color: white;}
 
 #right {
     position: absolute;
@@ -56,3 +57,5 @@ i {
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+.passive {color: yellow;}

@@ -1,0 +1,14 @@
+* {margin: 0; padding: 0; color: white; 
+    font-size: 30px; text-align: center;}
+
+.upper>div, .below>div {padding: 10px 13px; margin: 10px;}
+
+.year {background-color: blue;}
+.day {background-color: deeppink;}
+.month, .date, .hour, .minute, .second, .mili {background-color: red;}
+
+.upper, .below {display: flex; 
+    width: 500px; margin: 20px auto;
+    justify-content: center;}
+
+#btn {color: black; margin: 30px; padding: 10px;}

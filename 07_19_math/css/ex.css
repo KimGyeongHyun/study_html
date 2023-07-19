@@ -1,0 +1,5 @@
+.upper>p {display: inline-block;}
+
+.below {display: flex;}
+
+ul {list-style: none; padding: 10px;}
