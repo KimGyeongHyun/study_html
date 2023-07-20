@@ -1,0 +1,13 @@
+* {margin: 0; padding: 0; text-align: center;}
+
+h1 {padding: 30px;}
+
+#btn {padding: 5px;}
+
+.food_box {
+    margin: 20px auto;
+    width: 90vh;
+    height: 70vh;
+    background-size: cover;
+    background-position: center center;
+}

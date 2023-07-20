@@ -10,4 +10,5 @@ function set_time() {
     $('.4').text(birth);
 }
 
-date.onchange = set_time;
+// date.onchange = set_time;
+$('#date').change(set_time);
