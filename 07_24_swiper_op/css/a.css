@@ -1,0 +1,40 @@
+.my_swiper {
+    width: 500px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 20px black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.down {font-size: 50px;}
+
+.img1 {background-image: url('../img/a.jpg');}
+.img2 {background-image: url('../img/b.jpg');}
+.img3 {background-image: url('../img/c.png');}
+
+/* 슬라이드 넘어갈 때마다 텍스트에 애니메이션 */
+@keyframes text_slide_down {
+    0% {transform: translateY(-50%); opacity: 0;}
+    100% {transform: transltaeY(0%); opacity: 1;}
+}
+@keyframes text_slide_up {
+    0% {transform: translateY(100%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+
+/* 처음에 모든 span 이 animation 됨 (근데 왜 잘 되는 거지) */
+/* .swiper-slide>span {animation: text_slide_down 2s;} */
+/* 액티브 된 창의 span 한테만 animation 을 주기 */
+.swiper-slide-active>.down {animation: text_slide_down 1s;}
+.swiper-slide-active>.up {animation: text_slide_up 1s;}

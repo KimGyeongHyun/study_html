@@ -1,0 +1,64 @@
+* {margin: 0; padding: 0;}
+
+.navi_box {
+    position: relative;
+    display: flex; justify-content: space-around; align-items: center;
+    width: 850px;
+    padding: 20px; margin: 20px;
+    background-color:aliceblue;
+}
+
+.navi_left {width: 160px;}
+h3 {font-weight: 400;margin-bottom: 20px; margin-top: 5px;}
+.navi_left>p {margin-bottom: 20px; font-size: 13px;}
+
+.option {
+    background-color: white;
+    display: flex;
+    width: 60px; padding: 12px; margin: 7px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.swiper {
+    width: 520px; height: 130px; margin: 0;
+}
+
+.swiper-slide {
+    display: flex; flex-direction: column;
+    justify-content: space-around; align-items: center;
+}
+.swiper-slide>p {font-size: 12px;}
+
+.slide_des {
+    background-color: white;
+    display: flex; width: 100px; height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 0px #ddd;
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: 260px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #777;
+    background-color: white;
+    width: 35px; height: 35px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    content: "";
+}
+
+.swiper-button-prev>p, .swiper-button-next>p {
+    font-size: 20px; font-weight: bold;
+    transform: translateY(-2px);
+}

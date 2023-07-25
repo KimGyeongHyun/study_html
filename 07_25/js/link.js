@@ -1,0 +1,1 @@
+$('.slide_des').click(function() {location.href = 'http://naver.com';})
