@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title></title>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<!-- 풀페이지 기본 css -->
+<link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
+</head>
+<body>
+    <!-- 1. fullpage 에서 다운로드,
+    2. 압축해제하여 예시 참고
+    
+    example/simple.html 중 id 가 fullpage 인 div 참고
+    각 화면은 section 이라는 class 를 가져야 하며
+    id 를 section1, 2, 3 으로 가짐
+
+    맨 밑에 script는 (../dist/fullpage.js)를 참고함
+    link 에 fullpage.css 도 참고함
+    위의 두 개는 필수
+    examples.css 는 demo 와 비슷한 개념 (필수 x)
+    section background-color 등등이 지정되어 있음
+
+    script 에서 fullpage 객체 생성
+    해당 코드도 필요 (실행 코드)-->
+
+    <!-- 풀페이지 구성 -->
+    <div id="fullpage">
+        <div class="section active" id="section0"><h1>fullPage.js</h1></div>
+        <div class="section" id="section1">
+            <div class="slide "><h1>Simple Demo</h1></div>
+            <div class="slide active"><h1>Only text</h1></div>
+            <div class="slide"><h1>And text</h1></div>
+            <div class="slide"><h1>And more text</h1></div>
+        </div>
+        <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+        <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+    </div>
+
+    <!-- 풀페이지 자바스크립트 -->
+    <script type="text/javascript" src="../js/fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+        });
+    </script>
+</body>
+</html> 
