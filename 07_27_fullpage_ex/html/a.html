@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Normal scrolling - fullPage.js</title>
+<meta name="author" content="Alvaro Trigo Lopez" />
+<meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+<meta name="Resource-type" content="Document" />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<!-- 풀페이지 기본 css -->
+<link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
+<link rel="stylesheet" href="../css/a.css">
+</head>
+<body>
+    <!-- 1. fullpage 에서 다운로드,
+    2. 압축해제하여 예시 참고
+    
+    example/simple.html 중 id 가 fullpage 인 div 참고
+    각 화면은 section 이라는 class 를 가져야 하며
+    id 를 section1, 2, 3 으로 가짐
+
+    맨 밑에 script는 (../dist/fullpage.js)를 참고함
+    link 에 fullpage.css 도 참고함
+    위의 두 개는 필수
+    examples.css 는 demo 와 비슷한 개념 (필수 x)
+    section background-color 등등이 지정되어 있음
+
+    script 에서 fullpage 객체 생성
+    해당 코드도 필요 (실행 코드)-->
+
+    <!-- 스크롤 메뉴 -->
+    <ul id="menu">
+        <!-- data-menuanchor : 개발자가 변경 가능 -->
+        <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+        <li data-menuanchor="s1"><a href="#s1">with coffee</a></li>
+        <li data-menuanchor="s2"><a href="#s2">ordering</a></li>
+        <li data-menuanchor="s3"><a href="#s3">enjoy tea</a></li>
+        <li data-menuanchor="s4"><a href="#s4">sweet coffee</a></li>
+    </ul>
+
+    <!-- 풀페이지 구성 -->
+    <div id="fullpage">
+        <div class="section active" id="section0">
+            <img src="../img/logo.png" alt="">
+            <h1>Starbucks</h1>
+        </div>
+        <div class="section" id="section1">
+            <div class="inner-box">
+                <img src="../img/section1.png" alt="">
+                <div class="text-box">
+                    <h1>With Coffee</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="section" id="section2">
+            <div class="inner-box">
+                <img src="../img/section2.png" alt="">
+                <div class="text-box">
+                    <h1>Ordering</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <div class="inner-box">
+                <img src="../img/section3.png" alt="">
+                <div class="text-box">
+                    <h1>Enjoy Tea</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <div class="inner-box">
+                <img src="../img/section4.png" alt="">
+                <div class="text-box">
+                    <h1>Sweet coffee</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 풀페이지 자바스크립트 -->
+    <script type="text/javascript" src="../js/fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            menu: '#menu',
+            anchors: ['home', 's1', 's2', 's3', 's4'],
+            sectionsColor: ['#048243', 'antiquewhite', '#5fa07d', 'antiquewhite', '#1e3932'],
+            autoScrolling: true,
+        });
+    </script>
+</body>
+</html> 
