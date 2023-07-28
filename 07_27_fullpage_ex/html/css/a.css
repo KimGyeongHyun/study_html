@@ -69,7 +69,7 @@ li a{
 	color:antiquewhite;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 770px) {
     #section1 .inner-box, #section3 .inner-box,
 	#section2 .inner-box, #section4 .inner-box
 	{
