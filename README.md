@@ -34,5 +34,3 @@ Fullpage 디자인
 <a href = "https://kimgyeonghyun.github.io/study_html/07_27_fullpage_ex/html/index.html" target="_blank">
 <img src="https://img.shields.io/badge/FullPage-32bf84">
 </a>
-
-(xeicon 을 참조하지 못하는 현상이 있습니다)
