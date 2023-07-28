@@ -1,27 +1,33 @@
 *{text-align: center;}
 
 h1, p {text-align: left; margin: 30px;}
+h1 {font-size: 3vw;} p{font-size: 2vw;}
 #section0 h1{font-size: 60px; text-align: center; color: white;}
 
-#menu li {
+li {
 	display: inline-block;
 	margin: 10px;
-	color: #fff;
 	background:#fff;
 	background: rgba(255,255,255, 0.5);
-	-webkit-border-radius: 10px;
-            border-radius: 10px;
+    border-radius: 10px;
     border: 2px solid #1e3932;
+	overflow: hidden;
 }
-#menu li.active{
+li.active{
 	background:#666;
 	background: rgba(0,0,0, 0.5);
 	color: #fff;
 }
-#menu li a{
+li a{
 	text-decoration:none;
 	color: green;
 }
+/* s1 에서만 효과 적용 */
+/* fullpage 에서 slide 를 바꿀 때마다 body 속성에 fp-viewing-"slide anchor" 클래스를 추가함 */
+/* 특정 slide 에 방문하여 body 에 특정 클래스가 들어갈 때마다 적용 */
+.fp-viewing-s1 li, .fp-viewing-s3 li{background-color: #1e3932;}
+.fp-viewing-s1 li a, .fp-viewing-s3 li a{color:cadetblue;}
+
 #menu li.active{
 	color: #fff;
 }
@@ -72,4 +78,5 @@ h1, p {text-align: left; margin: 30px;}
     }
 	.inner-box img {width: 60%;}
 	.inner-box .text_box {width: 100%;}
+	h1 {font-size: 6vw;} p{font-size: 3vw;}
 }

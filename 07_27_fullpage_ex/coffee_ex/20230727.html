@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fullpage.css">
+    <title>Document</title>
+    <style>
+        * {margin:0;padding:0;list-style: none;}
+
+        #mymenu {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 15000;
+        }
+        #mymenu a {
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            color: #000;
+            font-weight: bold;
+        }
+
+
+
+
+        .section {
+            text-align: center;
+        }
+        .main {
+            background-color: orangered;
+            color: #fff;
+        }
+        .innerbox {
+            width: 1300px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            font-size: 30px;
+            text-align: left;
+        }
+        .s1 .innerbox,
+        .s3 .innerbox {
+            flex-direction: row-reverse;
+        }
+        .s2 .innerbox div:last-child,
+        .s4 .innerbox div:last-child {
+            margin-left: 40px;
+        }
+        @media(max-width: 1000px){
+            .innerbox {
+                display: block;
+                font-size: 20px;
+                text-align: center;
+            }
+            .s2 .innerbox div:last-child,
+            .s4 .innerbox div:last-child {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/fullpage.js"></script>
+
+    <ul id="mymenu">
+        <li data-menuanchor="home">
+            <a href="#home">메인페이지</a>
+        </li>
+        <li data-menuanchor="s1">
+            <a href="#s1">첫번째섹션</a>
+        </li>
+        <li data-menuanchor="s2">
+            <a href="#s2">두번째섹션</a>
+        </li>
+        <li data-menuanchor="s3">
+            <a href="#s3">세번째섹션</a>
+        </li>
+        <li data-menuanchor="s4">
+            <a href="#s4">네번째섹션</a>
+        </li>
+    </ul>
+
+
+    <div id="fullpage">
+        <div class="section main">
+            <img src="./img/coffee/logo.png" alt="logo">
+            <h1>coffee</h1>
+        </div>
+        <div class="section s1">
+            <div class="innerbox">
+                <div>
+                    <img src="./img/coffee/section1.png" alt="파란모자">
+                </div>
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>
+                        orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, deserunt commodi. Praesentium dolor repellat ipsam vero repellendus ex ipsa? Blanditiis, unde ipsum amet voluptas veniam voluptate iusto ab quo sint?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section s2">
+            <div class="innerbox">
+                <div>
+                    <img src="./img/coffee/section2.png" alt="파란모자">
+                </div>
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>
+                        orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, deserunt commodi. Praesentium dolor repellat ipsam vero repellendus ex ipsa? Blanditiis, unde ipsum amet voluptas veniam voluptate iusto ab quo sint?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section s3">
+            <div class="innerbox">
+                <div>
+                    <img src="./img/coffee/section3.png" alt="파란모자">
+                </div>
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>
+                        orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, deserunt commodi. Praesentium dolor repellat ipsam vero repellendus ex ipsa? Blanditiis, unde ipsum amet voluptas veniam voluptate iusto ab quo sint?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section s4">
+            <div class="innerbox">
+                <div>
+                    <img src="./img/coffee/section4.png" alt="파란모자">
+                </div>
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>
+                        orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, deserunt commodi. Praesentium dolor repellat ipsam vero repellendus ex ipsa? Blanditiis, unde ipsum amet voluptas veniam voluptate iusto ab quo sint?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var happy = new fullpage('#fullpage',{
+            sectionsColor: ['red','orange','yellow','skyblue','beige'],
+            menu: '#mymenu',
+            anchors: ['home','s1','s2','s3','s4'],
+        });
+
+        mm.onclick = function(){
+            console.log( this.dataset.happy )
+        }
+    </script>
+</body>
+</html>

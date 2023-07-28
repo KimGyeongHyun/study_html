@@ -9,8 +9,8 @@
 <meta name="Resource-type" content="Document" />
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
 <!-- 풀페이지 기본 css -->
-<link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
-<link rel="stylesheet" href="../css/a.css">
+<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+<link rel="stylesheet" href="./css/a.css">
 </head>
 <body>
     <!-- 1. fullpage 에서 다운로드,
@@ -32,6 +32,7 @@
     <!-- 스크롤 메뉴 -->
     <ul id="menu">
         <!-- data-menuanchor : 개발자가 변경 가능 -->
+        <!-- a herf 에 #contact 를 적으면 contact 를 가진 id 로 이동함 -->
         <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
         <li data-menuanchor="s1"><a href="#s1">with coffee</a></li>
         <li data-menuanchor="s2"><a href="#s2">ordering</a></li>
@@ -42,12 +43,12 @@
     <!-- 풀페이지 구성 -->
     <div id="fullpage">
         <div class="section active" id="section0">
-            <img src="../img/logo.png" alt="">
+            <img src="./img/logo.png" alt="">
             <h1>Starbucks</h1>
         </div>
         <div class="section" id="section1">
             <div class="inner-box">
-                <img src="../img/section1.png" alt="">
+                <img src="./img/section1.png" alt="">
                 <div class="text-box">
                     <h1>With Coffee</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
@@ -58,7 +59,7 @@
 
         <div class="section" id="section2">
             <div class="inner-box">
-                <img src="../img/section2.png" alt="">
+                <img src="./img/section2.png" alt="">
                 <div class="text-box">
                     <h1>Ordering</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>    
@@ -68,7 +69,7 @@
 
         <div class="section" id="section3">
             <div class="inner-box">
-                <img src="../img/section3.png" alt="">
+                <img src="./img/section3.png" alt="">
                 <div class="text-box">
                     <h1>Enjoy Tea</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>
@@ -78,7 +79,7 @@
 
         <div class="section" id="section4">
             <div class="inner-box">
-                <img src="../img/section4.png" alt="">
+                <img src="./img/section4.png" alt="">
                 <div class="text-box">
                     <h1>Sweet coffee</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipiendis labore? Saepe, temporibus aliquid?</p>
@@ -88,10 +89,12 @@
     </div>
 
     <!-- 풀페이지 자바스크립트 -->
-    <script type="text/javascript" src="../js/fullpage.js"></script>
+    <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             menu: '#menu',
+            // data-anchor 속성 추가시켜줌
+            // 메뉴스크롤 동작시키게끔 만들어줌
             anchors: ['home', 's1', 's2', 's3', 's4'],
             sectionsColor: ['#048243', 'antiquewhite', '#5fa07d', 'antiquewhite', '#1e3932'],
             autoScrolling: true,
