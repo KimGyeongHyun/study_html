@@ -68,3 +68,8 @@ button:hover {
     border-radius: 10px;
 }
 .rec li {padding: 5px;}
+
+@media (max-width: 800px) {
+    button {font-size: 12px; padding: 10px;}
+    .rec {max-height: 158px;}
+}
