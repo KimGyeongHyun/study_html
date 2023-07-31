@@ -30,9 +30,10 @@ h1 {
 .s3 {background-image: url('../img/3.jpg');}
 
 i {
-    padding: 10px;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0);
     color: gray;
+    /* width: 20px; height: 20px; */
 }
 .back>i {color: white;}
 
@@ -55,7 +56,11 @@ i {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .passive {color: yellow;}
+
+/* @media (max-width: 800px) {
+    i {}
+} */

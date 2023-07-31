@@ -18,6 +18,7 @@ ul {display: flex;}
 li {
     padding: 20px;
     list-style: none;
+    font-size: 16px;
 }
 
 .upper-box {position: relative;}
@@ -40,4 +41,8 @@ p {padding: 0 30px;}
 .submenu>li:hover {
     background-color: aliceblue;
     color: black;
+}
+
+@media (max-width: 800px) {
+    li {font-size: 10px;}
 }

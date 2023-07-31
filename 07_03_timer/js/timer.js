@@ -1,4 +1,5 @@
 var milis = 0;
+var count = 1;
 
 function display_time() {
     var min = Math.floor(milis/6000);
@@ -20,6 +21,14 @@ function li_deco() {
     if (l % 2 == 0) {$('.rec li').eq(l-1).css("background-color", "cornsilk");}
     else {$('.rec li').eq(l-1).css("background-color", "beige");}
 }
+function scroll_down() {
+    // js
+    // var rec = document.querySelector(".rec");
+    // rec.scrollTop = rec.scrollHeight;
+
+    // jq
+    $(function() {$('.rec').scrollTop($('.rec')[0].scrollHeight)});
+}
 
 display_time();
 var interval = setInterval(inc_and_display, 10);
@@ -35,8 +44,9 @@ $('#stop').click(function() {
 });
 
 $('#record').click(function() {
-    $('.rec').append("<li>" + $('.time_box').html() + "</li>");
+    $('.rec').append("<li>" + (count++) + ".  " + $('.time_box').html() + "</li>");
     li_deco();
+    scroll_down();
 });
 
 // button 속성 중에 disabled="disabled" 를 넣으면

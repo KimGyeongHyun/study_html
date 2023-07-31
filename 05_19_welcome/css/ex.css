@@ -41,7 +41,7 @@
 }
 
 .welcome {
-    font-size: 10vw;
+    font-size: 7vw;
     font-weight: 700;
     animation: welcome-move 5s;
 }
@@ -61,7 +61,7 @@ a {
     width: 60%;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 3vw;
     border: 3px solid white;
     padding: 10px 30px;
     color: white;
