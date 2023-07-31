@@ -16,12 +16,13 @@ section {
 }
 
 .time_box {
+    display: flex;
     background-color: aliceblue;
     width: 100%;
     height: 300px;
     margin-bottom: 30px;
-    line-height: 300px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 50px;
 }
 
@@ -30,7 +31,7 @@ section {
     justify-content: center;
     background-color: antiquewhite;
     width: 100%;
-    margin: auto;
+    margin-bottom: 30px;
 }
 
 button {
@@ -53,7 +54,7 @@ button:hover {
 .rec {
     background-color:beige;
     width: 100%;
-    margin: 30px auto;
+    margin: auto;
     list-style: none;
     max-height: 221.2px;
     overflow: auto;
@@ -70,6 +71,7 @@ button:hover {
 .rec li {padding: 5px;}
 
 @media (max-width: 800px) {
+    .time_box {height: 200px; margin-bottom: 15px;}
+    .btn_box {margin-bottom: 15px;}
     button {font-size: 12px; padding: 10px;}
-    .rec {max-height: 158px;}
 }

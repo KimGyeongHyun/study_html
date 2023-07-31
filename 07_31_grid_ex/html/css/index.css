@@ -58,7 +58,7 @@ p {
 
 @media (max-width: 600px) {
 
-    .inner {width: 400px;}
+    .inner {width: 230px;}
     
     .grid-wrapper {
         width: 230px; height: 800px;
