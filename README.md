@@ -10,11 +10,6 @@
 <img src="https://img.shields.io/badge/MainBanner-0000ff">
 </a>
 
-그리드 디자인 
-<a href = "https://kimgyeonghyun.github.io/study_html/07_31_grid_ex/html/" target="_blank">
-<img src="https://img.shields.io/badge/Grid-00ff00">
-</a>
-
 타이머 
 <a href = "https://kimgyeonghyun.github.io/study_html/07_03_timer/html/ex.html" target="_blank">
 <img src="https://img.shields.io/badge/Timer-fd4659">
@@ -33,4 +28,9 @@ Swiper slide 를 사용한 산림청 슬라이드
 Fullpage 디자인
 <a href = "https://kimgyeonghyun.github.io/study_html/07_27_fullpage_ex/html/index.html" target="_blank">
 <img src="https://img.shields.io/badge/FullPage-32bf84">
+</a>
+
+Web page 디자인 
+<a href = "https://kimgyeonghyun.github.io/study_html/07_31_grid_ex/html/" target="_blank">
+<img src="https://img.shields.io/badge/WebPage-00ff00">
 </a>

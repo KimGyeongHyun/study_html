@@ -1,6 +1,59 @@
 * {margin: 0; padding: 0;}
 
-.inner {width: 700px; margin: 30px auto;}
+.upper-menu {
+    width: 100vw; height: 50px;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-menu ul {
+    list-style: none;
+    display: flex;
+    padding-left: 10px;
+}
+
+.upper-menu ul li {
+    padding: 10px;
+    color: #999999;
+}
+.upper-menu ul li:hover {color: white;}
+.upper-menu i {
+    color: #999999;
+    padding-right: 30px;
+}
+.upper-menu i:hover {color: white;}
+
+.upper {
+    width: 100%; height: 400px;
+}.upper .mySwiper {
+    height: 400px;
+}
+
+.upper .swiper-slide>div {
+    width: 100%; height: 400px;
+    background-image: url('../img/laptop.jpg');
+    background-size: cover;
+    background-position: left bottom;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper h1 {
+    font-size: 40px; margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #333333;
+}
+.upper h2 {
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #333333;
+}
+
+.inner {width: 700px; margin: 60px auto 60px auto;}
+.inner h1 {font-size: 30px;}
 
 .grid-wrapper {
     display: grid; margin: 30px auto;
@@ -13,9 +66,6 @@
 .grid-box {
     position: relative;
     border: 3px solid #9999bb;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .grid-box:hover {
@@ -24,22 +74,114 @@
     cursor: pointer;
 }
 
-i {
+.grid-wrapper i {
     position: absolute;
     left: 0; top: 25%;
     color: #3B719F;
     margin: 15px; transform: translateY(-70%);
 }
-h2 { 
+.grid-wrapper h2 { 
     position: absolute; left: 21%; top: 7%;
     margin: 15px;
     font-size: 20px;
 }
-p {
+.grid-wrapper p {
     position: absolute; left: 21%; top: 39%;
     margin: 15px;
     font-size: 10px;
 }
+
+.exp {
+    width: 100vw; height: 400px;
+    background-image: url('../img/left_dev.jpg');
+    background-size: cover;
+    background-position: left top;
+    margin: 30px 0 30px 0;
+}
+
+.section-2 {
+    display: flex block; width: 90%;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.section-2 img {width: 40%; height: auto;}
+.section-2 .text-box {
+    padding: 50px; width: 50%;
+}
+.section-2 .text-box h2 {
+    font-size: 28px; margin-bottom: 15px;
+}
+.section-2 .text-box .ani-box {
+    display: flex inline;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.section-2 .box-link {min-width: 125px;}
+.section-2 .box-link p {
+    font-size: 15px; transition: 0.3s;
+    margin-bottom: 3px;
+}
+.section-2 .box-link>div {
+    width: 100%; height: 2px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.section-2 .box-link>div>div {
+    width: 100%; height: 2px; background-color: #0e37cc;
+    transition: 0.3s;
+    transform: translateX(-100%);
+}
+.section-2 .box-link:hover>div>div {
+    transform: translateX(0%);
+    transition: 0.3s;
+}
+.section-2 .box-link:hover>p {
+    color: #0e37cc;
+}
+
+.section-2 .btn-box {
+    display: flex;
+}
+.section-2 button {
+    box-sizing: border-box;
+    width: 85px; height: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.section-2 #btn1 {background-color: blue; color: white; border-color: blue;}
+.section-2 #btn2 {background-color: white; color: blue; border-color: blue;}
+.section-2 .text-box>p {
+    min-height: 150px; margin-bottom: 20px; font-size: 13px;
+}
+
+.bottom-menu {
+    width: 100%; height: 40px;
+    background-color: #999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-menu ul {
+    list-style: none;
+    display: flex;
+}
+.bottom-menu ul li {
+    padding: 10px;
+    color: #bbbbbb;
+    font-size: 15px;
+}
+.bottom-menu p {
+    font-size: 12px;
+    color: #bbbbbb;
+    padding-right: 25px;
+}
+
+.on {color: #0e37cc;}
+.on-back {background-color: #0e37cc;}
+.off-back {background-color: #aaaaaa;}
 
 @media (max-width: 800px) {
 
@@ -51,9 +193,14 @@ p {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    h2 {left: 16%}
-    p {left: 16%}
-
+    .grid-wrapper h2 {left: 16%}
+    .grid-wrapper p {left: 16%}
+    .section-2 {justify-content: left;}
+    .section-2 img {display: none;}
+    .section-2 .text-box {padding: 4px; width: 100%;}
+    .section-2 .box-link p {font-size: 12px;}
+    .section-2 .text-box>p {font-size: 9px; min-height: 75px;}
+    .section-2 .box-link {min-width: 100px;}
 }
 
 @media (max-width: 600px) {
@@ -65,6 +212,9 @@ p {
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(1, 1fr);
     }
-    h2 {left: 21%}
-    p {left: 21%}
+    .grid-wrapper h2 {left: 21%}
+    .grid-wrapper p {left: 21%}
+    .upper h2 {font-size: 12px;}
+    .bottom-menu ul li {font-size: 8px; padding: 5px;}
+    .bottom-menu p {font-size: 6px;}
 }

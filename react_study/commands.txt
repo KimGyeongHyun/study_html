@@ -1,0 +1,15 @@
+들어가기 전에..
+리액트 파일은 study_html 파일 안의 react_study 파일이므로
+cmd 명령을 입력하기 전에
+cd react_study 
+를 입력하여 리액트 파일로 이동해야 한다
+
+npx create-react-app '파일경로' : 빈 파일을 리액트 파일로 초기화
+npm start : 리액트 파일의 index.html 을 브라우저에 라이브로 띄움
+    (개발 환경)
+ctrl + c : 라이브로 열려있는 index.html 을 종료함
+npm run build : 배포판을 만들어줌
+    build 폴더 안에 파일들이 압축되어 들어감
+    (배포 환경)
+npx serve -s build : serve 라는 앱을 사용하여 build 결과 배포
+    -s : 아무 경로로 들어가도 index.html 을 실행함

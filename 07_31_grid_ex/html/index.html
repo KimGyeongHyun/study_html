@@ -4,15 +4,72 @@
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title></title>
-<link rel='stylesheet' href='./css/index.css'>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel='stylesheet' href='./css/index.css'>
 </head>
 <body>
 
+    <section class="upper-menu">
+        <ul>
+            <li>lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+            <li>amet</li>
+        </ul>
+        <i class="xi-bars xi-2x"></i>
+    </section>
+    
+    <div class="upper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                    <h1>Effective</h1>
+                    <h2>You can do everything that you think</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                    <h1>Unique</h1>
+                    <h2>Unique design, service, performance</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                    <h1>Synchronization</h1>
+                    <h2>Synchronize all of our products</h2>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+          </script>
+          
+        <!-- <div class="text-box">
+            <h1>Lorem ipsum dolor sit</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatum expedita, nulla similique iure distinctio! Minus voluptatum possimus quibusdam at aspernatur quaerat non odit, quae voluptate eum cumque tempora ea!</h2>
+        </div> -->
+    </div>
+
     <div class="inner">
+
         <section class="grid-wrapper">
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-call xi-2x"></i>
                 <div class="text-box">
                 <h2>Phone Call</h2>
@@ -20,19 +77,19 @@
                 </div>
             </div>
             
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-mail xi-2x"></i>
                 <h2>Message</h2>
                 <p>Communicate with others</p>
             </div>
     
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-alarm xi-2x"></i>
                 <h2>Alarm</h2>
                 <p>Wake up! You might be late! Hurry up!</p>
             </div>
     
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-time xi-2x"></i>
                 <h2>Current Time</h2>
                 <p>You don't need to take your watch to see the time.
@@ -40,7 +97,7 @@
                 </p>
             </div>
     
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-calendar xi-2x"></i>
                 <h2>Calendar</h2>
                 <p>Watch doesn't show the date.
@@ -48,7 +105,7 @@
                 </p>
             </div>
     
-            <div class="grid-box">
+            <div class="grid-box" data-aos='fade-up'>
                 <i class="xi-bluetooth xi-2x"></i>
                 <h2>BlueTooth</h2>
                 <p>You can link the device with your wireless earphone.</p>
@@ -62,7 +119,63 @@
         </script>
 
     </div>
+
+    <section class="exp">
+            
+    </section>
+
+    <section class="section-2">
+
+        <img src="./img/laptop-center.jpg" alt="">
+
+        <div class="text-box">
+            <h2>lomre ipsum dolor</h2>
+            <div class="ani-box">
+                <div class="box-link" onclick="disp_tab(1);">
+                    <p class="on">About us</p>
+                    <div class="under-bar on-back"><div></div></div>
+                </div>
+                <div class="box-link" onclick="disp_tab(2);">
+                    <p>Why Choose Us</p>
+                    <div class="under-bar off-back"><div></div></div>
+                </div>
+                <div class="box-link" onclick="disp_tab(3);">
+                    <p>Our mission</p>
+                    <div class="under-bar off-back"><div></div></div>
+                </div>
+            </div>
+
+            <p id="tab1">about us Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestiae nam doloribus amet assumenda eius ipsum deserunt neque velit corporis, quisquam optio est sit beatae unde, quam magni error animi?</p>
+            <p id="tab2">why choose us Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestiae nam doloribus amet assumenda eius ipsum deserunt neque velit corporis, quisquam optio est sit beatae unde, quam magni error animi?</p>
+            <p id="tab3">our mission Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestiae nam doloribus amet assumenda eius ipsum deserunt neque velit corporis, quisquam optio est sit beatae unde, quam magni error animi?</p>
+            
+            <div class="btn-box">
+                <button id="btn1">Get in Touch</button>
+                <button id="btn2">Read more</button>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <div class="bottom-menu">
+        <ul>
+            <li>lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+        </ul>
+        <p>copyrights all reserved in Vigene</p>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="../js/tab.js"></script>
+
+
     
-    
+    <!-- aos 소스 : https://michalsnik.github.io/aos/ -->
+
 </body>
 </html>
