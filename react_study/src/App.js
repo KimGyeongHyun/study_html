@@ -7,7 +7,7 @@ import {useState} from 'react'; // state 사용
 // props 에 속성값이 한꺼번에 들어간다
 // 속성에 변수, 리스트, 함수 모두 들어감
 function Header(props) {
-  console.log('props', props,  props.title);
+  // console.log('props', props,  props.title);
   return <header>
       {/* function(event) 을 event=> 로 줄여 씀 */}
       <h1><a href="/" onClick={event=>{
@@ -17,7 +17,7 @@ function Header(props) {
     </header>
 }
 
-// topics 의 제목을 Artical 태그로 순서대로 출력
+// topics 의 제목을 li 태그로 순서대로 출력
 function Nav(props) {
   // 배열 lis에 li 구성
   const lis = []
@@ -48,15 +48,15 @@ function Nav(props) {
 }
 
 // topics 의 내용을 하나 가져와 출력
-function Artical(props) {
-  return <artical>
+// mode 가 "WELCOME", "READ" 일 때 content 출력에 사용
+function Article(props) {
+  return <article>
         <h2>{props.title}</h2>
         {props.body}
-      </artical>
+      </article>
 }
 
 // title, body 를 받을 form 태그 리턴
-// 
 function Create(props) {
   return <article>
     <h2>Create</h2>
@@ -64,6 +64,7 @@ function Create(props) {
     /* form 태그 : input 정보를 한꺼번에 처리하는 태그 */
     }
     
+    {/* Create 버튼을 눌렀을 때 (sumbit) 실행되는 코드 */}
     <form onSubmit={event=>{
       // submit 을 하면 페이지가 리로드 되어 버린다
       // 이를 방지함
@@ -81,6 +82,44 @@ function Create(props) {
   </article>
 }
 
+function Update(props) {
+
+  // input 속성 중 value 값을 지정하면 웹 input 의 글자가 바뀌지 않는다
+  // value 선언을 props 객체로 지정해 버렸기 때문이다
+  // react 에서 onChange() 함수는 값이 바뀔 때 실행
+  // 웹 input 에서 입력된 값이 기존의 값과 결합하면서, title, body 값을 해당 값으로 바꾼다
+  // 즉, input 의 글자가 하나라도 바뀌면 state 값이 바뀌면서 Update 가 갱신된다
+
+  // 대신 defaultValue 속성을 사용하면 이런 복잡한 과정이 필요없다
+
+  // const [title, setTitle] = useState(props.title);
+  // const [body, setBody] = useState(props.body);
+
+  return <article>
+    <h2>Update</h2>
+    
+    <form onSubmit={event=>{
+      event.preventDefault();
+      const title = event.target.title.value;
+      const body = event.target.body.value;
+      props.onUpdate(title, body);
+    }}>
+      {/* 기존 내용의 title, body 값을 default 로 표시 */}
+      {/* onChange 는 html 에서 값이 바뀌고 마우스 포인터가 바깥으로 빠져나갈 때 호출,
+      React 는 값이 바뀌면 호출 */}
+      <p><input type="text" name="title" placeholder="title" defaultValue={props.title}
+      // value={title}
+      // onChange={event=>{setTitle(event.target.value);}}
+      ></input></p>
+      <p><textarea name="body" placeholder='body' defaultValue={props.body}
+      // value={body}
+      // onChange={event=>{setBody(event.target.value);}}
+      ></textarea></p>
+      <p><input type='submit' value="Update"></input></p>
+    </form>    
+  </article>
+}
+
 function App() {
   // 객체 배열을 만들어 Nav props에 전달
   console.clear();
@@ -94,6 +133,7 @@ function App() {
   // state
   // 0 : 상태의 값을 읽을 때 사용하는 데이터
   // 1 : 상태 값 변경할 때 사용하는 함수
+  // 함수 실행 중 값이 변경되지 않는다면 통과, 변했다면 처음으로 돌아감
 
   // mode 에 따라 content 요소를 다르게 표현
   // const _mode = useState("WELCOME");
@@ -120,15 +160,16 @@ function App() {
     {id:3, title:'js', body:'js is ...'},
   ]);
 
-  let content = null;
+  let content = null;         // mode 에 따라 다른 내용을 보여주는 component
+  let contextControl = null;  // mode 가 READ 일 때만 content 맨 밑에 나오는 component
 
-  // Header 클릭
-  // content 의 내용을 Artical 로 바꿈
+  // Header
+  // content 의 내용을 기본으로 바꿈
   if (mode === "WELCOME") {
-    content = <Artical title="Welcome" body="Hello, WEB"></Artical>
+    content = <Article title="Welcome" body="Hello, WEB"></Article>
   }
-  // Nav 클릭, Create 클릭 이후
-  // 클릭한 Nav 의 제목과 내용을 가져와 Artical 로 출력
+  // Nav, Create
+  // 클릭한 Nav 의 제목과 내용을 가져와 Article 로 출력
   else if (mode === "READ") {
     let title, body = null;
     for (let i = 0; i < topics.length; i++) {
@@ -137,21 +178,61 @@ function App() {
         body = topics[i].body;
       }
     }
-    content = <Artical title={title} body={body}></Artical>;
+    content = <Article title={title} body={body}></Article>;
+    // 형식을 지키기 위해 '/update/'+id 사용
+    contextControl = <li><a href={'/update/'+id} onClick={event=>{
+      event.preventDefault();
+      setMode('UPDATE');
+    }}>Update</a></li>;
   }
-  // Create 클릭
-  // Nav 내용에 새로운 내용을 추가하여 갱신
-  // state 이기 때문에 코드가 다시 실행되면서 Nav 내용이 갱신됨
+  // Create
+  // topics 에 새로운 내용을 추가하여 갱신
+  // topics 는 state 이기 때문에 코드가 다시 실행되면서 Nav 내용이 topics 에 따라 갱신됨
   else if (mode === "CREATE") {
+    // Create component 생성
+    // submit 했을 때 onCreate 함수가 실행됨
     content = <Create onCreate={(title, body)=> {
       // 1. newValue = {...value} 로 복제
       // 2. newValue 변경
       // 3. setValue(newValue) 로 데이터 변경 
-      const newTopic = {id:nextId, title:title, body:body};
-      const newTopics = [...topics];
-      newTopics.push(newTopic);
-      setTopics(newTopics);
+      const newTopic = {id:nextId, title:title, body:body}; // 유저로부터 입력받은 새로운 데이터
+      const newTopics = [...topics];  // 기존 topics 깊은 복사
+      newTopics.push(newTopic);       // 복사된 데이터에 새로운 데이터 추가
+      setTopics(newTopics);           // 새로운 데이터가 추가된 데이터로 setting
+
+      setMode('READ');                // content 를 Nav 의 li 로 바꿈
+      setId(nextId);                  // Nav 의 마지막 li 을 index 로 잡음
+      // nextId 가 Nav 의 마지막 li 을 가리키면서
+      // "READ" 로 설정된 mode 에 따라 Nav 의 마지막 li 이 Article 태그로 content 에 표시된다
+      setNextId(nextId+1);            // 다음으로 설정할 index +1
+      // +1 값이 들어가서 처음엔 코드가 한 번 더 돌지만,
+      // mode 와 nextId 값은 도는 중에 변하지 않으므로 모두 통과,
+      // 해당 코드도 파라미터가 이전과 동일한 nextId+1 이므로 통과한다 
     }}></Create>
+  }
+  // Update
+  // Nav 에서 선택된 요소의 title, body 를 다른 값으로 바꿈
+  else if (mode === "UPDATE") {
+    // mode 가 "READ" 일 때 title, body 를 추출하는 코드
+    // 해당 id (바꿀 id) 의 title, body 를 가져와 Update 의 input 값의 디폴트 값으로 넣는다
+    let title, body = null;
+    for (let i = 0; i < topics.length; i++) {
+      if (topics[i].id === id) {
+        title = topics[i].title;
+        body = topics[i].body;
+      }
+    }
+    // 바꿀 id 의 title, body 를 props parameter 로 전달
+    content = <Update title={title} body={body} onUpdate={(title, body)=>{
+      // topics 의 해당 id 내용을 갱신된 값으로 바꾼다
+      const newTopics = [...topics];
+      // READ 한 상태에서 update 가 되기 때문에 해당 id 가 유지된다
+      const updatedTopic = {id:id, title:title, body:body};
+      for (let i = 0; i < newTopics.length; i++) 
+        if (newTopics[i].id === id) {newTopics[i] = updatedTopic; break;}
+      setTopics(newTopics);
+      setMode("READ");  // 다시 "READ" 모드로 돌아간다
+    }}></Update>;
   }
 
   // 태그
@@ -168,22 +249,23 @@ function App() {
         setId(id);
       }}></Nav>
 
-      <Artical title="Welcome" body="Hello, WEB"></Artical>
-      <Artical title="Welcome" body="Hi, WEB"></Artical>
+      <Article title="Welcome" body="Hello, WEB"></Article>
+      <Article title="Welcome" body="Hi, WEB"></Article>
       
       {/* 요소를 조건에 따라 마음대로 바꿀 수 있음 */}
       {content}
 
       <br></br>
 
-      <a href='/create' onClick={event=> {
-        event.preventDefault();
-        setMode("CREATE");
-        // setMode('READ');
-        // setId(nextId);
-        // setNextId(nextId+1);
-      }}>Create</a>
-
+      <ul>
+        <li>
+          <a href='/create' onClick={event=> {
+            event.preventDefault();
+            setMode("CREATE");
+          }}>Create</a></li>
+        {contextControl}
+      </ul>
+      
     </div>
   );
 }
@@ -191,7 +273,35 @@ function App() {
 export default App;
 
 // 정리
-// content 요소를 정함
-// mode 변수로 content 안에 뭐가 들어갈지 결정
-// state 를 사용하면 mode 가 바꿀 때마다 전체 코드를 수행,
-// 조건문에 따라 content 안의 내용이 바뀌게 된다
+
+// props 에 필요한 데이터를 담아 전달해서 이벤트를 수행한다
+// state 변수를 바꾸는 행위는 props 함수 안에서만 한다
+// props 안의 함수는 선언문이므로 함수의 파라미터 변수를 같이 전달하는 게 아니다
+
+// create, update 는 a 태그이기 때문에 클릭했을 때 함수가 바로 실행, state 변수를 갱신한다
+// Header, Nav 는 component 선언부에 a 태그가 존재하여 onClick 이벤트를 따로 주고,
+// onClick 안에서 props 함수를 불러 state 변수를 갱신한다
+// 모든 a 태그의 기본 기능은 제거
+
+// Nav 선언부는 js 문법으로 li 를 topics 만큼 생성
+// state 변화로 코드가 처음부터 시작되고 선언부가 다시 한번 불릴 때 
+// Nav 의 내용이 topics 를 따라가게 된다 
+// 또한 Nav 의 li a 태그에서 onClick 이벤트가 수행될 때
+// 해당 li a 태그의 id 값이 props 함수 파라미터로 전달되면서
+// state 인 id 값을 갱신하게 된다
+// mode 가 "READ" 일 때 해당 id 값을 참고하여 Nav 의 어떤 li 를 띄울지 결정한다
+
+// Create
+// mode 가 "CREATE" 일 때 content 는 Create component 가 나온다
+// Create component 안에는 form 태그가 있으며 그 안에는 input (text, submit) 태그 가 들어있다
+// App 함수에서 Create component 를 구성할 때 onCreate 라는 props 함수를 전달하며
+// title, body 값을 input 을 통해 받아 state 변수인 topics 를 갱신하는 역할을 한다
+// 이 함수는 Create componenet 의 submit 에 의해 불린다
+// 즉, Create 를 누르면 form 태그가 나오고
+// submit 을 하면 onCreate 함수라 불리며 topics 가 갱신된다
+// 이후 mode, id, nextId 값도 갱신된다 (방식은 위의 실행 코드 주석 참고)
+
+// a 태그 (그리고 a 태그 내부 props 함수) 에 의해 mode 가 갱신되며
+// 조건문에 따라 content 에 보여줄 내용을 결정한다
+// 형식상 state 변수 갱신 함수는 App 함수에서만 하게끔 되어 있다
+
