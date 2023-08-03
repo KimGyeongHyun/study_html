@@ -17,6 +17,11 @@
     font-weight: bold;
 }
 
+.swiper-slide>div {
+    width: 80%; height: 80%;
+    margin: auto;
+}
+
 .down {font-size: 50px;}
 
 .img1 {background-image: url('../img/a.jpg');}

@@ -2,6 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react'; // state 사용
 
+// 리액트 장점
+// 1. component 를 함수화하여 사용할 수 있음
+//  -> component 단위로 수정, 추가, 삭제 가능
+// 2. 링크를 눌렀을 때 다른 페이지로 이동하는 대신 한 페이지에서 모두 처리할 수 있음
+//  (데이터 변경시 효율적인 랜더링 수행 가능)
+//  -> component 함수화 덕분. 조건문으로 어떤 component 를 보여줄지 결정할 수 있음
+
+// component 함수화와 동시에 필요한 정보를 파라미터로 전달할 수 있기 때문에
+// 선언부에 큰 틀만 잡고 출력할 정보들을 파라미터로 전달하는 방식을 사용할 수 있음
+// state 변경 시 재랜더링 되기 때문에 바뀐 상태로 선언부부터 다시 정의하여 component 를 표현할 수 있음
+// 즉, component 에서 유동적으로 바뀌는 것들은 js 반복문, {} 로 구성하기
+
+// component 의 return 부는 html 형식으로 작성되지만
+// js 안에서 html 문법을 작성하는 것이기 때문에 실제로 html 문법을 사용하는 것이 아니라
+// js 에서 html 로 '작성하게끔' 해주는 JSX 문법을 사용한다 
+//    (원래는 React.~~~ 의 방식으로 component 가 생성됨)
+//    (js 에서 작성한 html 문법을 react 문법으로 바꿔주는 역할을 함)
+// 때문에 실제 html 문법과 조금 다를 수 있으며
+// class 는 js 에서 class 선언부에 사용되기 때문에
+// class='' 대신 className='' 으로 사용하는게 좋다
+
 // 각 function 을 component 라고 부름
 // component 에 전달되는 것 : props
 // props 에 속성값이 한꺼번에 들어간다
@@ -180,10 +201,24 @@ function App() {
     }
     content = <Article title={title} body={body}></Article>;
     // 형식을 지키기 위해 '/update/'+id 사용
-    contextControl = <li><a href={'/update/'+id} onClick={event=>{
+    // <></> 는 복수의 태그를 그루핑하기 위한 태그
+    // Update, Delete 요소 가짐
+    contextControl = 
+    <>
+      {/* Update link */}
+      <li><a href={'/update/'+id} onClick={event=>{
       event.preventDefault();
       setMode('UPDATE');
-    }}>Update</a></li>;
+      }}>Update</a></li>
+      {/* Delete button */}
+      <li><input type='button' value='Delete' onClick={()=>{
+        const newTopics = [];
+        for (let i = 0; i<topics.length ; i++)
+          if (topics[i].id !== id) newTopics.push(topics[i]);
+          setTopics(newTopics);
+          setMode("WELCOME");
+      }}></input></li>
+    </>;
   }
   // Create
   // topics 에 새로운 내용을 추가하여 갱신
