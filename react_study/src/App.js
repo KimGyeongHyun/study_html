@@ -5,6 +5,7 @@ import {useState} from 'react'; // state 사용
 // 리액트 장점
 // 1. component 를 함수화하여 사용할 수 있음
 //  -> component 단위로 수정, 추가, 삭제 가능
+//  -> html 으로만 구성하면 많은 div 로 인해 코드가 더러워짐. 이를 해결할 수 있음
 // 2. 링크를 눌렀을 때 다른 페이지로 이동하는 대신 한 페이지에서 모두 처리할 수 있음
 //  (데이터 변경시 효율적인 랜더링 수행 가능)
 //  -> component 함수화 덕분. 조건문으로 어떤 component 를 보여줄지 결정할 수 있음
@@ -169,9 +170,16 @@ function App() {
 
   // 변하는 데이터가 원시 데이터면 그대로 실행
   // 아니라면(객체, list 등) 다르게 구성해야 함
+  // 객체나 list 의 경우 내부 데이터가 변경 되더라 하더라도
+  // 참조값이 변하지 않았으므로 데이터가 변경 되지 않았다고 판단,
+  // setState 에 따른 재랜더링이 일어나지 않는다
+  // 따라서 새로운 객체를 생성하여 데이터 수정 후 setState 하는 것
+
+  // 리스트의 경우
   // 1. newValue = [...value] 로 복제
   // 2. newValue 변경
   // 3. setValue(newValue) 로 데이터 변경 
+
   const [id, setId] = useState(null);   // id : 현재 id 저장
   const [nextId, setNextId] = useState(4);  // nextId : id 가 다음으로 변할 값 저장
   // Nav 에 들어가는 id, title, body 값 저장
@@ -340,3 +348,10 @@ export default App;
 // 조건문에 따라 content 에 보여줄 내용을 결정한다
 // 형식상 state 변수 갱신 함수는 App 함수에서만 하게끔 되어 있다
 
+// state 변경 시 무한루프에 빠질까 걱정되는 부분
+// 위의 코드는 click, submit 등 한 번만 호출되는 이벤트 상황에서만 실행된다
+// 따라서 재랜더링 되는 경우에도 이벤트가 발생되지 않았으므로 setState 를 돌지 않는다
+// setState 가 여러개인 onCreate 의 경우도
+// submit 을 할 때만 setState 가 불리는데
+// submit 은 한 번만 제출되므로 state 값이 호출되면 해당 state 는 setState 이후 다음 setState 로 지나간다
+// 결국 모든 setState 를 돌고 바뀐 state 값에 따라 결과가 출력된다
