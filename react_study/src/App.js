@@ -25,6 +25,8 @@ import {useState} from 'react'; // state 사용
 // class='' 대신 className='' 으로 사용하는게 좋다
 
 // 각 function 을 component 라고 부름
+// 하나의 태그를 component 로 구성하여 리턴하는 방식
+// 여러 개의 태그를 한꺼번에 리턴하고 싶으면 <></> 안에 싸서 리턴하면 된다
 // component 에 전달되는 것 : props
 // props 에 속성값이 한꺼번에 들어간다
 // 속성에 변수, 리스트, 함수 모두 들어감
@@ -347,11 +349,19 @@ export default App;
 // a 태그 (그리고 a 태그 내부 props 함수) 에 의해 mode 가 갱신되며
 // 조건문에 따라 content 에 보여줄 내용을 결정한다
 // 형식상 state 변수 갱신 함수는 App 함수에서만 하게끔 되어 있다
+// (실제로는 이벤트 상황에서 state 가 갱신됨)
 
 // state 변경 시 무한루프에 빠질까 걱정되는 부분
-// 위의 코드는 click, submit 등 한 번만 호출되는 이벤트 상황에서만 실행된다
+// setState 는 click, submit 등 한 번만 호출되는 이벤트 상황에서만 실행된다
 // 따라서 재랜더링 되는 경우에도 이벤트가 발생되지 않았으므로 setState 를 돌지 않는다
 // setState 가 여러개인 onCreate 의 경우도
 // submit 을 할 때만 setState 가 불리는데
 // submit 은 한 번만 제출되므로 state 값이 호출되면 해당 state 는 setState 이후 다음 setState 로 지나간다
 // 결국 모든 setState 를 돌고 바뀐 state 값에 따라 결과가 출력된다
+
+// 최종 정리
+// App 함수에서 이벤트 상황에 setState 를 실행할 코드를 선언하여 component 의 props 로 전달,
+// component 가 호출되면서 App 에서 선언한 함수를 이벤트에 사용한다
+// content 내용 변화는 mode, 나머지 세부적인 변화들은 다른 state 변수들을 사용
+// 최종 내용은 App return 부에 있으며,
+// 그 전의 내용은 mode 에 따른 content 내용 변경, state 선언, props 함수 선언
