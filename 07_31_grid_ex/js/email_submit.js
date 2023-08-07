@@ -1,5 +1,8 @@
 // 이메일 주소를 받아 처리할 때 실행되는 함수
-function email_submitted() {alert("Thank you so much!");}
+function email_submitted() {
+    alert("Thank you so much!");            // 이벤트 처리
+    $('.input-wrapper input').val("");      // 내용 제거
+}
 
 // Submit 버튼을 눌렀을 때 이벤트 처리
 $('#email-btn').click(email_submitted);
@@ -13,7 +16,6 @@ $(()=>{
         if (event.keyCode == 13) {
             event.preventDefault();     // 기존 입력 무시
             email_submitted();          // 이벤트 처리
-            input_box.val("");          // 내용 삭제
         }
     });
 });

@@ -26,6 +26,7 @@
 }
 .header .logo .logo-right i {color: #79acd1; margin: 2px;}
 .header .logo .logo-right button {
+    cursor: pointer;
     font-size: 8px;
     background-color: #79acd1; color: white; border: none;
     width: 70px; height: 30px; margin: 5px; padding: 0px;
@@ -277,8 +278,8 @@
     flex-direction: column;
 }
 .footer ul li {
+    cursor: pointer;
     padding: 10px;
-    
     font-size: 15px;
 }
 .footer .input-wrapper {
@@ -286,6 +287,7 @@
 }
 .footer .input-wrapper input {height: 25px; margin: 5px;}
 .footer .input-wrapper button {
+    cursor: pointer;
     height: 27px; margin: 5px; padding: 2px;
     border: 1px solid black;
 }
@@ -301,14 +303,17 @@
     background-color: black;
 }
 .popup i {
+    cursor: pointer;
     position: absolute; top: 15px; right: 25px;
     color: white;
 }
 .popup>ul {
     list-style: none; color: #dddddd;
+    width: 200px;
 }
 .popup>ul li {
-    padding: 20px;
+    cursor: pointer;
+    font-size: 30px; font-weight: bold; padding: 20px;
 }
 
 .subpopup {
@@ -318,12 +323,16 @@
     background-color: #aaaaaa;
     list-style: none;
 }
-.subpopup h2{font-size: 24px; padding: 20px;}
+.subpopup h2{font-size: 30px; font-weight: bold; padding: 20px;}
 .subpopup i {
+    cursor: pointer;
     position: absolute; top: 15px; right: 25px;
     color: black;
 }
+.subpopup>ul {width: 200px;}
 .subpopup>ul li {
+    cursor: pointer;
+    font-size: 20px;
     padding: 20px;
 }
 
@@ -343,11 +352,11 @@
 @keyframes fade_in {0% {opacity: 0;} 100% {opacity: 1;}}
 
 @media (max-width: 1200px) {
-    .footer h2 {font-size: 15px; padding: 20px;}
-    .footer>h2 {font-size: 20px;}
+    .footer h2 {font-size: 20px; padding: 20px;}
+    .footer>h2 {font-size: 25px;}
     .footer ul li {
         padding: 10px;
-        font-size: 10px;
+        font-size: 14px;
     }
     .footer p {
         font-size: 12px;
@@ -357,6 +366,8 @@
 @media (max-width: 800px) {
 
     .nav {height: 400px;}
+    .nav .swiper-slide h1 {font-size: 30px;}
+    .nav .swiper-slide h2 {font-size: 16px;}
 
     .grid-section {width: 560px;}
     .grid-section .grid-wrapper {
@@ -372,6 +383,8 @@
 
     .tab-section img {display: none;}
     .tab-section {justify-content: left;}
+
+    .footer>h2 {display: none;}
 }
 @media (max-width: 600px) {
 
