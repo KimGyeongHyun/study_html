@@ -2,7 +2,7 @@ function slide_left(str) {$(str).animate({left: 0}, 500);}
 function slide_right(str) {$(str).animate({left: '110vw'}, 500);}
 
 $('.header .menu .menu-box>i').click(()=>{slide_left('.popup');});
-$('.popup i').click(()=>{slide_right('.popup');});
+$('.popup>i').click(()=>{slide_right('.popup');});
 
 $('.popup>ul #popup1').click(()=>{slide_left('.sub1');});
 $('.popup>ul #popup2').click(()=>{slide_left('.sub2');});
