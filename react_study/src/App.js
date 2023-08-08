@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react'; // state 사용
+import {Modal} from './component/modal.jsx'
 
 // 리액트 장점
 // 1. component 를 함수화하여 사용할 수 있음
@@ -280,6 +281,8 @@ function App() {
     }}></Update>;
   }
 
+  let [modal, setModal] = useState(false);
+
   // 태그
   return (
     <div className="App">
@@ -310,6 +313,9 @@ function App() {
           }}>Create</a></li>
         {contextControl}
       </ul>
+
+      <button onClick={()=>{setModal(!modal);}}>Modal button</button>
+      {modal == true ? <Modal/> : null}
       
     </div>
   );
