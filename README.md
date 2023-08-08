@@ -31,6 +31,6 @@ Fullpage 디자인
 </a>
 
 Web page 디자인 
-<a href = "https://kimgyeonghyun.github.io/study_html/07_31_grid_ex/html/" target="_blank">
+<a href = "https://kimgyeonghyun.github.io/study_html/07_31_web_page/html/" target="_blank">
 <img src="https://img.shields.io/badge/WebPage-00ff00">
 </a>
