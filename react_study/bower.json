@@ -1,0 +1,13 @@
+{
+  "name": "react_study",
+  "description": "vigene",
+  "main": "src",
+  "authors": [
+    "KimGyeongHyun <potter9602@naver.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/KimGyeongHyun/study_html"
+}

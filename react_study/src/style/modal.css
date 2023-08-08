@@ -14,4 +14,6 @@
     text-align: center;
 }
 
-.modal h2 {margin: 30px;}
+.modal .inner-box h2 {margin: 30px;}
+.modal .inner-box p {margin: 30px;}
+.modal .inner-box i {position: fixed; top: 20px; right: 20px;}

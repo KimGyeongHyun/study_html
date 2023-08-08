@@ -315,7 +315,7 @@ function App() {
       </ul>
 
       <button onClick={()=>{setModal(!modal);}}>Modal button</button>
-      {modal == true ? <Modal/> : null}
+      {modal == true ? <Modal flag='false'/> : null}
       
     </div>
   );

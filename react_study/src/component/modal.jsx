@@ -1,13 +1,20 @@
 import { useState } from "react";
 import '../style/modal.css'
 
-const Modal = ()=>{
-    return <div className="modal">
-        <div className="inner-box">
-            <h2>Modal</h2>
-            <p>hello</p>
+const Modal = (props)=>{
+
+    let [flag, flagState] = useState(false);
+
+    return (
+        <div className="modal">
+            <div className="inner-box">
+                <i className="xi-close" onClick={()=>{flagState(true)}}></i>
+                <h2>Modal</h2>
+                <p>hello</p>
+            </div>
         </div>
-    </div>
+    )
+    
 }
 
 export {Modal}
