@@ -1,0 +1,7 @@
+alt shift down : 한 줄 코드 아래 복사
+alt down : 한 줄 코드 이동
+
+ctrl k 0 : 모두 접기
+ctrl k j : 모두 펴기
+
+ctrl k f : 자동 줄맞춤
