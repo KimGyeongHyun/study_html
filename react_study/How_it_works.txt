@@ -1,0 +1,14 @@
+index.html
+    index.html 은 폴더 주소로 도메인이 연결되었을 때 실행되는 html
+    빌드에서 -s 옵션을 사용하면 폴더 어느 주소로 접속하던 index.html 로 접속한다
+
+    index.html 에서 기본적인 html 요소를 구성하고
+    index.css 에서 디자인 수행,
+    필요한 곳에 React 로 요소를 구성할 수 있다
+    따라서 고정되어 있는 태그는 html 에, 바뀌는 태그는 React 에 구현한다
+
+    default 에선 index.html 안에 root 이란 id 를 가지는 div 가 존재한다
+    React 에서 root 를 가지는 id 를 선택자로 가져와
+    
+
+App.js

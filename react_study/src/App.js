@@ -282,7 +282,8 @@ function App() {
   }
 
   let [modal, setModal] = useState(false);
-
+  console.log(modal);
+  
   // 태그
   return (
     <div className="App">
@@ -315,7 +316,7 @@ function App() {
       </ul>
 
       <button onClick={()=>{setModal(!modal);}}>Modal button</button>
-      {modal == true ? <Modal flag='false'/> : null}
+      {modal == true ? <Modal onChangeMode = {()=>{setModal(!modal)}}/> : null}
       
     </div>
   );
