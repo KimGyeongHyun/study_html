@@ -7,7 +7,7 @@
     "words" : [
         {
             "id" : 1, "day" : 1, "eng" : "book", 
-            "kor" : "책", "isDone" : false
+            "kor" : "책", "isDone" : true
         },
         {
             "id" : 2, "day" : 1, "eng" : "apple", 

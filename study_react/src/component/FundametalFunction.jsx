@@ -144,7 +144,6 @@ function Update(props) {
 
 function Fundamental_function() {
   // 객체 배열을 만들어 Nav props에 전달
-  console.clear();
 
   // 어떤 요소를 클릭했을 때 js 안의 변수를 바꾸면서
   // 다른 요소의 내용을 갱신해야 할 때

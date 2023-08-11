@@ -1,0 +1,30 @@
+import { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import './Words.css'
+
+export default function Word({word}) {
+
+    const [isShow, setIsShow] = useState(false);
+    const [isDone, setIsDone] = useState(word.isDone)
+
+    function toggleShow() {setIsShow(!isShow);}
+    function toggleDone() {setIsDone(!isDone);}
+
+    return <>
+    <thead>
+    <tr className={isDone ? "off" : ""}>
+        <th><input type="checkbox" checked={isDone}
+        onChange={toggleDone}
+        style={{width:"20px", height:"20px"}}/></th>
+        <th>{word.eng}</th>
+        <th style={{width: "200px"}}>{isShow && word.kor}</th>
+        <th>
+            <Button variant="success" onClick={toggleShow}>뜻 
+            {isShow ? " 숨기기" : " 보기"}
+            </Button>
+            <Button variant="warning">삭제</Button>
+        </th>
+    </tr>
+    </thead>
+    </>
+}

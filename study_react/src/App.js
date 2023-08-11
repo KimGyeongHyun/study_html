@@ -7,7 +7,6 @@ import MyModal from './component/MyModal';
 import MyBrouserRouter from './component/wordsComponent/MyBrouserRouter'
 
 function App() {
-  console.clear();
 
   const [radioValue, setRadioValue] = useState('1');
   var body = null;

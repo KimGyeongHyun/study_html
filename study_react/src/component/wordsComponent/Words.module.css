@@ -1,0 +1,27 @@
+.box {display: flex; justify-content: space-between;}
+.menu {display: flex; justify-content: center;}
+
+.nat {text-decoration: none; color: black;}
+.btn {
+    text-decoration: none; color: black;
+    border: 1px solid black; margin: 5px; padding: 5px;
+    background-color: #dddddd;
+}
+.dayList {
+    height: 100px;
+    list-style: none;
+    display: flex; flex-direction: row;
+    align-items: center;
+}
+.dayText {
+    margin: 15px;   padding: 20px 30px;
+    border-radius: 10px;
+    background-color: blue; color: white;
+    text-decoration: none; color: white;
+}
+
+.day{font-size: 32px; padding: 20px;}
+.tb {margin: 20px;}
+.tbEle {padding: 10px; border: 1px solid black;}
+
+.off {background-color: gray;}
