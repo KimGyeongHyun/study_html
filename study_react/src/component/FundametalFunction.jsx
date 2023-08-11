@@ -277,8 +277,6 @@ function Fundamental_function() {
       setMode("READ");  // 다시 "READ" 모드로 돌아간다
     }}></Update>;
   }
-
-  let [modal, setModal] = useState(false);
   
   // 태그
   return (

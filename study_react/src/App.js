@@ -1,9 +1,10 @@
 import './App.css';
 import { useState } from 'react'; // state 사용
-import BootstrapModalModal from './component/BootstrapModal'
-import Fundamental_function from './Pages/Fundametal_function';
+import BootstrapModal from './component/MyBootstrapModal'
+import FundamentalFunction from './component/FundametalFunction';
 import RadioButton from './component/RadioButton';
 import MyModal from './component/MyModal';
+import MyBrouserRouter from './component/wordsComponent/MyBrouserRouter'
 
 function App() {
   console.clear();
@@ -11,9 +12,13 @@ function App() {
   const [radioValue, setRadioValue] = useState('1');
   var body = null;
 
-  if (radioValue == '1') body = <Fundamental_function/>
-  else if (radioValue == '2') body = <BootstrapModalModal/>
-  else if (radioValue == '3') body = <MyModal/>
+  // add, delete, update
+  if (radioValue === '1') body = <FundamentalFunction/>
+  else if (radioValue === '2') body = <BootstrapModal/>
+  // module.css
+  else if (radioValue === '3') body = <MyModal/>
+  // map, filter
+  else if (radioValue === '4') body = <MyBrouserRouter/>
   
   return <>
 

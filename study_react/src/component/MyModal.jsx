@@ -1,13 +1,14 @@
 
 import { useState } from 'react'
-import '../style/MyModal.css'
+import styles from "./MyModal.module.css"
+import {GrClose} from 'react-icons/gr';
 
 function ModalWindow(props) {
-    return <div className="my-modal">
-        <div className="inner-box">
-            <i className="xi-close" onClick={()=>{props.onChangeMode();}}></i>
-            <h2>Modal</h2>
-            <p>hello</p>
+    return <div className={styles.modalWindow}>
+        <div className={styles.innerBox}>
+            <GrClose className={styles.iDeco} size={25} onClick={()=>{props.onChangeMode();}}></GrClose>
+            <h2 className={styles.h2Deco}>Modal</h2>
+            <p className={styles.pDeco}>hello</p>
         </div>
     </div>
 }

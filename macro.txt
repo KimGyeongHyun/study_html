@@ -5,3 +5,5 @@ ctrl k 0 : 모두 접기
 ctrl k j : 모두 펴기
 
 ctrl k f : 자동 줄맞춤
+
+ctrl shift ` : 커맨드 창

@@ -1,10 +1,10 @@
-.my-modal {
+.modalWindow {
     position: fixed; 
     width: 100vw; height: 100vh;
     left: 0; top: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.my-modal .inner-box {
+.innerBox {
     position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 200px; height: 200px;
@@ -15,6 +15,6 @@
     text-align: center;
 }
 
-.my-modal .inner-box h2 {margin: 30px;}
-.my-modal .inner-box p {margin: 30px;}
-.my-modal .inner-box i {position: fixed; top: 20px; right: 20px;}
+.h2Deco {margin: 30px;}
+.pDeco {margin: 30px;}
+.iDeco {position: fixed; top: 15px; right: 15px;}

@@ -1,0 +1,9 @@
+.box {display: flex; justify-content: space-between;}
+.menu {display: flex; justify-content: center;}
+
+.nat {text-decoration: none; color: black;}
+.btn {
+    text-decoration: none; color: black;
+    border: 1px solid black; margin: 5px; padding: 5px;
+    background-color: #dddddd;
+}
