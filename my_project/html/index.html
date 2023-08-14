@@ -4,9 +4,17 @@
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title></title>
+
+<!-- icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- swiper slide -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 <!-- js -->
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
 <!-- custom css -->
@@ -16,79 +24,166 @@
 <body>
 
     <section class="header">
+        <div class="header-nav">
+            <ul>
+                <li>홈</li>
+                <li>|</li>
+                <li>로그인</li>
+                <li>|</li>
+                <li>회원가입</li>
+                <li>|</li>
+                <li><i class="xi-instagram xi-2x"></i></li>
+            </ul>
+        </div>
+        <div class="main-slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide s1">
+                    <div>
+                        <h2>달달한 디저트</h2>
+                        <h3>빵, 과자, 케이크, 등 다양하고 달달한 디저트가 준비되어 있습니다</h3>
+                        <!-- <button>Get in touch</button> -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide s2">
+                    <div>
+                        <h2>신선한 재료 인증 마크</h2>
+                        <h3>자체 인증 마크로 믿고 먹을 수 있는 식당만 엄선했습니다</h3>
+                        <!-- <button>Get in touch</button> -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide s3">
+                    <div>
+                        <h2>다양한 종류의 음식</h2>
+                        <h3>육. 해. 공. 가리지 않고 다 모아놨다~!</h3>
+                        <!-- <button>Get in touch</button> -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide s4">
+                    <div>
+                        <h2>사장님 응원해요! 이벤트 중~</h2>
+                        <h3>이벤트에 응모하고 사은품을 받아가세요</h3>
+                        <!-- <button>Get in touch</button> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+            <script>
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+            });
+            </script>
+        </div>
+    </section>
 
+    <section class="intro">
+        <!-- <h2>다양한 먹을거리가 당신을 찾아갑니다</h2> -->
+        
     </section>
 
     <section class="menu-section">
-        <div class="inner-box">
-            <h2>이달의 치킨 메뉴</h2>
-            <div class="container menu-right" data-aos="fade-left">
-                <div class="item">
-                    <div class="food-img img1"></div>
-                    <div class="text-box">
-                        <h3>BHC 뿌링클</h3>
-                        <p>뿌링뿌링! 세상에 없던 마법의 맛 뿌링클</p>
+        <div class="menu-wrapper">
+            <div class="inner-box inner-right">
+                <div class="menu" data-aos="fade-left">
+                    <h2>이 달의 치킨 메뉴</h2>
+                    <div class="container">
+                        <div class="item">
+                            <div class="food-img img1"></div>
+                            <div class="text-box">
+                                <h3>BHC 뿌링클</h3>
+                                <p>뿌링뿌링! 세상에 없던 마법의 맛 뿌링클</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img2"></div>
+                            <div class="text-box">
+                                <h3>BBQ 황금올리브</h3>
+                                <p>바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img3"></div>
+                            <div class="text-box">
+                                <h3>교촌 허니콤보</h3>
+                                <p>달콤한 허니소스에 쫄깃한 날개와
+                                    담백한 다리가 만난 메뉴</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="food-img img2"></div>
-                    <div class="text-box">
-                        <h3>BBQ 황금올리브</h3>
-                        <p>바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨</p>
+            </div>
+        </div>
+    
+        <div class="menu-wrapper">
+            <div class="inner-box inner-left">
+                <div class="menu" data-aos="fade-right">
+                    <h2>이 달의 버거 메뉴</h2>
+                    <div class="container">
+                        <div class="item">
+                            <div class="food-img img4"></div>
+                            <div class="text-box">
+                                <h3>롯데리아 새우버거</h3>
+                                <p>새우가 통째로! 수제버거 못지않은 패티 퀄리티</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img5"></div>
+                            <div class="text-box">
+                                <h3>맥도날드 불고기버거</h3>
+                                <p>진한 불고기 소스의 패티가 두 장!</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img6"></div>
+                            <div class="text-box">
+                                <h3>버거킹 와퍼</h3>
+                                <p>불에 직접 구운 순 쇠고기 패티에 싱싱한 야채가 한가득~</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="food-img img3"></div>
-                    <div class="text-box">
-                        <h3>교촌 허니콤보</h3>
-                        <p>달콤한 허니소스에 쫄깃한 날개와
-                            담백한 다리가 만난 메뉴</p>
+            </div>
+        </div>
+    
+        <div class="menu-wrapper">
+            <div class="inner-box inner-right">
+                <div class="menu" data-aos="fade-left">
+                    <h2>바로 배송~ 중국집 메뉴</h2>
+                    <div class="container">
+                        <div class="item">
+                            <div class="food-img img7"></div>
+                            <div class="text-box">
+                                <h3>짜장면</h3>
+                                <p>와 짜장면! 커피보다 싸다!</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img8"></div>
+                            <div class="text-box">
+                                <h3>짬뽕</h3>
+                                <p>얼큰하고 시원한 국물이 생각날 땐~</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="food-img img9"></div>
+                            <div class="text-box">
+                                <h3>볶음밥</h3>
+                                <p>밥은 먹고 다니자! 불맛 제대로 볶음밥</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="menu-section" id="section2">
-        <div class="inner-box">
-            <h2>이 달의 버거 메뉴</h2>
-            <div class="container menu-left" data-aos="fade-right">
-                <div class="item">
-                    <div class="food-img img4"></div>
-                    <div class="text-box">
-                        <h3>롯데리아 새우버거</h3>
-                        <p>뿌링뿌링! 세상에 없던 마법의 맛 뿌링클</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="food-img img5"></div>
-                    <div class="text-box">
-                        <h3>맥도날드 불고기버거</h3>
-                        <p>비비큐의 시그니처 메뉴 후라이드의 대명사</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="food-img img6"></div>
-                    <div class="text-box">
-                        <h3>버거킹 와퍼</h3>
-                        <p>달콤한 허니소스에 쫄깃한 날개와
-                            담백한 다리가 만난 메뉴</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="menu-section" id="section3">
-        <div class="inner-box">
-            <h2>h4</h2>
-            <div class="container">
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-            </div>
-        </div>
-    </section>
+    
 
     <script>
         AOS.init();
