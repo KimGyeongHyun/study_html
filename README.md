@@ -37,5 +37,5 @@ Web page 디자인
 
 React 
 <a href = "https://kimgyeonghyun.github.io/study_html/study_react/build/" target="_blank">
-<img src="https://img.shields.io/badge/WebPage-02066f">
+<img src="https://img.shields.io/badge/React-02066f">
 </a>

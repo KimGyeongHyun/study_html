@@ -1,0 +1,8 @@
+title 부분 부제목 animation
+
+3개의 메뉴를 한 화면에 배치
+AOS
+
+TroubleShooting
+    fullpage 와 AOS 호환 문제
+    fullpage 에서 지원하는 

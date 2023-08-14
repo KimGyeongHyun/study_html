@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Jua";
+	src: url('../fonts/Jua/Jua-Regular.ttf');
+	font-weight: 400;
+}
+*{margin: 0; padding: 0;}
+
+.header {
+	width: 100vw; height: 100vh;
+	background-color: black;
+}
+
+.menu-section {
+	position: relative;
+	font-family: "Jua";
+	height: 500px;
+}
+.container {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+    display: grid; gap: 4vw 4vw;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(1, 24vw);
+}
+.container .item {
+    background-color: white;
+	border-radius: 3vw; overflow: hidden;
+}
+.container .item .food-img {
+	width: 18vw; height: 12vw;
+    background-size: cover;
+    background-position: center center;
+}
+.container .item .text-box {
+	font-family: "Jua";
+	box-sizing: border-box;
+	width: 18vw; height: 12vw; padding: 2vw;
+	display: flex; flex-direction: column;
+	justify-content: center; align-items: center;
+}
+.container .item .text-box h3 {font-size: 1.8vw;}
+.container .item .text-box p {font-size: 0.9vw;}
+
+/* .menu-right {transform: translateX(5%);}
+.menu-left {transform: translateX(-5%);} */
+
+.img1 {background-image: url('../img/bburingkle.png');}
+.img2 {background-image: url('../img/goldenOlive.png');}
+.img3 {background-image: url('../img/HoneyCombo.png');}
+.img4 {background-image: url('../img/LotteShrimp.png');}
+.img5 {background-image: url('../img/MacBull.png');}
+.img6 {background-image: url('../img/KingWhopper.png');}
+
+#section0 h1{font-size: 60px; text-align: center; color: white;}
+#section1 h2 {font-size: 50px; color: white; margin: 20px;}
+#section2 h2 {font-size: 50px; color: white; margin: 20px;}
+#section3 h2 {font-size: 50px; color: white; margin: 20px;}
+
+@media (max-width: 600px) {
+	.container .item .text-box p {display: none;}
+}
