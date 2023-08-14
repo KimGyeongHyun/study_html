@@ -6,4 +6,5 @@ ctrl k j : 모두 펴기
 
 ctrl k f : 자동 줄맞춤
 
-ctrl shift ` : 커맨드 창
+ctrl shift ` : 커맨드 추가
+ctrl ` : 커맨드 창 열기
