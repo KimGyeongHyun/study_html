@@ -2,6 +2,9 @@ import {useNavigate} from "react-router-dom"
 import Button from 'react-bootstrap/Button'
 import { useEffect, useState } from "react";
 
+// 날짜를 버튼으로 출력
+// 각 버튼에 날짜 정보를 가지는 주소를 구성하고
+// 해당 주소로 이동하는 클릭 이벤트 추가
 export default function DayList() {
     // console.log(dummy);
     const navigate = useNavigate();
@@ -24,14 +27,8 @@ export default function DayList() {
     // 랜더링 이후 API 를 부를 때는 빈배열을 집어 넣음
     // 한 번만 실행됨
 
-
-
     return <>
     <div>
-        {
-            // dummy 안의 days 를 day 로 하나씩 가져온다
-            // day 객체는 각각 id 와 day 를 가진다
-        }
         {days.map(day=>(
             <Button key={day.id} variant="primary" onClick={()=>{
                 navigate(`/day/${day.day}`);}} style={{margin: "5px"}}>

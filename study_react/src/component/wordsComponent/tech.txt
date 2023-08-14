@@ -1,0 +1,16 @@
+api 관련 전반적인 구성과 작동 방식
+
+링크 변경
+Header의 h1, DayList의 버튼 에 클릭 시 주소 변경 이벤트 추가
+
+내용 갱신
+Routes 안의 Route path 조건에 따라 Routes 안의 element 변경
+
+db 호스팅
+json server 를 사용하여 만들어놨던 data.json 파일을 임시 서버에 올림
+data 를 가져올 때 상대 주소 대신 서버에서 가져옴
+
+서버에서 데이터 가져오기
+fetch 를 사용하여 setState 방식으로 데이터를 갱신한다
+DayList 에서 key:id, value:day 구성의 json 을 days 에 갱신한다
+Day 에서 조건에 맞는 day value 값을 가진 단어들의 json 을 words 에 갱신한다

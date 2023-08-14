@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import './Words.css'
 
+// 단어 한 개를 table thead 하나로 구성한다
+// 체크박스, 영단어, 뜻, 버튼 2개로 이루어진다
 export default function Word({word}) {
 
     const [isShow, setIsShow] = useState(false);

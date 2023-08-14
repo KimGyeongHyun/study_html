@@ -4,8 +4,7 @@ import Word from "./Word"
 // Route path 주소에서 (:변수) 안의 값을 key:변수, value:str 형식으로 가져옴 
 import { useParams } from "react-router-dom";
 
-
-
+// 여러 개의 Word 를 table 로 구성하여 출력
 export default function Day() {
     const day = Number(useParams().day);
     // const wordList = dummy.words.filter(word=>(word.day === day));
@@ -23,20 +22,6 @@ export default function Day() {
         <table>
             <tbody>
                 <table>
-                {
-                    // dummy 안의 words 를 word 로 하나씩 가져온다
-                    // word 객체는 각각 5개의 데이터 쌍을 가진다
-                    // (id, day, eng, kor, isDone)
-                }
-                {/* {dummy.words.map(word=>(
-                    <tr>
-                        <td>{word.eng}</td>
-                        <td>{word.kor}</td>
-                    </tr>
-                ))} */}
-                {
-                    // filter 로 조건에 맞는 word 만 가져올 수 있음
-                }
                 {words.map(word=>(
                     <Word word={word} key={word.id}/>
                 ))}

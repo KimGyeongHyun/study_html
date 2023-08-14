@@ -13,3 +13,5 @@ npm run build : 배포판을 만들어줌
     (배포 환경)
 npx serve -s build : serve 라는 앱을 사용하여 build 결과 배포
     -s : 아무 경로로 들어가도 index.html 을 실행함
+json-server --watch ./src/db/data.json --port 3001 :
+    포트 3001 번으로 data.json 을 가짜서버에 올린다
