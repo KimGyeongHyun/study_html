@@ -35,7 +35,12 @@ Web page 디자인
 <img src="https://img.shields.io/badge/WebPage-00ff00">
 </a>
 
-React 
+React 공부
 <a href = "https://kimgyeonghyun.github.io/study_html/study_react/build/" target="_blank">
 <img src="https://img.shields.io/badge/React-02066f">
+</a>
+
+개인 프로젝트
+<a href = "https://kimgyeonghyun.github.io/study_html/my_project/html/" target="_blank">
+<img src="https://img.shields.io/badge/Project-a593e0">
 </a>
