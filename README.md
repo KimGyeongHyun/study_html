@@ -5,19 +5,9 @@
 <img src="https://img.shields.io/badge/Submenu-ff0000">
 </a>
 
-메인 배너 
-<a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/05_19_welcome/html/ex.html" target="_blank">
-<img src="https://img.shields.io/badge/MainBanner-0000ff">
-</a>
-
 타이머 
 <a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/07_03_timer/html/ex.html" target="_blank">
 <img src="https://img.shields.io/badge/Timer-fd4659">
-</a>
-
-메인 슬라이드 배너 
-<a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/07_12_spin_ex/html/ex.html" target="_blank">
-<img src="https://img.shields.io/badge/SlideBanner-ffab0f">
 </a>
 
 Swiper slide 를 사용한 산림청 슬라이드 
