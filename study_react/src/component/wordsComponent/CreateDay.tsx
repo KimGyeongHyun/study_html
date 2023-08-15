@@ -5,7 +5,7 @@ export default function CreateDay() {
     const days = useFetch('http://localhost:3001/days');
     const history = useNavigate();
 
-    function addDay(e) {
+    function addDay(e: React.FormEvent) {
         e.preventDefault();
 
         // 단어 추가

@@ -3,7 +3,10 @@ import { useState } from 'react'
 import styles from "./MyModal.module.css"
 import {GrClose} from 'react-icons/gr';
 
-function ModalWindow(props) {
+interface ModalProps {
+    onChangeMode: ()=> void;
+}
+function ModalWindow(props : ModalProps) {
     return <div className={styles.modalWindow}>
         <div className={styles.innerBox}>
             <GrClose className={styles.iDeco} size={25} onClick={()=>{props.onChangeMode();}}></GrClose>

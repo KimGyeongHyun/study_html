@@ -3,7 +3,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function RadioButton(props) {
+interface Props {
+  onChangeMode: (value: string) => void;
+}
+
+function RadioButton(props : Props) {
   const [radioValue, setRadioValue] = useState('1');
 
   const radios = [

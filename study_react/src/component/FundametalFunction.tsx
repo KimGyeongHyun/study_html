@@ -1,4 +1,4 @@
-import {useState} from 'react'; // state 사용
+import {useState, useRef} from 'react'; // state 사용
 
 // 리액트 장점
 // 1. component 를 함수화하여 사용할 수 있음
@@ -28,7 +28,12 @@ import {useState} from 'react'; // state 사용
 // component 에 전달되는 것 : props
 // props 에 속성값이 한꺼번에 들어간다
 // 속성에 변수, 리스트, 함수 모두 들어감
-function Header(props) {
+
+interface HeaderProps {
+  title: string;
+  onChangeMode: () => void;
+}
+function Header(props : HeaderProps) {
   // console.log('props', props,  props.title);
   return <header>
       {/* function(event) 을 event=> 로 줄여 씀 */}
@@ -39,8 +44,15 @@ function Header(props) {
     </header>
 }
 
+interface NavProps {
+  onChangeMode: (id: number) => void;
+  topics: TopicProps[];
+}
+interface TopicProps {
+  id: number; title: string; body: string;
+}
 // topics 의 제목을 li 태그로 순서대로 출력
-function Nav(props) {
+function Nav(props : NavProps) {
   // 배열 lis에 li 구성
   const lis = []
 
@@ -53,11 +65,12 @@ function Nav(props) {
       /* 태그 속성을 부여하면 숫자도 문자열로 들어감 */
       // 따라서 태그에서 숫자를 뽑아 쓰고 싶으면 Number()로 형변환해서 쓰기
       }
-      <a id={t.id} href={'/read/' + t.id} onClick={event=>{
-        event.preventDefault();
+      <a id={t.id.toString()} href={'/read/' + t.id} onClick={e=>{
+        e.preventDefault();
         // event.targer : 이벤트를 유발시킨 태그 (a 태그)
         // 문자열이었던 id 를 숫자로 형변환
-        props.onChangeMode(Number(event.target.id));
+        if (e.target instanceof Element)
+          props.onChangeMode(Number(e.target.id));
       }}>{t.title}</a>
       </li>)
   }
@@ -69,17 +82,27 @@ function Nav(props) {
       </nav>
 }
 
+interface ArticleProps {
+  title: string; body: string;
+}
 // topics 의 내용을 하나 가져와 출력
 // mode 가 "WELCOME", "READ" 일 때 content 출력에 사용
-function Article(props) {
+function Article(props : ArticleProps) {
   return <article>
         <h2>{props.title}</h2>
         {props.body}
       </article>
 }
 
+interface CreateProps {
+  onCreate: (title: string, body: string) => void;
+}
 // title, body 를 받을 form 태그 리턴
-function Create(props) {
+function Create(props : CreateProps) {
+
+  const titleRef = useRef<HTMLInputElement>(null);
+  const bodyRef = useRef<HTMLTextAreaElement>(null);
+
   return <article>
     <h2>Create</h2>
     {
@@ -93,18 +116,24 @@ function Create(props) {
       event.preventDefault();
       // 여기서의 event.target 은 form 태그
       // 아래와 같이 값을 쉽게 가져올 수 있음
-      const title = event.target.title.value;
-      const body = event.target.body.value;
-      props.onCreate(title, body);
+      if (titleRef.current && bodyRef.current) {
+        const title = titleRef.current.value;
+        const body = bodyRef.current.value;
+        props.onCreate(title, body);
+      }
     }}>
-      <p><input type="text" name="title" placeholder="title"></input></p>
-      <p><textarea name="body" placeholder='body'></textarea></p>
+      <p><input type="text" name="title" placeholder="title" ref={titleRef}></input></p>
+      <p><textarea name="body" placeholder='body' ref={bodyRef}></textarea></p>
       <p><input type='submit' value="Create"></input></p>
     </form>    
   </article>
 }
 
-function Update(props) {
+interface UpdateProps {
+  onUpdate: (title: string, body: string) => void;
+  title: string; body: string;
+}
+function Update(props : UpdateProps) {
 
   // input 속성 중 value 값을 지정하면 웹 input 의 글자가 바뀌지 않는다
   // value 선언을 props 객체로 지정해 버렸기 때문이다
@@ -117,26 +146,27 @@ function Update(props) {
   // const [title, setTitle] = useState(props.title);
   // const [body, setBody] = useState(props.body);
 
+  const titleRef = useRef<HTMLInputElement>(null);
+  const bodyRef = useRef<HTMLTextAreaElement>(null);
+
   return <article>
     <h2>Update</h2>
     
     <form onSubmit={event=>{
       event.preventDefault();
-      const title = event.target.title.value;
-      const body = event.target.body.value;
-      props.onUpdate(title, body);
+      if (titleRef.current && bodyRef.current) {
+        const title = titleRef.current.value;
+        const body = bodyRef.current.value;
+        props.onUpdate(title, body);
+      }
     }}>
       {/* 기존 내용의 title, body 값을 default 로 표시 */}
       {/* onChange 는 html 에서 값이 바뀌고 마우스 포인터가 바깥으로 빠져나갈 때 호출,
       React 는 값이 바뀌면 호출 */}
       <p><input type="text" name="title" placeholder="title" defaultValue={props.title}
-      // value={title}
-      // onChange={event=>{setTitle(event.target.value);}}
-      ></input></p>
+      ref={titleRef}></input></p>
       <p><textarea name="body" placeholder='body' defaultValue={props.body}
-      // value={body}
-      // onChange={event=>{setBody(event.target.value);}}
-      ></textarea></p>
+      ref={bodyRef}></textarea></p>
       <p><input type='submit' value="Update"></input></p>
     </form>    
   </article>
@@ -179,7 +209,7 @@ function Fundamental_function() {
   // 2. newValue 변경
   // 3. setValue(newValue) 로 데이터 변경 
 
-  const [id, setId] = useState(null);   // id : 현재 id 저장
+  const [id, setId] = useState(0);   // id : 현재 id 저장
   const [nextId, setNextId] = useState(4);  // nextId : id 가 다음으로 변할 값 저장
   // Nav 에 들어가는 id, title, body 값 저장
   const [topics, setTopics] = useState([
@@ -199,7 +229,7 @@ function Fundamental_function() {
   // Nav, Create
   // 클릭한 Nav 의 제목과 내용을 가져와 Article 로 출력
   else if (mode === "READ") {
-    let title, body = null;
+    let [title, body] = ["", ""];
     for (let i = 0; i < topics.length; i++) {
       if (topics[i].id === id) {
         title = topics[i].title;
@@ -257,7 +287,7 @@ function Fundamental_function() {
   else if (mode === "UPDATE") {
     // mode 가 "READ" 일 때 title, body 를 추출하는 코드
     // 해당 id (바꿀 id) 의 title, body 를 가져와 Update 의 input 값의 디폴트 값으로 넣는다
-    let title, body = null;
+    let [title, body] = ["", ""];
     for (let i = 0; i < topics.length; i++) {
       if (topics[i].id === id) {
         title = topics[i].title;
