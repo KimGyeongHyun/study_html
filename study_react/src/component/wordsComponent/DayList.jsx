@@ -1,20 +1,21 @@
-import {useNavigate} from "react-router-dom"
+import {Navigate} from "react-router-dom"
 import Button from 'react-bootstrap/Button'
-import { useEffect, useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 // 날짜를 버튼으로 출력
 // 각 버튼에 날짜 정보를 가지는 주소를 구성하고
 // 해당 주소로 이동하는 클릭 이벤트 추가
 export default function DayList() {
     // console.log(dummy);
-    const navigate = useNavigate();
-    const [days, setDays] = useState([]);
+    // const navigate = useNavigate();
+    // const [days, setDays] = useState([]);
 
-    useEffect(()=>{
-        fetch('http://localhost:3001/days')
-        .then(res=>{return res.json();})
-        .then(data=>{setDays(data);});
-    }, []);
+    // useEffect(()=>{
+    //     fetch('http://localhost:3001/days')
+    //     .then(res=>{return res.json();})
+    //     .then(data=>{setDays(data);});
+    // }, []);
+    const days = useFetch('http://localhost:3001/days');
 
 
     // useEffect
@@ -31,7 +32,7 @@ export default function DayList() {
     <div>
         {days.map(day=>(
             <Button key={day.id} variant="primary" onClick={()=>{
-                navigate(`/day/${day.day}`);}} style={{margin: "5px"}}>
+                Navigate(`/day/${day.day}`);}} style={{margin: "5px"}}>
                 Day {day.day}
             </Button>
         ))}
