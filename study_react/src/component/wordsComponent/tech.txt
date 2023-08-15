@@ -14,3 +14,7 @@ data 를 가져올 때 상대 주소 대신 서버에서 가져옴
 fetch 를 사용하여 setState 방식으로 데이터를 갱신한다
 DayList 에서 key:id, value:day 구성의 json 을 days 에 갱신한다
 Day 에서 조건에 맞는 day value 값을 가진 단어들의 json 을 words 에 갱신한다
+
+type script 의 장점
+props 의 구조를 명시함으로써 오류 방지
+props 구조에 맞는 자동 완성 기능 지원
