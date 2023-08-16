@@ -1,223 +1,366 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>배달 사이트</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anywhere Delivery</title>
 
-<!-- icon -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- swiper slide -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- swiper slide -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
-<!-- js -->
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
-<!-- custom css -->
-<link rel='stylesheet' href='../css/main.css'>
-
-</head>
-<body>
-
-    <section class="header">
-        <div class="header-nav">
-            <ul>
-                <li>홈</li>
-                <li>|</li>
-                <li>로그인</li>
-                <li>|</li>
-                <li>회원가입</li>
-                <li>|</li>
-                <li><i class="xi-instagram xi-2x"></i></li>
-            </ul>
-        </div>
-        <div class="main-slider">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide s1">
-                    <div>
-                        <h2>달달한 디저트</h2>
-                        <h3>빵, 과자, 케이크, 등 다양하고 달달한 디저트가 준비되어 있습니다</h3>
-                        <!-- <button>Get in touch</button> -->
-                    </div>
-                  </div>
-                  <div class="swiper-slide s2">
-                    <div>
-                        <h2>신선한 재료 인증 마크</h2>
-                        <h3>자체 인증 마크로 믿고 먹을 수 있는 식당만 엄선했습니다</h3>
-                        <!-- <button>Get in touch</button> -->
-                    </div>
-                  </div>
-                  <div class="swiper-slide s3">
-                    <div>
-                        <h2>다양한 종류의 음식</h2>
-                        <h3>육. 해. 공. 가리지 않고 다 모아놨다~!</h3>
-                        <!-- <button>Get in touch</button> -->
-                    </div>
-                  </div>
-                  <div class="swiper-slide s4">
-                    <div>
-                        <h2>사장님 응원해요! 이벤트 중~</h2>
-                        <h3>이벤트에 응모하고 사은품을 받아가세요</h3>
-                        <!-- <button>Get in touch</button> -->
-                    </div>
-                  </div>
-                </div>
-            </div>
-            
-            <!-- Swiper JS -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-            <script>
-            var swiper = new Swiper(".mySwiper", {
-                loop: true,
-                // autoplay: {
-                //     delay: 3500,
-                //     disableOnInteraction: false,
-                // },
-            });
-            </script>
-        </div>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- tracking nav section -->
+    <section class="tracking-nav">
+      <ul>
+        <li id="sc1">top</li>
+        <li id="sc2">menu</li>
+        <li id="sc3">소개</li>
+        <li id="sc4">down</li>
+      </ul>
     </section>
 
+    <!-- scroll toggle -->
+    <script src="../js/scrollShow.js"></script>
+
+    <!-- header section  -->
+    <section class="header" id="scroll1">
+      <div class="header-nav">
+        <h1>Anywhere</h1>
+        <ul>
+          <li>홈</li>
+          <li>|</li>
+          <li>로그인</li>
+          <li>|</li>
+          <li>회원가입</li>
+          <li>|</li>
+          <li>
+            <a href="https://github.com/KimGyeongHyun"
+              ><i class="fa-brands fa-github-alt fa-1x" style="color: white"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-btn" id="sc-menu">Go to menu</div>
+      <div class="main-slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-duplicate s1">
+              <div>
+                <h2>달달한 디저트</h2>
+                <h3>
+                  빵, 과자, 케이크, 등 다양하고 달달한 디저트가 준비되어
+                  있습니다
+                </h3>
+                <!-- <button>Get in touch</button> -->
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate s2">
+              <div>
+                <h2>신선한 재료 인증 마크</h2>
+                <h3>자체 인증 마크로 믿고 먹을 수 있는 식당만 엄선했습니다</h3>
+                <!-- <button>Get in touch</button> -->
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate s3">
+              <div>
+                <h2>다양한 종류의 음식</h2>
+                <h3>육. 해. 공. 가리지 않고 다 모아놨다~!</h3>
+                <!-- <button>Get in touch</button> -->
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate s4">
+              <div>
+                <h2>사장님 응원해요! 이벤트 중~</h2>
+                <h3>이벤트에 응모하고 사은품을 받아가세요</h3>
+                <!-- <button>Get in touch</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+          });
+        </script>
+      </div>
+    </section>
+
+    <!-- intro section -->
     <section class="intro">
-        <!-- <h2>다양한 먹을거리가 당신을 찾아갑니다</h2> -->
-        
+      <div class="text-box">
+        <h2 data-aos="fade-up">Anywhere</h2>
+        <div class="p-box">
+          <h3 data-aos="fade-up" data-aos-delay="200">
+            '어디서든' 이란 말을 뜻하는 Anywhere 는 고객님이 언제, 어디에서
+            주문하던 최상의 서비스를 받을 수 있게 하는 것을 목표로 합니다.
+          </h3>
+          <p data-aos="fade-up" data-aos-delay="400">
+            고객님의 평점과 만족도 조사로 구성된 빅데이터와, 최신 기술로 무장된
+            딥러닝 기술로 차원이 다른 서비스를 제공합니다.
+          </p>
+        </div>
+      </div>
     </section>
 
+    <div id="scroll2"></div>
+
+    <!-- recommand section (none) -->
+    <section class="recommand_section"></section>
+
+    <!-- menu section  -->
     <section class="menu-section">
-        <div class="menu-wrapper">
-            <div class="inner-box inner-right">
-                <div class="menu" data-aos="fade-left">
-                    <h2>이 달의 치킨 메뉴</h2>
-                    <div class="container">
-                        <div class="item">
-                            <div class="food-img img1"></div>
-                            <div class="text-box">
-                                <h3>BHC <br>뿌링클</h3>
-                                <p>뿌링뿌링! 세상에 없던 마법의 맛 뿌링클</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img2"></div>
-                            <div class="text-box">
-                                <h3>BBQ <br>황금올리브</h3>
-                                <p>바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img3"></div>
-                            <div class="text-box">
-                                <h3>교촌 <br>허니콤보</h3>
-                                <p>달콤한 허니소스에 쫄깃한 날개와
-                                    담백한 다리가 만난 메뉴</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="menu-wrapper">
+        <div class="inner-box inner-right">
+          <div class="menu" data-aos="fade-left">
+            <h2>이 달의 치킨 메뉴</h2>
+            <div class="container">
+              <div class="item">
+                <div class="food-img img1"></div>
+                <div class="text-box">
+                  <h3>BHC <br />뿌링클</h3>
+                  <p>뿌링뿌링! 세상에 없던 마법의 맛 뿌링클</p>
                 </div>
-            </div>
-        </div>
-    
-        <div class="menu-wrapper">
-            <div class="inner-box inner-left">
-                <div class="menu" data-aos="fade-right">
-                    <h2>이 달의 버거 메뉴</h2>
-                    <div class="container">
-                        <div class="item">
-                            <div class="food-img img4"></div>
-                            <div class="text-box">
-                                <h3>롯데리아 <br>새우버거</h3>
-                                <p>새우가 통째로! 수제버거 못지않은 패티 퀄리티</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img5"></div>
-                            <div class="text-box">
-                                <h3>맥도날드 <br>불고기버거</h3>
-                                <p>진한 불고기 소스의 패티가 두 장!</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img6"></div>
-                            <div class="text-box">
-                                <h3>버거킹 <br>와퍼</h3>
-                                <p>불에 직접 구운 순 쇠고기 패티에 싱싱한 야채가 한가득~</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="item">
+                <div class="food-img img2"></div>
+                <div class="text-box">
+                  <h3>BBQ <br />황금올리브</h3>
+                  <p>바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨</p>
                 </div>
-            </div>
-        </div>
-    
-        <div class="menu-wrapper">
-            <div class="inner-box inner-right">
-                <div class="menu" data-aos="fade-left">
-                    <h2>바로 배송~ 중국집 메뉴</h2>
-                    <div class="container">
-                        <div class="item">
-                            <div class="food-img img7"></div>
-                            <div class="text-box">
-                                <h3>짜장면</h3>
-                                <p>와 짜장면! 커피보다 싸다!</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img8"></div>
-                            <div class="text-box">
-                                <h3>짬뽕</h3>
-                                <p>얼큰하고 시원한 국물이 생각날 땐~</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="food-img img9"></div>
-                            <div class="text-box">
-                                <h3>볶음밥</h3>
-                                <p>밥은 먹고 다니자! 불맛 제대로 볶음밥</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="item">
+                <div class="food-img img3"></div>
+                <div class="text-box">
+                  <h3>교촌 <br />허니콤보</h3>
+                  <p>달콤한 허니소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴</p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="menu-wrapper">
+        <div class="inner-box inner-left">
+          <div class="menu" data-aos="fade-right">
+            <h2>이 달의 버거 메뉴</h2>
+            <div class="container">
+              <div class="item">
+                <div class="food-img img4"></div>
+                <div class="text-box">
+                  <h3>롯데리아 <br />새우버거</h3>
+                  <p>새우가 통째로! 수제버거 못지않은 패티 퀄리티</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="food-img img5"></div>
+                <div class="text-box">
+                  <h3>맥도날드 <br />불고기버거</h3>
+                  <p>진한 불고기 소스의 패티가 두 장!</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="food-img img6"></div>
+                <div class="text-box">
+                  <h3>버거킹 <br />와퍼</h3>
+                  <p>불에 직접 구운 순 쇠고기 패티에 싱싱한 야채가 한가득~</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-wrapper">
+        <div class="inner-box inner-right">
+          <div class="menu" data-aos="fade-left">
+            <h2>바로 배송~ 중국집 메뉴</h2>
+            <div class="container">
+              <div class="item">
+                <div class="food-img img7"></div>
+                <div class="text-box">
+                  <h3>짜장면</h3>
+                  <p>와 짜장면! 커피보다 싸다!</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="food-img img8"></div>
+                <div class="text-box">
+                  <h3>짬뽕</h3>
+                  <p>얼큰하고 시원한 국물이 생각날 땐~</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="food-img img9"></div>
+                <div class="text-box">
+                  <h3>볶음밥</h3>
+                  <p>밥은 먹고 다니자! 불맛 제대로 볶음밥</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="tag-section">
-        <ul>
-            <li><i class="fa-solid fa-mug-hot fa-2xl"></i></li>
-            <li><i class="fa-solid fa-lemon fa-2xl"></i></li>
-            <li><i class="fa-solid fa-fish fa-2xl"></i></li>
-            <li><i class="fa-solid fa-seedling fa-2xl"></i></li>
-            <li><i class="fa-solid fa-wine-bottle fa-2xl"></i></li>
-            <li><i class="fa-solid fa-pizza-slice fa-2xl"></i></li>
-            <li><i class="fa-solid fa-ice-cream fa-2xl"></i></li>
-            <li><i class="fa-solid fa-carrot fa-2xl"></i></li>
-            <li><i class="fa-solid fa-cheese fa-2xl"></i></li>
-            <li><i class="fa-solid fa-cookie fa-2xl"></i></li>
-            <li><i class="fa-solid fa-apple-whole fa-2xl"></i></li>
-            <li><i class="fa-solid fa-bowl-rice fa-2xl"></i></li>
-            <li><i class="fa-solid fa-bread-slice fa-2xl"></i></li>
-        </ul>
-        <ul>
-            <li><i class="fa-solid fa-route fa-2xl"></i></li>
-            <li><i class="fa-solid fa-street-view fa-2xl"></i></li>
-            <li><i class="fa-solid fa-location-crosshairs fa-2xl"></i></li>
-            <li><i class="fa-solid fa-hand-holding-dollar fa-2xl"></i></li>
-            <li><i class="fa-solid fa-clock fa-2xl"></i></li>
-        </ul>
+    <div id="scroll3"></div>
+
+    <!-- tag section -->
+    <section
+      class="tag-section"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="1300"
+      data-aos-once="true"
+    >
+      <h2>
+        <span style="font-family: 'Pacifico'; font-size: 4vw">Anywhere</span>
+        만의 독창적인 시스템과 혜택
+      </h2>
+      <!-- <ul>
+        <li><i class="fa-solid fa-mug-hot fa-2xl"></i></li>
+        <li><i class="fa-solid fa-lemon fa-2xl"></i></li>
+        <li><i class="fa-solid fa-fish fa-2xl"></i></li>
+        <li><i class="fa-solid fa-seedling fa-2xl"></i></li>
+        <li><i class="fa-solid fa-wine-bottle fa-2xl"></i></li>
+        <li><i class="fa-solid fa-pizza-slice fa-2xl"></i></li>
+        <li><i class="fa-solid fa-ice-cream fa-2xl"></i></li>
+        <li><i class="fa-solid fa-carrot fa-2xl"></i></li>
+        <li><i class="fa-solid fa-cheese fa-2xl"></i></li>
+        <li><i class="fa-solid fa-cookie fa-2xl"></i></li>
+        <li><i class="fa-solid fa-apple-whole fa-2xl"></i></li>
+        <li><i class="fa-solid fa-bowl-rice fa-2xl"></i></li>
+        <li><i class="fa-solid fa-bread-slice fa-2xl"></i></li>
+      </ul>
+      <ul>
+        <li><i class="fa-solid fa-route fa-2xl"></i></li>
+        <li><i class="fa-solid fa-street-view fa-2xl"></i></li>
+        <li><i class="fa-solid fa-location-crosshairs fa-2xl"></i></li>
+        <li><i class="fa-solid fa-hand-holding-dollar fa-2xl"></i></li>
+        <li><i class="fa-solid fa-clock fa-2xl"></i></li>
+      </ul> -->
+
+      <div class="container">
+        <div class="item">
+          <i class="fa-solid fa-star fa-2x"></i>
+          <div class="text-box">
+            <h3>점포 리뷰 시스템</h3>
+            <p>
+              점포 리뷰 시스템으로 해당 점포가 괜찮은지를 판단할 수 있습니다
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-street-view fa-2x"></i>
+          <div class="text-box">
+            <h3>위치 기반 계산 시스템</h3>
+            <p>
+              점포에서 음식이 완료되는 시점과 기사님의 도착 예상 시간을 미리
+              계산하여 음식이 방치되는 시간을 최소화 합니다
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-route fa-2x"></i>
+          <div class="text-box">
+            <h3>복합 계산 시스템</h3>
+            <p>
+              음식을 검색했을 때 고객님과 점포 사이의 거리, 점포의 평점을
+              기준으로 어떤 점포가 추천될지 결정됩니다
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-mug-hot fa-2x"></i>
+          <div class="text-box">
+            <h3>음식 외의 식품</h3>
+            <p>음식점이 아니더라도 커피, 디저트 가게도 배송 가능합니다</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-hand-holding-dollar fa-2x"></i>
+          <div class="text-box">
+            <h3>푸짐한 이벤트 혜택</h3>
+            <p>
+              월정액제 구독시 모든 배달비 제외, 3개월 당 음료 쿠폰 1매를
+              지급합니다
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-gift fa-2x"></i>
+          <div class="text-box">
+            <h3>친구 간 선물</h3>
+            <p>생일 선물이나 효소 선물로 음식을 선물하세요</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <div id="scroll4"></div>
+    <!-- footer section  -->
     <section class="footer">
-        
+      <div class="footer-box">
+        <h2>Anywhere</h2>
+        <div class="text-box">
+          <h3>Info</h3>
+          <p>Tel. 010 - 0000 - 0000</p>
+          <p>e-mail. asdfsdfg@gmail.com</p>
+          <p>수원시 어쩌구 어쩌고 200번길 15</p>
+        </div>
+        <div class="text-box">
+          <h3>Join us</h3>
+          <form action="">
+            <input type="text" placeholder="e-mail" />
+            <input type="text" placeholder="password" />
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
     </section>
-    
+
+    <!-- scroll control -->
+    <script src="../js/scrollEvent.js"></script>
 
     <script>
-        AOS.init();
-      </script>
-
-</body>
-</html> 
+      AOS.init();
+    </script>
+  </body>
+</html>
