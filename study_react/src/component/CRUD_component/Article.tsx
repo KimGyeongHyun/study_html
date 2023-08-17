@@ -1,7 +1,4 @@
-type ArticleProps = {
-	title: string;
-	body: string;
-};
+import './componentForm';
 
 // topics 의 내용을 하나 가져와 출력
 // mode 가 "WELCOME", "READ" 일 때 content 출력에 사용

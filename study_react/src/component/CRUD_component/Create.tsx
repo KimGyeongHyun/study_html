@@ -1,8 +1,6 @@
 import { useRef } from 'react';
+import './componentForm';
 
-type CreateProps = {
-	onCreate: (title: string, body: string) => void;
-};
 // title, body 를 받을 form 태그 리턴
 const Create = ({ onCreate }: CreateProps) => {
 	const titleRef = useRef<HTMLInputElement>(null);

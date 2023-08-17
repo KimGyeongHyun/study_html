@@ -1,10 +1,5 @@
 import { useRef } from 'react';
-
-type UpdateProps = {
-	onUpdate: (title: string, body: string) => void;
-	title: string;
-	body: string;
-};
+import './componentForm';
 
 const Update = ({ onUpdate, title, body }: UpdateProps) => {
 	// input 속성 중 value 값을 지정하면 웹 input 의 글자가 바뀌지 않는다

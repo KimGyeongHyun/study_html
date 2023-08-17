@@ -20,10 +20,6 @@ function RadioButton(props: Props) {
 		{ name: 'Words', value: '3' },
 	];
 
-	radios.map((radio, idx) => {
-		console.log(radio, idx);
-	});
-
 	return (
 		// ButtonGroup 설정
 		<ButtonGroup style={{ margin: '20px 0 0 20px' }}>

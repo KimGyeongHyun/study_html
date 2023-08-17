@@ -1,13 +1,4 @@
-type TopicProps = {
-	id: number;
-	title: string;
-	body: string;
-};
-
-type NavProps = {
-	onChangeMode: (id: number) => void;
-	topics: TopicProps[];
-};
+import './componentForm';
 
 const Nav = ({ onChangeMode, topics }: NavProps) => {
 	const lis = [];

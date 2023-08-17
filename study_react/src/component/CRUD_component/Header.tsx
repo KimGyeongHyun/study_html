@@ -1,7 +1,4 @@
-type HeaderProps = {
-	title: string;
-	onChangeMode: () => void;
-};
+import './componentForm';
 
 const Header = ({ title, onChangeMode }: HeaderProps) => {
 	return (
