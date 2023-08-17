@@ -23,7 +23,7 @@
       "day": 1,
       "eng": "book",
       "kor": "책",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 3,
@@ -73,6 +73,13 @@
       "kor": "식물",
       "isDone": false,
       "id": 9
+    },
+    {
+      "day": "4",
+      "eng": "elephant",
+      "kor": "코끼리",
+      "isDone": false,
+      "id": 10
     }
   ]
 }

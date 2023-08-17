@@ -23,7 +23,7 @@ export default function MyBrowserRouter() {
 					<Route path='/day/:day' element={<Day />}></Route>
 					<Route path='/create_word' element={<CreateWord />}></Route>
 					<Route path='/create_day' element={<CreateDay />}></Route>
-					<Route element={<EmptyPage />}></Route>
+					<Route path='*' element={<EmptyPage />}></Route>
 				</Routes>
 			</div>
 		</BrowserRouter>
