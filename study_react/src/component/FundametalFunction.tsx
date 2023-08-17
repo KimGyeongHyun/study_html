@@ -13,9 +13,11 @@ function Fundamental_function() {
 		{ id: 2, title: 'css', body: 'css is ...' },
 		{ id: 3, title: 'js', body: 'js is ...' },
 	]);
-	const [id, setId] = useState(0); // id : 현재 id 저장
+	const [id, setId] = useState(0); // myComponent 가 어떤 Article 에 포커싱할지 선택
 	const [nextId, setNextId] = useState(4); // nextId : id 가 다음으로 변할 값 저장
 
+	// Header
+	// 컴포넌트 변화 X, setMode event
 	const myHeader = () => {
 		return (
 			<Header
@@ -27,6 +29,10 @@ function Fundamental_function() {
 		);
 	};
 
+	// Nav
+	// 재랜더링시 topics 에 따라 내용 갱신
+	// setMode, setId event
+	// setId 로 myComponent 이 포커싱할 Article 지정
 	const myNav = () => {
 		return (
 			<Nav
@@ -38,6 +44,13 @@ function Fundamental_function() {
 		);
 	};
 
+	// mode 에 따라 달라지는 컴포넌트
+	// 재랜더링시 mode, topics, id 에 따라 내용 갱신
+	// mode === "WELCOME" : welcomd 문구 출력 / 하단에 create link
+	// mode === "READ" : topics[id] Article 출력 / 하단에 create, update, delete link
+	// mode === "CREATE" : fomr 태그 출력
+	// mode === "UPDATE" : form 태그 출력
+	// setState 함수로 topics, id, nextID 업데이트
 	const myComponent = () => {
 		return (
 			<Component
@@ -61,7 +74,6 @@ function Fundamental_function() {
 		);
 	};
 
-	// 태그
 	return (
 		<div style={{ padding: '20px' }}>
 			<h2>WEB 하단에 ol 형식으로 Article들이 들어있습니다</h2>
@@ -80,6 +92,7 @@ function Fundamental_function() {
 			<p>현재 섹션은 db를 사용하지 않아 데이터가 갱신되지 않습니다</p>
 			<p>페이지가 전환되면 내용이 저장되어 있지 않습니다</p>
 
+			{/*Header, Nav*/}
 			{myHeader()}
 			{myNav()}
 

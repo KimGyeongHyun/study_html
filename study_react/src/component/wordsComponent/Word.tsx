@@ -53,29 +53,25 @@ export default function Word({ word: w }: IProps) {
 	if (word.id === 0) return null;
 
 	return (
-		<>
-			<thead>
-				<tr className={isDone ? 'off' : ''}>
-					<th>
-						<input
-							type='checkbox'
-							checked={isDone}
-							onChange={toggleDone}
-							style={{ width: '20px', height: '20px' }}
-						/>
-					</th>
-					<th>{word.eng}</th>
-					<th style={{ width: '200px' }}>{isShow && word.kor}</th>
-					<th>
-						<Button variant='success' onClick={toggleShow}>
-							뜻{isShow ? ' 숨기기' : ' 보기'}
-						</Button>
-						<Button variant='warning' onClick={del}>
-							삭제
-						</Button>
-					</th>
-				</tr>
-			</thead>
-		</>
+		<tr className={isDone ? 'off' : ''}>
+			<th>
+				<input
+					type='checkbox'
+					checked={isDone}
+					onChange={toggleDone}
+					style={{ width: '20px', height: '20px' }}
+				/>
+			</th>
+			<th>{word.eng}</th>
+			<th style={{ width: '200px' }}>{isShow && word.kor}</th>
+			<th>
+				<Button variant='success' onClick={toggleShow}>
+					뜻{isShow ? ' 숨기기' : ' 보기'}
+				</Button>
+				<Button variant='warning' onClick={del}>
+					삭제
+				</Button>
+			</th>
+		</tr>
 	);
 }

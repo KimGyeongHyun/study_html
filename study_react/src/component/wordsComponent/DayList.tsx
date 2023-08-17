@@ -7,50 +7,41 @@ import { IDay } from './JsonForm';
 // 각 버튼에 날짜 정보를 가지는 주소를 구성하고
 // 해당 주소로 이동하는 클릭 이벤트 추가
 export default function DayList() {
-	// console.log(dummy);
 	const navigate = useNavigate();
 
-	// useEffect
-	// 상태값이 바뀌었을 때 동작하는 함수 작성 가능
-	// 첫번째 매개변수는 함수
-	// 랜더링 결과가 실제 돔에 반영된 직후에 실행됨
-	// 두번째 매개변수로 배열 전달
-	// 배열 안에 갱신될 때 실행될 변수를 넣음
-
-	// 랜더링 이후 API 를 부를 때는 빈배열을 집어 넣음
-	// 한 번만 실행됨
-
-	// const [days, setDays] = useState([]);
-	// useEffect(()=>{
-	//     fetch('http://localhost:3001/days')
-	//     .then(res=>{return res.json();})
-	//     .then(data=>{setDays(data);});
-	// }, []);
-
 	// 커스텀 훅 사용
-	// 외부 js에서 url 받아 해당 데이터를 json 형태로 리턴
+	// useFetch 는 파라미터에서 url 받아 해당 데이터를 리턴
+	// '/days' 엔 서버에 저장되어 있는 날짜정보 존재
 	const days: IDay[] = useFetch('http://localhost:3001/days');
 
 	// 느린 인터넷 환경에서의 안내
+	// 로딩이 될 때까지 days 가 없으므로 days.length 는 0 이다
+	// 다만 단어장 안에 단어가 없을 때도 해당 문구가 표시된다
 	if (days.length === 0) {
 		return <span>Loading...</span>;
 	}
 
 	return (
-		<>
-			<div>
-				{days.map((day) => (
+		<div>
+			{
+				// 서버로부터 받은 날짜 정보를 순회
+				// Array 의 map 함수로 날짜 순회
+				// {id: number; day: number}
+				// 버튼은 Bootstrap button 사용
+				// 각 버튼에 날짜 정보를 가지는 이벤트 링크 추가
+
+				days.map((day) => (
 					<Button
 						key={day.id}
-						variant='primary'
+						variant='primary' // 색상
 						onClick={() => {
 							navigate(`/day/${day.day}`);
 						}}
 						style={{ margin: '5px' }}>
 						Day {day.day}
 					</Button>
-				))}
-			</div>
-		</>
+				))
+			}
+		</div>
 	);
 }

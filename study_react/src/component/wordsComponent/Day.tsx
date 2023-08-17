@@ -1,26 +1,20 @@
 import Word from './Word';
-// 주소에서 값을 가져옴
-// Route path 주소에서 (:변수) 안의 값을 key:변수, value:str 형식으로 가져옴
 import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import { IWord } from './JsonForm';
 
-// 여러 개의 Word 를 table 로 구성하여 출력
+// 해당 날짜에 대한 단어 정보를 서버로부터 받아 와서 table 형식으로 출력
 export default function Day() {
-	// 어떤 파라미터를 사용할지 파라미터처럼 적용 (제네릭)
-	const { day } = useParams<{ day: string }>();
-	// const wordList = dummy.words.filter(word=>(word.day === day));
-	// console.log(wordList);
+	// DayList 의 Day 1 버튼을 누르면 'day/1' 링크로 주소가 이동한다
+	// MyBrouserRouter 에서 현재 주소를 읽고 Routes 에서 판단한다
+	// Route 의 path='/day/:day' 형식에 따라 day 뒤에 있는 주소를 str 형식으로 읽어온다
+	// useParams 함수에서 key:day, value:"1" 의 형식으로 리턴된다
 
-	// useEffect 로 db data 가져옴
-	// const [words, setWords] = useState([]);
-	// useEffect(()=>{
-	//     fetch(`http://localhost:3001/words?day=${day}`)
-	//     .then(res=>{return res.json();})
-	//     .then(data=>{setWords(data);});
-	// }, [day]);
+	// 주소에서 day 추출 (string 형식)
+	const { day } = useParams<{ day: string }>();
 
 	// 커스텀 훅으로 db data 가져옴
+	//
 	const words: IWord[] = useFetch(`http://localhost:3001/words?day=${day}`);
 
 	return (

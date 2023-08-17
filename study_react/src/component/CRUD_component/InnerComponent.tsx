@@ -28,7 +28,9 @@ const myComponent = ({
 	// ]);
 
 	let content = null; // mode 에 따라 다른 내용을 보여주는 component
-	let contextControl = null; // mode 가 READ 일 때만 content 맨 밑에 나오는 component
+	let contextControl = null; // mode 가 READ 일 때만 content 하단에 나오는 component
+	// create 만 있는 ul
+	// mode === "WELCOME" 일 때 contextControl 을 해당 컴포넌트로 설정
 	let justCreate = (
 		<li>
 			<a
@@ -41,6 +43,8 @@ const myComponent = ({
 			</a>
 		</li>
 	);
+	// create, update, delete 가 있는 ul
+	// mode === "READ" 일 때 contextControl 을 해당 컴포넌트로 설정
 	let allUl = (
 		<ul>
 			<li>
@@ -80,14 +84,13 @@ const myComponent = ({
 		</ul>
 	);
 
-	// Header
 	// content 의 내용을 기본으로 바꿈
 	if (mode === 'WELCOME') {
 		content = <Article title='Welcome' body='Hello, WEB'></Article>;
-		contextControl = justCreate;
+		contextControl = justCreate; // create
 	}
-	// Nav, Create
-	// 클릭한 Nav 의 제목과 내용을 가져와 Article 로 출력
+
+	// 포커싱된 Article 을 id 로 찾아 출력
 	else if (mode === 'READ') {
 		let [title, body] = ['', ''];
 		for (let i = 0; i < topics.length; i++) {
@@ -97,19 +100,18 @@ const myComponent = ({
 			}
 		}
 		content = <Article title={title} body={body}></Article>;
-		// 형식을 지키기 위해 '/update/'+id 사용
-		// <></> 는 복수의 태그를 그루핑하기 위한 태그
-		// Update, Delete 요소 가짐
-		contextControl = allUl;
+		contextControl = allUl; // create, update, delete
 	}
+
 	// Create
 	// topics 에 새로운 내용을 추가하여 갱신
-	// topics 는 state 이기 때문에 코드가 다시 실행되면서 Nav 내용이 topics 에 따라 갱신됨
 	else if (mode === 'CREATE') {
 		// Create component 생성
 		// submit 했을 때 onCreate 함수가 실행됨
 		content = (
 			<Create
+				// submit 버튼을 눌렀을 때 실행되는 함수
+				// mode 를 "READ" 로 바꾸고, id 를 nextId 로 바꾸면서 제일 밑에 있는 Article 을 포커싱한다
 				onCreate={(title, body) => {
 					// 1. newValue = {...value} 로 복제
 					// 2. newValue 변경
@@ -122,7 +124,7 @@ const myComponent = ({
 					onChangeMode('READ'); // content 를 Nav 의 li 로 바꿈
 					onChangeId(nextId); // Nav 의 마지막 li 을 index 로 잡음
 					// nextId 가 Nav 의 마지막 li 을 가리키면서
-					// "READ" 로 설정된 mode 에 따라 Nav 의 마지막 li 이 Article 태그로 content 에 표시된다
+					// "READ" 로 설정된 mode 에 따라 Nav 의 마지막 li 이 Article 이 content 에 표시된다
 					onChangeNextId(nextId + 1); // 다음으로 설정할 index +1
 					// +1 값이 들어가서 처음엔 코드가 한 번 더 돌지만,
 					// mode 와 nextId 값은 도는 중에 변하지 않으므로 모두 통과,
@@ -130,6 +132,7 @@ const myComponent = ({
 				}}></Create>
 		);
 	}
+
 	// Update
 	// Nav 에서 선택된 요소의 title, body 를 다른 값으로 바꿈
 	else if (mode === 'UPDATE') {
@@ -142,26 +145,28 @@ const myComponent = ({
 				body = topics[i].body;
 			}
 		}
+
 		// 바꿀 id 의 title, body 를 props parameter 로 전달
 		content = (
-			<>
-				<Update
-					title={title}
-					body={body}
-					onUpdate={(title, body) => {
-						// topics 의 해당 id 내용을 갱신된 값으로 바꾼다
-						const newTopics = [...topics];
-						// READ 한 상태에서 update 가 되기 때문에 해당 id 가 유지된다
-						const updatedTopic = { id: id, title: title, body: body };
-						for (let i = 0; i < newTopics.length; i++)
-							if (newTopics[i].id === id) {
-								newTopics[i] = updatedTopic;
-								break;
-							}
-						onChangeTopics(newTopics);
-						onChangeMode('READ'); // 다시 "READ" 모드로 돌아간다
-					}}></Update>
-			</>
+			<Update
+				title={title}
+				body={body}
+				// submit 버튼을 눌렀을 때 실행되는 코드
+				// topics 를 갱신, id 는 이미 updated 된 Article 을 포커싱하고 있음
+				// mode 를 READ 로 바꾸면서 바꾼 Article 로 포커싱
+				onUpdate={(title, body) => {
+					// topics 의 해당 id 내용을 갱신된 값으로 바꾼다
+					const newTopics = [...topics];
+					// READ 한 상태에서 update 가 되기 때문에 해당 id 가 유지된다
+					const updatedTopic = { id: id, title: title, body: body };
+					for (let i = 0; i < newTopics.length; i++)
+						if (newTopics[i].id === id) {
+							newTopics[i] = updatedTopic;
+							break;
+						}
+					onChangeTopics(newTopics);
+					onChangeMode('READ'); // 다시 "READ" 모드로 돌아간다
+				}}></Update>
 		);
 	}
 
