@@ -28,6 +28,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- custom css -->
@@ -42,10 +45,10 @@
         <li id="sc3">소개</li>
         <li id="sc4">down</li>
       </ul>
-    </section>
 
-    <!-- scroll toggle -->
-    <script src="../js/scrollShow.js"></script>
+      <!-- scroll toggle -->
+      <script src="../js/scrollShow.js"></script>
+    </section>
 
     <!-- header section  -->
     <section class="header" id="scroll1">
@@ -66,47 +69,44 @@
         </ul>
       </div>
       <div class="menu-btn" id="sc-menu">Go to menu</div>
-      <div class="main-slider">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-duplicate s1">
-              <div>
-                <h2>달달한 디저트</h2>
-                <h3>
-                  빵, 과자, 케이크, 등 다양하고 달달한 디저트가 준비되어
-                  있습니다
-                </h3>
-                <!-- <button>Get in touch</button> -->
-              </div>
+
+      <!-- header slider -->
+      <div class="swiper hSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide s1">
+            <div>
+              <h2>달달한 디저트</h2>
+              <h3>
+                빵, 과자, 케이크, 등 다양하고 달달한 디저트가 준비되어 있습니다
+              </h3>
+              <!-- <button>Get in touch</button> -->
             </div>
-            <div class="swiper-slide swiper-slide-duplicate s2">
-              <div>
-                <h2>신선한 재료 인증 마크</h2>
-                <h3>자체 인증 마크로 믿고 먹을 수 있는 식당만 엄선했습니다</h3>
-                <!-- <button>Get in touch</button> -->
-              </div>
+          </div>
+          <div class="swiper-slide s2">
+            <div>
+              <h2>신선한 재료 인증 마크</h2>
+              <h3>자체 인증 마크로 믿고 먹을 수 있는 식당만 엄선했습니다</h3>
+              <!-- <button>Get in touch</button> -->
             </div>
-            <div class="swiper-slide swiper-slide-duplicate s3">
-              <div>
-                <h2>다양한 종류의 음식</h2>
-                <h3>육. 해. 공. 가리지 않고 다 모아놨다~!</h3>
-                <!-- <button>Get in touch</button> -->
-              </div>
+          </div>
+          <div class="swiper-slide s3">
+            <div>
+              <h2>다양한 종류의 음식</h2>
+              <h3>육. 해. 공. 가리지 않고 다 모아놨다~!</h3>
+              <!-- <button>Get in touch</button> -->
             </div>
-            <div class="swiper-slide swiper-slide-duplicate s4">
-              <div>
-                <h2>사장님 응원해요! 이벤트 중~</h2>
-                <h3>이벤트에 응모하고 사은품을 받아가세요</h3>
-                <!-- <button>Get in touch</button> -->
-              </div>
+          </div>
+          <div class="swiper-slide s4">
+            <div>
+              <h2>사장님 응원해요! 이벤트 중~</h2>
+              <h3>이벤트에 응모하고 사은품을 받아가세요</h3>
+              <!-- <button>Get in touch</button> -->
             </div>
           </div>
         </div>
 
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script>
-          var swiper = new Swiper(".mySwiper", {
+          var swiper = new Swiper(".hSwiper", {
             loop: true,
             autoplay: {
               delay: 3500,
@@ -126,24 +126,68 @@
             '어디서든' 이란 말을 뜻하는 Anywhere 는 고객님이 언제, 어디에서
             주문하던 최상의 서비스를 받을 수 있게 하는 것을 목표로 합니다.
           </h3>
-          <p data-aos="fade-up" data-aos-delay="400">
+          <p data-aos="fade-up" data-aos-delay="400" data-aos-offset="-20">
             고객님의 평점과 만족도 조사로 구성된 빅데이터와, 최신 기술로 무장된
             딥러닝 기술로 차원이 다른 서비스를 제공합니다.
           </p>
         </div>
       </div>
     </section>
-
     <div id="scroll2"></div>
-
-    <!-- recommand section (none) -->
-    <section class="recommand_section"></section>
 
     <!-- menu section  -->
     <section class="menu-section">
+      <!-- menu title -->
+      <div class="h2-box">
+        <h2 data-aos="fade-up">추천 메뉴</h2>
+      </div>
+
+      <!-- menu slider -->
+      <div class="menu-slider-box">
+        <div class="menu-slider-background"></div>
+        <div class="menu-slider" data-aos="fade-up">
+          <div class="swiper mSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide s1"></div>
+              <div class="swiper-slide s2"></div>
+              <div class="swiper-slide s3"></div>
+              <div class="swiper-slide s4"></div>
+              <div class="swiper-slide s5"></div>
+              <div class="swiper-slide s6"></div>
+              <div class="swiper-slide s7"></div>
+              <div class="swiper-slide s8"></div>
+              <div class="swiper-slide s9"></div>
+            </div>
+
+            <script>
+              var swiper = new Swiper(".mSwiper", {
+                loop: true,
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 15,
+                observer: true,
+                observeParents: true,
+                autoplay: {
+                  delay: 2000,
+                  disableOnInteraction: false,
+                },
+                breakpoints: {
+                  600: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    slidesPerGroup: 2,
+                  },
+                },
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu box  -->
       <div class="menu-wrapper">
         <div class="inner-box inner-right">
-          <div class="menu" data-aos="fade-left">
+          <div class="menu" data-aos="fade-up" data-aos-offset="-100">
             <h2>이 달의 치킨 메뉴</h2>
             <div class="container">
               <div class="item">
@@ -174,7 +218,7 @@
 
       <div class="menu-wrapper">
         <div class="inner-box inner-left">
-          <div class="menu" data-aos="fade-right">
+          <div class="menu" data-aos="fade-up" data-aos-offset="-100">
             <h2>이 달의 버거 메뉴</h2>
             <div class="container">
               <div class="item">
@@ -205,7 +249,7 @@
 
       <div class="menu-wrapper">
         <div class="inner-box inner-right">
-          <div class="menu" data-aos="fade-left">
+          <div class="menu" data-aos="fade-up" data-aos-offset="-100">
             <h2>바로 배송~ 중국집 메뉴</h2>
             <div class="container">
               <div class="item">
@@ -239,7 +283,7 @@
 
     <!-- tag section -->
     <section
-      class="tag-section"
+      class="info-section"
       data-aos="fade-up"
       data-aos-delay="300"
       data-aos-duration="1300"
@@ -249,29 +293,6 @@
         <span style="font-family: 'Pacifico'; font-size: 4vw">Anywhere</span>
         만의 독창적인 시스템과 혜택
       </h2>
-      <!-- <ul>
-        <li><i class="fa-solid fa-mug-hot fa-2xl"></i></li>
-        <li><i class="fa-solid fa-lemon fa-2xl"></i></li>
-        <li><i class="fa-solid fa-fish fa-2xl"></i></li>
-        <li><i class="fa-solid fa-seedling fa-2xl"></i></li>
-        <li><i class="fa-solid fa-wine-bottle fa-2xl"></i></li>
-        <li><i class="fa-solid fa-pizza-slice fa-2xl"></i></li>
-        <li><i class="fa-solid fa-ice-cream fa-2xl"></i></li>
-        <li><i class="fa-solid fa-carrot fa-2xl"></i></li>
-        <li><i class="fa-solid fa-cheese fa-2xl"></i></li>
-        <li><i class="fa-solid fa-cookie fa-2xl"></i></li>
-        <li><i class="fa-solid fa-apple-whole fa-2xl"></i></li>
-        <li><i class="fa-solid fa-bowl-rice fa-2xl"></i></li>
-        <li><i class="fa-solid fa-bread-slice fa-2xl"></i></li>
-      </ul>
-      <ul>
-        <li><i class="fa-solid fa-route fa-2xl"></i></li>
-        <li><i class="fa-solid fa-street-view fa-2xl"></i></li>
-        <li><i class="fa-solid fa-location-crosshairs fa-2xl"></i></li>
-        <li><i class="fa-solid fa-hand-holding-dollar fa-2xl"></i></li>
-        <li><i class="fa-solid fa-clock fa-2xl"></i></li>
-      </ul> -->
-
       <div class="container">
         <div class="item">
           <i class="fa-solid fa-star fa-2x"></i>
@@ -334,18 +355,44 @@
       </div>
     </section>
 
+    <!-- info-2 section -->
+    <section class="info-2">
+      <div class="text-box">
+        <h2 data-aos="fade-up" data-aos-offset="-100">
+          Anywhere 에서 추진하는 신선한 재료 인증 마크
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="300" data-aos-offset="-100">
+          <br />
+          <br />
+          점포 리뷰만으로는 음식이 위생적으로 조리 되었는지 알 수 없습니다.
+          따라서 저희는 고객님들이 믿을 수 있는 음식을 전달받을 수 있게 노력하고
+          있습니다.
+          <br />
+          <br />
+          "자체 인증 마크 시스템" 은 주기적으로 점포를 방문하여 위생상태를
+          점검하여 조건에 맞는 점포에 인증 마크를 줍니다.
+        </p>
+      </div>
+    </section>
+
     <div id="scroll4"></div>
     <!-- footer section  -->
     <section class="footer">
       <div class="footer-box">
-        <h2>Anywhere</h2>
-        <div class="text-box">
+        <h2 class="f1">Anywhere</h2>
+        <div class="text-box f2">
+          <h3>About Us</h3>
+          <p>Home</p>
+          <p>Get in touch</p>
+          <p>FAQs</p>
+        </div>
+        <div class="text-box f3">
           <h3>Info</h3>
           <p>Tel. 010 - 0000 - 0000</p>
           <p>e-mail. asdfsdfg@gmail.com</p>
           <p>수원시 어쩌구 어쩌고 200번길 15</p>
         </div>
-        <div class="text-box">
+        <div class="text-box f4">
           <h3>Join us</h3>
           <form action="">
             <input type="text" placeholder="e-mail" />
