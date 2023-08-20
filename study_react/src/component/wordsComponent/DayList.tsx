@@ -3,8 +3,8 @@ import Button from 'react-bootstrap/Button';
 import useFetch from '../../hooks/useFetch';
 import { IDay } from './JsonForm';
 
-// 날짜를 버튼으로 출력
-// 각 버튼에 날짜 정보를 가지는 주소를 구성하고
+// 날짜를 db 에서 가져와 버튼으로 출력
+// 각 버튼에 날짜 정보를 가지는 주소 링크 구성,
 // 해당 주소로 이동하는 클릭 이벤트 추가
 export default function DayList() {
 	const navigate = useNavigate();

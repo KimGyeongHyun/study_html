@@ -7,6 +7,8 @@ import CreateWord from './CreateWord';
 import CreateDay from './CreateDay';
 
 // 단어장 페이지
+// path 로 현 주소를 읽어 Router 내에서 path 조건에 만족하는 Route element 를 출력
+// Link to 로 주소 변경 (하위 컴포넌트에 링크 생성)
 export default function MyBrowserRouter() {
 	// body 구성에 BrowserRouter 를 사용
 	// 주소가 바뀔 때마다 body 를 해당 주소의 element 로 설정
@@ -21,16 +23,14 @@ export default function MyBrowserRouter() {
 
 	return (
 		<BrowserRouter>
-			<div>
-				<Header />
-				<Routes>
-					<Route path='/' element={<DayList />}></Route>
-					<Route path='/day/:day' element={<Day />}></Route>
-					<Route path='/create_word' element={<CreateWord />}></Route>
-					<Route path='/create_day' element={<CreateDay />}></Route>
-					<Route path='*' element={<EmptyPage />}></Route>
-				</Routes>
-			</div>
+			<Header />
+			<Routes>
+				<Route path='/' element={<DayList />}></Route>
+				<Route path='/day/:day' element={<Day />}></Route>
+				<Route path='/create_word' element={<CreateWord />}></Route>
+				<Route path='/create_day' element={<CreateDay />}></Route>
+				<Route path='*' element={<EmptyPage />}></Route>
+			</Routes>
 		</BrowserRouter>
 	);
 }

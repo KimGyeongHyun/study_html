@@ -13,7 +13,7 @@ function Fundamental_function() {
 		{ id: 2, title: 'css', body: 'css is ...' },
 		{ id: 3, title: 'js', body: 'js is ...' },
 	]);
-	const [id, setId] = useState(0); // myComponent 가 어떤 Article 에 포커싱할지 선택
+	const [id, setId] = useState(1); // myComponent 가 어떤 Article 에 포커싱할지 선택
 	const [nextId, setNextId] = useState(4); // nextId : id 가 다음으로 변할 값 저장
 
 	// Header

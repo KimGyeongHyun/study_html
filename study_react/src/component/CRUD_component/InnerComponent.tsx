@@ -14,27 +14,50 @@ const myComponent = ({
 	onChangeId,
 	onChangeNextId,
 }: MyComponentProps) => {
-	// BrowserRouter 를 사용
-	// 주소가 바뀔 때마다 해당 주소의 element 로 설정
-	// 해당하는 주소가 없다면 EmptyPage 로 들어감
-	// 현재 EmptyPage 가 호출되지 않는 현상이 있음
-	// path 가 없으면 조건을 타고 들어가지 않는듯
-
-	// Nav 에 들어가는 id, title, body 값 저장
-	// const [topics, setTopics] = useState([
-	// 	{ id: 1, title: 'html', body: 'html is ...' },
-	// 	{ id: 2, title: 'css', body: 'css is ...' },
-	// 	{ id: 3, title: 'js', body: 'js is ...' },
-	// ]);
-
 	let content = null; // mode 에 따라 다른 내용을 보여주는 component
 	let contextControl = null; // mode 가 READ 일 때만 content 하단에 나오는 component
+
+	// change form 에서 submit 되었을 때 title, body 내용을 topics 에 갱신
+	// chrlrkqt
+	function changeTopics(title: string, body: string) {
+		// 1. newValue = {...value} 로 복제
+		// 2. newValue 변경
+		// 3. setValue(newValue) 로 데이터 변경
+		const newTopic = { id: nextId, title: title, body: body }; // 유저로부터 입력받은 새로운 데이터
+		const newTopics = [...topics]; // 기존 topics 깊은 복사
+		newTopics.push(newTopic); // 복사된 데이터에 새로운 데이터 추가
+		onChangeTopics(newTopics); // 새로운 데이터가 추가된 데이터로 setting
+
+		onChangeMode('READ'); // content 를 Nav 의 li 로 바꿈
+		onChangeId(nextId); // Nav 의 마지막 li 을 index 로 잡음
+		// nextId 가 Nav 의 마지막 li 을 가리키면서
+		// "READ" 로 설정된 mode 에 따라 Nav 의 마지막 li 이 Article 이 content 에 표시된다
+		onChangeNextId(nextId + 1); // 다음으로 설정할 index +1
+		// +1 값이 들어가서 처음엔 코드가 한 번 더 돌지만,
+		// mode 와 nextId 값은 도는 중에 변하지 않으므로 모두 통과,
+		// 해당 코드도 파라미터가 이전과 동일한 nextId+1 이므로 통과한다
+	}
+
+	function updateTopics(title: string, body: string) {
+		// topics 의 해당 id 내용을 갱신된 값으로 바꾼다
+		const newTopics = [...topics];
+		// READ 한 상태에서 update 가 되기 때문에 해당 id 가 유지된다
+		const updatedTopic = { id: id, title: title, body: body };
+		for (let i = 0; i < newTopics.length; i++)
+			if (newTopics[i].id === id) {
+				newTopics[i] = updatedTopic;
+				break;
+			}
+		onChangeTopics(newTopics);
+		onChangeMode('READ'); // 다시 "READ" 모드로 돌아간다
+	}
+
 	// create 만 있는 ul
 	// mode === "WELCOME" 일 때 contextControl 을 해당 컴포넌트로 설정
 	let justCreate = (
 		<li>
 			<a
-				href='/create'
+				href='#'
 				onClick={(event) => {
 					event.preventDefault();
 					onChangeMode('CREATE');
@@ -49,7 +72,7 @@ const myComponent = ({
 		<ul>
 			<li>
 				<a
-					href='/create'
+					href='#'
 					onClick={(event) => {
 						event.preventDefault();
 						onChangeMode('CREATE');
@@ -60,7 +83,7 @@ const myComponent = ({
 			{/* Update link */}
 			<li>
 				<a
-					href={'/update/' + id}
+					href='#'
 					onClick={(event) => {
 						event.preventDefault();
 						onChangeMode('UPDATE');
@@ -75,6 +98,7 @@ const myComponent = ({
 					value='Delete'
 					onClick={() => {
 						const newTopics = [];
+						// 포커스 되어있는 Articles 를 제외하고 다시 topics 를 만들어 setState
 						for (let i = 0; i < topics.length; i++)
 							if (topics[i].id !== id) newTopics.push(topics[i]);
 						onChangeTopics(newTopics);
@@ -113,22 +137,7 @@ const myComponent = ({
 				// submit 버튼을 눌렀을 때 실행되는 함수
 				// mode 를 "READ" 로 바꾸고, id 를 nextId 로 바꾸면서 제일 밑에 있는 Article 을 포커싱한다
 				onCreate={(title, body) => {
-					// 1. newValue = {...value} 로 복제
-					// 2. newValue 변경
-					// 3. setValue(newValue) 로 데이터 변경
-					const newTopic = { id: nextId, title: title, body: body }; // 유저로부터 입력받은 새로운 데이터
-					const newTopics = [...topics]; // 기존 topics 깊은 복사
-					newTopics.push(newTopic); // 복사된 데이터에 새로운 데이터 추가
-					onChangeTopics(newTopics); // 새로운 데이터가 추가된 데이터로 setting
-
-					onChangeMode('READ'); // content 를 Nav 의 li 로 바꿈
-					onChangeId(nextId); // Nav 의 마지막 li 을 index 로 잡음
-					// nextId 가 Nav 의 마지막 li 을 가리키면서
-					// "READ" 로 설정된 mode 에 따라 Nav 의 마지막 li 이 Article 이 content 에 표시된다
-					onChangeNextId(nextId + 1); // 다음으로 설정할 index +1
-					// +1 값이 들어가서 처음엔 코드가 한 번 더 돌지만,
-					// mode 와 nextId 값은 도는 중에 변하지 않으므로 모두 통과,
-					// 해당 코드도 파라미터가 이전과 동일한 nextId+1 이므로 통과한다
+					changeTopics(title, body);
 				}}></Create>
 		);
 	}
@@ -155,18 +164,9 @@ const myComponent = ({
 				// topics 를 갱신, id 는 이미 updated 된 Article 을 포커싱하고 있음
 				// mode 를 READ 로 바꾸면서 바꾼 Article 로 포커싱
 				onUpdate={(title, body) => {
-					// topics 의 해당 id 내용을 갱신된 값으로 바꾼다
-					const newTopics = [...topics];
-					// READ 한 상태에서 update 가 되기 때문에 해당 id 가 유지된다
-					const updatedTopic = { id: id, title: title, body: body };
-					for (let i = 0; i < newTopics.length; i++)
-						if (newTopics[i].id === id) {
-							newTopics[i] = updatedTopic;
-							break;
-						}
-					onChangeTopics(newTopics);
-					onChangeMode('READ'); // 다시 "READ" 모드로 돌아간다
-				}}></Update>
+					updateTopics(title, body);
+				}}
+			/>
 		);
 	}
 

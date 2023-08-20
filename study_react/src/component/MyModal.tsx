@@ -6,6 +6,8 @@ import MyBootstramModal from './MyBootstrapModal';
 interface ModalProps {
 	onChangeMode: () => void;
 }
+
+// 커스텀 모달창
 function ModalWindow(props: ModalProps) {
 	return (
 		<div className={styles.modalWindow}>
@@ -23,7 +25,9 @@ function ModalWindow(props: ModalProps) {
 	);
 }
 
+// 페이지
 function MyModal() {
+	// 커스텀 모달창을 state 로 결정
 	const [modal, setModal] = useState(false);
 	let modal_comp = modal ? (
 		<ModalWindow
@@ -35,6 +39,7 @@ function MyModal() {
 
 	return (
 		<>
+			{/* 커스텀 모달창 */}
 			<button
 				onClick={() => {
 					setModal(!modal);
@@ -43,6 +48,8 @@ function MyModal() {
 				Custom Modal
 			</button>
 			{modal_comp}
+
+			{/* 커스텀 부트스트랩 모달창 */}
 			<MyBootstramModal />
 		</>
 	);

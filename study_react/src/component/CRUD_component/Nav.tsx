@@ -15,7 +15,7 @@ const Nav = ({ onChangeMode, topics }: NavProps) => {
 				}
 				<a
 					id={t.id.toString()}
-					href={'/read/' + t.id}
+					href='#'
 					onClick={(e) => {
 						e.preventDefault();
 						// event.targer : 이벤트를 유발시킨 태그 (a 태그)

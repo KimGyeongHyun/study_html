@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import { IWord } from './JsonForm';
 
-// 해당 날짜에 대한 단어 정보를 서버로부터 받아 와서 table 형식으로 출력
+// 해당 날짜의 단어 정보를 서버로부터 받아 와서 table 형식으로 출력
 export default function Day() {
 	// DayList 의 Day 1 버튼을 누르면 'day/1' 링크로 주소가 이동한다
 	// MyBrouserRouter 에서 현재 주소를 읽고 Routes 에서 판단한다
