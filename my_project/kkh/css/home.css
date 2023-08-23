@@ -1,0 +1,79 @@
+body {
+  position: relative;
+}
+
+section {
+  margin: 7vw auto;
+}
+
+.intro-section {
+  position: relative;
+}
+.intro-section > h1 {
+  position: absolute;
+  top: 3vw;
+  left: 3vw;
+  font-size: 8vw;
+}
+.intro-section .title-margin {
+  height: 16vw;
+}
+.intro-section .left-intro {
+  background-color: #cff9f9;
+}
+.intro-section .right-intro {
+  background-color: #ced7fb;
+}
+.intro-section p {
+  font-size: 2vw;
+}
+.intro-section .text-box {
+  margin: 5vw;
+}
+
+.algorithm-section .text-box h2,
+.SOLID-section .text-box h2,
+.others-section .text-box h2 {
+  font-size: 5vw;
+  margin-bottom: 5vw;
+}
+.algorithm-section .text-box p,
+.SOLID-section .text-box p .others-section .text-box p {
+  font-size: 2vw;
+}
+.algorithm-section .text-box button,
+.SOLID-section .text-box button,
+.others-section .text-box button {
+  font-size: 3vw;
+}
+
+.algorithm-section {
+  background-color: #f3cdff;
+  padding: 20px;
+}
+.SOLID-section {
+  background-color: #d3b2f3;
+  padding: 20px;
+}
+.web-section {
+  background-color: #bebeff;
+  padding: 20px;
+}
+.others-section {
+  background-color: #ffc0e3;
+  padding: 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: #dddddd;
+}
+.footer p {
+  height: 70px;
+  line-height: 70px;
+  margin: 0;
+}

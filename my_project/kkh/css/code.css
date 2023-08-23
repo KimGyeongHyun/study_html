@@ -1,0 +1,11 @@
+.code {
+  margin: 20px;
+  padding: 20px;
+
+  /* x scroll*/
+  overflow: auto;
+  white-space: nowrap;
+}
+.code > p {
+  white-space: pre;
+}
