@@ -31,6 +31,6 @@ React 공부
 </a>
 
 개인 프로젝트
-<a href = "https://kimgyeonghyun.github.io/study_html/my_project/anywhere/html/" target="_blank">
+<a href = "https://kimgyeonghyun.github.io/study_html/my_project/" target="_blank">
 <img src="https://img.shields.io/badge/Project-a593e0">
 </a>

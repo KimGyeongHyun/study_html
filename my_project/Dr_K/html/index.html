@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Dr.K</title>
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- swiper slide  -->
     <link
@@ -20,26 +29,73 @@
     <section class="nav">
       <div class="bg-white"></div>
       <div class="nav-menu">
-        <div class="logo">asdf</div>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
+        <div class="nav-box1">
+          <div class="logo">
+            <img src="../img/logo.png" alt="logo" />
+            <h1>Dr.K</h1>
+          </div>
+          <ul>
+            <li class="nav-list">Home</li>
+            <li class="nav-list">Log in</li>
+            <li class="nav-list">Sign in</li>
+            <li class="nav-list">
+              <a href="https://github.com/KimGyeongHyun"
+                ><i class="fa-brands fa-github-alt fa-1x"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-box2">
+          <ul>
+            <li class="nav-list">소개</li>
+            <li class="nav-list">|</li>
+            <li class="nav-list">제품 정보</li>
+            <li class="nav-list">|</li>
+            <li class="nav-list">연구 성과</li>
+            <li class="nav-list">|</li>
+            <li class="nav-list">QnA</li>
+          </ul>
+        </div>
       </div>
     </section>
+
     <section class="header">
       <div class="swiper headerSwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="s1"></div>
+            <div class="s1 slide">
+              <div class="text-box">
+                <h2>글로벌 시장을 주도하는 회사</h2>
+                <p>탄탄한 기초과학과 끊임없는 R&D를 통해 다수의 특허 보유</p>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide">
-            <div class="s2"></div>
+            <div class="s2 slide">
+              <div class="text-box">
+                <h2>친환경적으로 제약하는 회사</h2>
+                <p>
+                  제약하면서 나오는 불순물을 충분히 여과, 희석하여 자연 피해
+                  최소화
+                </p>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide">
-            <div class="s3"></div>
+            <div class="s3 slide">
+              <div class="text-box">
+                <h2>미래를 바라보는 회사</h2>
+                <p>다가오는 미래에 많이 발생할 질병을 예측, 신약 개발</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="s4 slide">
+              <div class="text-box">
+                <h2>백신 개발에 적극적인 회사</h2>
+                <p>백신 개발, 대량 생산, 국내 무료 지원</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -58,8 +114,22 @@
           },
         });
       </script>
+      <script src="../js/navEvent.js"></script>
     </section>
-    <script src="../js/navEvent.js"></script>
+
+    <section class="container">
+      <div class="info">
+        <div class="text-box">
+          <h2>asdfasdf</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+            provident accusamus vero, quos officiis explicabo perferendis quia
+            dignissimos dolores beatae molestiae, a non ipsa eum voluptates ab
+            id cupiditate! Laboriosam.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque

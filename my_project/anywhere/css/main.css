@@ -1,16 +1,16 @@
 /* font */
 @font-face {
   font-family: "Jua";
-  src: url("../fonts/Jua/Jua-Regular.ttf");
+  src: url("../../font/Jua/Jua-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Noto";
-  src: url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf");
+  src: url("../../font/Noto_Sans_KR/NotoSansKR-Medium.otf");
 }
 @font-face {
   font-family: "Pacifico";
-  src: url("../fonts/Pacifico/Pacifico-Regular.ttf");
+  src: url("../../font/Pacifico/Pacifico-Regular.ttf");
 }
 * {
   margin: 0;
