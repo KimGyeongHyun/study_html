@@ -16,7 +16,8 @@
   width: 70%;
 }
 .big-sc h2 {
-  font-size: 35px;
+  font-size: 45px;
+  margin-bottom: 30px;
 }
 .big-sc p {
   font-size: 20px;
@@ -33,4 +34,8 @@
 .sm-sc p {
   font-size: 16px;
   margin-bottom: 10px;
+}
+.space-box {
+  width: 100%;
+  height: 200px;
 }
