@@ -1,11 +1,36 @@
-.s1 {
-  padding: 50px;
-  background-color: pink;
+.big {
+  position: relative;
   width: 100%;
 }
 
-.s2 {
-  padding: 50px;
-  background-color: blue;
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid #dddddd;
+}
+
+.main-box {
+  position: absolute;
+  right: 0;
+  width: 70%;
+}
+.big-sc h2 {
+  font-size: 35px;
+}
+.big-sc p {
+  font-size: 20px;
+}
+
+.sm-sc {
   width: 100%;
+  padding: 30px 30px 30px 0;
+  /* background-color: aliceblue; */
+}
+.sm-sc h2 {
+  font-size: 24px;
+}
+.sm-sc p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }

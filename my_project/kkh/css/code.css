@@ -1,11 +1,12 @@
 .code {
-  margin: 20px;
+  margin-bottom: 20px;
   padding: 20px;
 
   /* x scroll*/
-  overflow: auto;
-  white-space: nowrap;
+  /* overflow: auto;
+  white-space: nowrap; */
 }
 .code > p {
   white-space: pre;
+  display: inline;
 }

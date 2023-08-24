@@ -31,37 +31,34 @@ section {
   margin: 5vw;
 }
 
-.algorithm-section .text-box h2,
-.SOLID-section .text-box h2,
-.others-section .text-box h2 {
+.sc {
+  padding: 20px;
+}
+.sc .text-box {
+  padding: 20px;
+}
+.sc .text-box h2 {
   font-size: 5vw;
   margin-bottom: 5vw;
 }
-.algorithm-section .text-box p,
-.SOLID-section .text-box p .others-section .text-box p {
+.sc .text-box p {
   font-size: 2vw;
 }
-.algorithm-section .text-box button,
-.SOLID-section .text-box button,
-.others-section .text-box button {
+.sc .text-box button {
   font-size: 3vw;
 }
 
 .algorithm-section {
   background-color: #f3cdff;
-  padding: 20px;
 }
 .SOLID-section {
   background-color: #d3b2f3;
-  padding: 20px;
 }
 .web-section {
   background-color: #bebeff;
-  padding: 20px;
 }
 .others-section {
   background-color: #ffc0e3;
-  padding: 20px;
 }
 
 .footer {
