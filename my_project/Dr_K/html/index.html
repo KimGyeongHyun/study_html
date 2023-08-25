@@ -20,12 +20,17 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
+    <!-- navigator -->
     <section class="nav">
       <div class="bg-white"></div>
       <div class="nav-menu">
@@ -40,10 +45,11 @@
             <li class="nav-list">Sign in</li>
             <li class="nav-list">
               <a href="https://github.com/KimGyeongHyun"
-                ><i class="fa-brands fa-github-alt fa-1x"></i
+                ><i class="fa-brands fa-github-alt fa-1x icon-toggle"></i
               ></a>
             </li>
           </ul>
+          <i class="fa-solid fa-bars fa-2x icon-toggle"></i>
         </div>
         <div class="nav-box2">
           <ul>
@@ -59,6 +65,7 @@
       </div>
     </section>
 
+    <!-- header -->
     <section class="header">
       <div class="swiper headerSwiper">
         <div class="swiper-wrapper">
@@ -117,16 +124,70 @@
       <script src="../js/navEvent.js"></script>
     </section>
 
-    <section class="container">
-      <div class="info">
-        <div class="text-box">
-          <h2>asdfasdf</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-            provident accusamus vero, quos officiis explicabo perferendis quia
-            dignissimos dolores beatae molestiae, a non ipsa eum voluptates ab
-            id cupiditate! Laboriosam.
-          </p>
+    <!-- info -->
+    <section class="info" data-aos="fade-down" data-aos-duration="700">
+      <div class="op-box">
+        <div class="container">
+          <div class="text-box">
+            <h2>About Dr.K</h2>
+            <p>
+              1000조 원 규모의 글로벌 케미컬 의약품 시장을 개척하며 미래 성장을
+              새로운 동력을 불어넣고 있습니다
+            </p>
+            <p>
+              다년간 쌓인 R&D 데이터는 안정성을 더욱 높이며 글로벌 제약의 선두에
+              설 수 있는 기반을 마련합니다
+            </p>
+            <p></p>
+          </div>
+          <div class="img-box">
+            <!-- Swiper -->
+            <div class="swiper infoSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide s1"></div>
+                <div class="swiper-slide s2"></div>
+                <div class="swiper-slide s3"></div>
+                <div class="swiper-slide s4"></div>
+                <div class="swiper-slide s5"></div>
+                <div class="swiper-slide s6"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <script>
+              var swiper = new Swiper(".infoSwiper", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+                breakpoints: {
+                  600: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                },
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech">
+      <div class="op-box">
+        <div class="container">
+          <h2>Technology</h2>
+          <div class="content">
+            <img src="../img/" alt="" />
+          </div>
+
+          <div class="buttons">
+            <button>a</button>
+            <button>b</button>
+            <button>c</button>
+          </div>
         </div>
       </div>
     </section>
@@ -198,5 +259,9 @@
       voluptatem, laudantium tempora adipisci autem maxime, porro quasi alias et
       ea!
     </p>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

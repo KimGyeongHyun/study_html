@@ -2,28 +2,32 @@ var nav = document.querySelector(".nav");
 var white = document.querySelector(".bg-white");
 var logo = document.querySelector(".nav .nav-menu .logo");
 var li = document.getElementsByClassName("nav-list");
-var icon = document.querySelector(".nav .nav-menu ul li a i");
+var icon = document.getElementsByClassName("icon-toggle");
 var [flag1, flag2] = [false, false];
 
 function changeBlack() {
   logo.style.color = "black";
   logo.style.textShadow = "none";
-  icon.style.color = "black";
-  icon.style.textShadow = "none";
   for (var i = 0; i < li.length; i++) {
     li[i].style.color = "black";
     li[i].style.textShadow = "none";
+  }
+  for (var i = 0; i < icon.length; i++) {
+    icon[i].style.color = "black";
+    icon[i].style.textShadow = "none";
   }
 }
 
 function changeWhite() {
   logo.style.color = "white";
   logo.style.textShadow = "2px 2px 4px #333333";
-  icon.style.color = "white";
-  icon.style.textShadow = "2px 2px 4px #333333";
   for (var i = 0; i < li.length; i++) {
     li[i].style.color = "white";
     li[i].style.textShadow = "2px 2px 4px #333333";
+  }
+  for (var i = 0; i < icon.length; i++) {
+    icon[i].style.color = "white";
+    icon[i].style.textShadow = "2px 2px 4px #333333";
   }
 }
 
