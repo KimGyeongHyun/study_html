@@ -23,8 +23,10 @@
 body {
   position: relative;
 }
-.container {
+.inner {
+  box-sizing: border-box;
   width: 80%;
+  padding: 50px 0;
   margin: auto 10%;
 }
 
@@ -177,34 +179,37 @@ body {
 /* info */
 .info {
   position: relative;
+  width: 100%;
+  height: 80vh;
   margin-bottom: 10vw;
   background-image: url(../img/bg9.jpg);
   background-size: cover;
   background-position: center;
 }
 .info .op-box {
-  padding: 10vw 0;
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255, 0.4);
 }
 .info .container {
-  text-align: right;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .info .text-box {
-  text-align: left;
-  width: 80%;
-  margin-bottom: 100px;
+  width: 80vw;
 }
 .info .text-box h2 {
   font-family: "Mont";
-  font-size: 80px;
+  font-size: 8vw;
   margin: 30px 0;
   color: #333333;
 }
 .info .text-box p {
   font-family: "Noto";
-  font-size: 30px;
+  font-size: 3vw;
   margin: 30px 0;
   color: #555555;
 }
@@ -213,49 +218,106 @@ body {
   text-align: left;
 }
 
-.info .img-box .infoSwiper {
-  width: 70vw;
-  height: 20vw;
-}
-.info .img-box .infoSwiper .swiper-slide {
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}
-.info .img-box .infoSwiper .s1 {
-  background-image: url(../img/analysis-4402809_1920.jpg);
-}
-.info .img-box .infoSwiper .s2 {
-  background-image: url(../img/approximately-3887443_1920.jpg);
-}
-.info .img-box .infoSwiper .s3 {
-  background-image: url(../img/laboratory-3827736_1920.jpg);
-}
-.info .img-box .infoSwiper .s4 {
-  background-image: url(../img/s2.jpg);
-}
-.info .img-box .infoSwiper .s5 {
-  background-image: url(../img/technology-4905258_1920.jpg);
-}
-.info .img-box .infoSwiper .s6 {
-  background-image: url(../img/covid-5288310_1920.jpg);
-}
-
 /* technology section */
 .tech {
+  width: 100%;
   background-image: url(../img/bg1.jpg);
   background-size: cover;
   background-position: center;
 }
 .tech .op-box {
   width: 100%;
-  height: 100%;
-  padding: 10vw 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 122, 255, 0.2);
+}
+.tech .tech-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .tech h2 {
+  width: 100%;
   font-family: "Mont";
   font-size: 60px;
+  margin-bottom: 50px;
+}
+.tech .content {
+  width: 50vw;
+  height: 60vh;
+}
+.tech .content .tech-box {
+  width: 60vw;
+  position: absolute;
+}
+.tech .content .tech1 {
+  opacity: 1;
+}
+.tech .content .tech2,
+.tech .content .tech3,
+.tech .content .tech4,
+.tech .content .tech5,
+.tech .content .tech6 {
+  opacity: 0;
+}
+.tech .content .tech-img {
+  width: 50vw;
+  height: 30vh;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 5px white;
+  margin-bottom: 5vh;
+  background-position: center;
+  background-size: cover;
+}
+.tech .content .img1 {
+  background-image: url(../img/tech1.jpg);
+}
+.tech .content .img2 {
+  background-image: url(../img/tech2.jpg);
+}
+.tech .content .img3 {
+  background-image: url(../img/tech3.jpg);
+}
+.tech .content .img4 {
+  background-image: url(../img/tech4.jpg);
+}
+.tech .content .img5 {
+  background-image: url(../img/tech5.jpg);
+}
+.tech .content .img6 {
+  background-image: url(../img/tech6.jpg);
+}
+.tech .content .text-box h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.tech .content .text-box p {
+  font-size: 13px;
+}
+.tech .buttons {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.tech .buttons button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: aliceblue;
+  color: black;
+  transition: 0.2s;
+}
+.tech .buttons .active {
+  background-color: #4f86c6;
+  color: white;
+  box-shadow: 0px 0px 5px 3px white;
+}
+.tech .buttons button:hover {
+  background-color: #4fb0c6;
+  color: white;
+  box-shadow: 0px 0px 5px 3px white;
 }
 
 @media (max-width: 600px) {
@@ -271,14 +333,24 @@ body {
   .nav .nav-menu ul li {
     padding: 10px;
   }
-  .info .text-box h2 {
-    font-size: 60px;
+  .tech h2 {
+    font-size: 30px;
   }
-  .info .text-box p {
-    font-size: 20px;
+  .tech .content .text-box h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .tech .content .text-box p {
+    font-size: 15px;
+  }
+  .tech .tech-content {
+    flex-direction: column-reverse;
+  }
+  .tech .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 400px) {
   .nav .nav-menu .nav-box2 ul li {
     font-size: 12px;
