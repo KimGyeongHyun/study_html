@@ -34,7 +34,6 @@ body {
 .nav {
   width: 100%;
   height: 15vh;
-  border-bottom: 1px solid #333333;
   position: fixed;
   top: 0;
   left: 0;
@@ -65,6 +64,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid #333333;
 }
 .nav .nav-menu .nav-box1 {
   width: 100%;
@@ -88,11 +88,11 @@ body {
   font-size: 50px;
   padding: 20px;
 }
-.nav .nav-menu .nav-box1 ul li {
+.nav .nav-menu .nav-box1 .lists .nav-list {
   font-size: 16px;
 }
 
-.nav .nav-menu .nav-box1 ul li a i {
+.nav .nav-menu .nav-box1 .lists .nav-list a i {
   color: white;
   transition: 0.2s;
 }
@@ -110,19 +110,70 @@ body {
   justify-content: center;
   align-items: center;
 }
-.nav .nav-menu .nav-box2 ul li {
-  font-size: 20px;
+.nav .nav-menu .nav-box2 .lists {
+  margin: auto;
 }
-.nav .nav-menu ul {
+.nav .nav-menu .nav-box2 .lists .nav-list {
+  width: 20vw;
+  font-size: 20px;
+  text-align: center;
+}
+.nav .nav-menu .nav-box2 .lists .spacer {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 0px #666666;
+  transition: 0.2s;
+}
+.nav .nav-menu .lists {
+  cursor: pointer;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  color: white;
+  text-shadow: 0px 0px 10px #333333;
 }
-.nav .nav-menu ul li {
+.nav .nav-menu .nav-box1 .lists .nav-list {
   cursor: pointer;
   padding: 20px;
   transition: 0.2s;
   color: white;
-  text-shadow: 0px 0px 10px #000000;
+  text-shadow: 0px 0px 10px #333333;
+}
+.nav .nav-popup {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-bottom: 1px solid #333333;
+}
+.nav .nav-popup .nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background-color: white;
+}
+.nav .nav-popup .nav-box ul {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  list-style: none;
+  padding: 5px 0;
+}
+.nav .nav-popup .nav-box ul li {
+  cursor: pointer;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #666666;
+}
+.nav .nav-popup .nav-box .spacer {
+  width: 1px;
+  margin-top: 20px;
+  height: 120px;
+  background-color: #aaaaaa;
 }
 
 /* header slider*/
@@ -189,7 +240,12 @@ body {
 .info .op-box {
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.8)
+  );
 }
 .info .container {
   width: 100%;
@@ -221,17 +277,18 @@ body {
 /* technology section */
 .tech {
   width: 100%;
-  background-image: url(../img/bg1.jpg);
+  background-image: url(../img/bg4.jpg);
   background-size: cover;
   background-position: center;
+  margin-bottom: 100px;
 }
 .tech .op-box {
   width: 100%;
-  background-color: rgba(0, 122, 255, 0.2);
+  background: linear-gradient(rgba(255, 255, 255, 0), white 95%);
 }
 .tech .tech-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -242,11 +299,11 @@ body {
   margin-bottom: 50px;
 }
 .tech .content {
-  width: 50vw;
-  height: 60vh;
+  width: 70vw;
+  height: 80vh;
 }
 .tech .content .tech-box {
-  width: 60vw;
+  width: 70vw;
   position: absolute;
 }
 .tech .content .tech1 {
@@ -260,7 +317,7 @@ body {
   opacity: 0;
 }
 .tech .content .tech-img {
-  width: 50vw;
+  width: 70vw;
   height: 30vh;
   border-radius: 30px;
   box-shadow: 0px 0px 20px 5px white;
@@ -275,33 +332,36 @@ body {
   background-image: url(../img/tech2.jpg);
 }
 .tech .content .img3 {
-  background-image: url(../img/tech3.jpg);
+  background-image: url(../img/splashing-165192_1920.jpg);
 }
 .tech .content .img4 {
-  background-image: url(../img/tech4.jpg);
+  background-image: url(../img/vaccine-5897391_1920.jpg);
 }
 .tech .content .img5 {
   background-image: url(../img/tech5.jpg);
 }
 .tech .content .img6 {
-  background-image: url(../img/tech6.jpg);
+  background-image: url(../img/white-1772985_1920.jpg);
 }
 .tech .content .text-box h3 {
-  font-size: 30px;
+  font-family: "Mont";
+  font-size: 60px;
   margin-bottom: 20px;
 }
 .tech .content .text-box p {
-  font-size: 13px;
+  font-size: 30px;
 }
 .tech .buttons {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  width: 70vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin-bottom: 50px;
+  gap: 20px;
 }
 .tech .buttons button {
   cursor: pointer;
   padding: 5px;
-  margin: 5px;
   border: none;
   border-radius: 5px;
   font-size: 15px;
@@ -310,14 +370,149 @@ body {
   transition: 0.2s;
 }
 .tech .buttons .active {
-  background-color: #4f86c6;
+  background-color: #4da0e4;
   color: white;
   box-shadow: 0px 0px 5px 3px white;
 }
 .tech .buttons button:hover {
-  background-color: #4fb0c6;
+  background-color: #8dbada;
   color: white;
   box-shadow: 0px 0px 5px 3px white;
+}
+
+.rnd {
+  width: 100%;
+  background-image: url(../img/bg5.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.rnd .op-box {
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+.rnd h2 {
+  font-size: 7vw;
+  margin-bottom: 50px;
+}
+.rnd .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.rnd .content img {
+  transition: 0.2s;
+  width: 30%;
+  height: 17vw;
+}
+.rnd .content:hover img {
+  transform: scale(1.2);
+}
+.rnd .content .text-box {
+  width: 60%;
+  display: flex;
+  /* font-family: "Cor"; */
+  flex-direction: column;
+  justify-content: center;
+}
+.rnd .content .text-box h3 {
+  font-size: 5vw;
+  margin-bottom: 20px;
+}
+.rnd .content .text-box p {
+  font-size: 2vw;
+}
+
+.community h2 {
+  font-family: "Mont";
+  font-size: 8vw;
+  margin-bottom: 50px;
+}
+.community .contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.community .content {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.2vw solid #353866;
+  border-radius: 8px;
+}
+.community .content .num-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  background-color: #353866;
+  color: white;
+  border-radius: 8px;
+  width: 8vw;
+  height: 8vw;
+  margin: 3vw 0;
+}
+.community .content .text-box {
+  margin: 3vw 0;
+}
+.community .content .text-box h3 {
+  font-size: 3vw;
+}
+.community .content .text-box p {
+  font-size: 1.5vw;
+}
+.community .content:hover {
+  background-color: #353866;
+  color: white;
+}
+.community .content:hover .num-box {
+  background-color: white;
+  color: #000000;
+}
+
+footer {
+  background-color: #353866;
+}
+footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .content .logo {
+  cursor: pointer;
+  color: white;
+  font-family: "Cor";
+  font-size: 50px;
+}
+footer .content .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #8588be;
+}
+footer .content .text-box p {
+  margin: 10px 0;
+}
+
+@media (max-width: 1000px) {
+  .tech .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .tech .content .text-box h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .tech .content .text-box p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -327,11 +522,22 @@ body {
   .nav .nav-menu .nav-box1 > i {
     display: block;
   }
-  .nav .nav-menu .nav-box2 ul li {
-    font-size: 16px;
+  .nav .nav-menu .nav-box2 .lists .nav-list {
+    width: 23vw;
+    font-size: 12px;
   }
-  .nav .nav-menu ul li {
+  .nav .nav-menu > ul li {
     padding: 10px;
+  }
+  .nav .nav-popup .nav-box ul {
+    width: 23vw;
+  }
+  .nav .nav-popup .nav-box ul li {
+    font-size: 12px;
+  }
+  .tech .buttons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
   .tech h2 {
     font-size: 30px;
@@ -343,17 +549,16 @@ body {
   .tech .content .text-box p {
     font-size: 15px;
   }
-  .tech .tech-content {
-    flex-direction: column-reverse;
-  }
-  .tech .buttons {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  footer .content .logo {
+    display: none;
   }
 }
 @media (max-width: 400px) {
   .nav .nav-menu .nav-box2 ul li {
     font-size: 12px;
+  }
+  .tech .buttons {
+    gap: 10px;
   }
   .info .text-box h2 {
     font-size: 35px;

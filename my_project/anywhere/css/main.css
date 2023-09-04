@@ -465,6 +465,105 @@ body {
   font-size: 2vw;
 }
 
+/* event section */
+.event {
+  width: 90%;
+  margin: 0 auto 100px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4vw;
+}
+.event .content {
+  position: relative;
+  cursor: pointer;
+  width: 40vw;
+  height: 15vw;
+  border-radius: 1vw;
+  box-shadow: 5px 5px 5px 0px #666666;
+}
+.event .c1 {
+  font-family: "Jua";
+  background-image: url(../img/ev1.jpg);
+  background-size: 70vw;
+  background-position: 0% 30%;
+}
+.event .c1 h3 {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  color: white;
+  font-size: 2.6vw;
+}
+.event .c1 p {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+  font-size: 1.6vw;
+  color: white;
+}
+
+.event .c2 {
+  font-family: "Jua";
+  background-image: url(../img/slide4.jpg);
+  background-size: 40vw;
+  background-position: 40% 40%;
+  color: white;
+  text-shadow: 0px 0px 4px #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.event .c2 h3 {
+  font-size: 2.8vw;
+}
+.event .c2 p {
+  font-size: 2vw;
+}
+
+.event .c3 {
+  background-image: url(../img/rose-4207584_1920.jpg);
+  background-size: 50vw;
+  background-position: 0% 50%;
+}
+
+.event .c4 {
+  background-image: url(../img/ev15.jpg);
+  background-size: 60vw;
+  background-position: center;
+}
+
+.event .c6 {
+  background-image: url(../img/ev16.png);
+  background-size: 50vw;
+  background-position: 40% 40%;
+}
+.event .c6 h3 {
+  font-family: "Jua";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 22%;
+  color: white;
+  font-size: 2.6vw;
+}
+
+.event .c5 {
+  background-image: url(../img/ev6.jpg);
+  background-size: 60vw;
+  background-position: 0% 48%;
+}
+.event .c5 h3 {
+  position: absolute;
+  font-family: "Noto";
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2.4vw;
+}
+
 /* footer section */
 .footer {
   width: 100%;
