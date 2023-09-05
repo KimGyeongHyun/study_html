@@ -12,6 +12,10 @@
   font-family: "Pacifico";
   src: url("../../font/Pacifico/Pacifico-Regular.ttf");
 }
+@font-face {
+  font-family: "Cor";
+  src: url(../../font/Cormorant/Cormorant-Italic-VariableFont_wght.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,12 +49,8 @@ body {
   cursor: pointer;
   color: white;
   text-align: center;
-  width: 7vw;
-  min-width: 30px;
-  max-width: 100px;
-  height: 5vw;
-  min-height: 15px;
-  max-height: 75px;
+  width: 100%;
+  padding: 1vw;
   font-size: 1.5vw;
   display: flex;
   justify-content: center;
@@ -227,6 +227,7 @@ body {
   font-size: 10vw;
   color: #333333;
 }
+
 /* menu slider (recommand) */
 .menu-section .menu-slider-box {
   position: relative;
@@ -290,6 +291,7 @@ body {
 .menu-section .menu-slider .mSwiper .s9 {
   background-image: url("../img/m_pasta-3547078_640.jpg");
 }
+
 /* menu box  */
 .menu-wrapper {
   position: relative;
@@ -464,6 +466,10 @@ body {
 .info-2 .text-box p {
   font-size: 2vw;
 }
+.info-2 #scroll4 {
+  position: absolute;
+  bottom: 0;
+}
 
 /* event section */
 .event {
@@ -502,7 +508,6 @@ body {
   font-size: 1.6vw;
   color: white;
 }
-
 .event .c2 {
   font-family: "Jua";
   background-image: url(../img/slide4.jpg);
@@ -521,34 +526,39 @@ body {
 .event .c2 p {
   font-size: 2vw;
 }
-
 .event .c3 {
-  background-image: url(../img/rose-4207584_1920.jpg);
-  background-size: 50vw;
-  background-position: 0% 50%;
+  background-image: url(../img/stars-875759_1920.jpg);
+  background-size: 70vw;
+  background-position: 0% 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jua";
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 4px #333333;
 }
-
+.event .c3 h3 {
+  font-size: 3.2vw;
+  margin-bottom: 1vw;
+}
+.event .c3 p {
+  font-size: 2vw;
+}
 .event .c4 {
   background-image: url(../img/ev15.jpg);
   background-size: 60vw;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.event .c6 {
-  background-image: url(../img/ev16.png);
-  background-size: 50vw;
-  background-position: 40% 40%;
-}
-.event .c6 h3 {
-  font-family: "Jua";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 22%;
+.event .c4 h3 {
   color: white;
-  font-size: 2.6vw;
+  font-family: "Cor";
+  text-shadow: 0px 0px 4px #333333;
+  font-size: 3.4vw;
 }
-
 .event .c5 {
   background-image: url(../img/ev6.jpg);
   background-size: 60vw;
@@ -562,6 +572,20 @@ body {
   transform: translateY(-50%);
   color: white;
   font-size: 2.4vw;
+}
+.event .c6 {
+  background-image: url(../img/ev16.png);
+  background-size: 50vw;
+  background-position: 40% 40%;
+}
+.event .c6 h3 {
+  font-family: "Jua";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 22%;
+  color: white;
+  font-size: 2.6vw;
 }
 
 /* footer section */
@@ -604,14 +628,17 @@ body {
   flex-direction: column;
 }
 .footer .footer-box .text-box form input {
-  margin: 2px 0;
+  margin: 4px 0;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 2px;
+  padding: 2px;
 }
 .footer .footer-box .text-box form button {
   width: 50px;
   margin: 5px 0;
   padding: 2px;
+  border: none;
+  color: #666666;
 }
 
 /* animation */
@@ -690,6 +717,60 @@ body {
   }
   .info-section .container .item .text-box p {
     display: none;
+  }
+  .event {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .event .content {
+    width: 80vw;
+    height: 30vw;
+    border-radius: 2vw;
+  }
+  .event .c1 {
+    background-size: 140vw;
+  }
+  .event .c1 h3 {
+    font-size: 5.2vw;
+  }
+  .event .c1 p {
+    font-size: 3.2vw;
+  }
+  .event .c2 {
+    font-family: "Jua";
+    background-size: 80vw;
+  }
+  .event .c2 h3 {
+    font-size: 5.6vw;
+  }
+  .event .c2 p {
+    font-size: 4vw;
+  }
+  .event .c3 h3 {
+    font-size: 6.4vw;
+    margin-bottom: 2vw;
+  }
+  .event .c3 p {
+    font-size: 4vw;
+  }
+  .event .c4 {
+    background-size: 120vw;
+  }
+  .event .c4 h3 {
+    font-size: 6.8vw;
+  }
+  .event .c5 {
+    background-size: 120vw;
+  }
+  .event .c5 h3 {
+    font-size: 4.8vw;
+  }
+  .event .c6 {
+    background-size: 100vw;
+  }
+  .event .c6 h3 {
+    font-size: 5.2vw;
   }
   .footer .footer-box .f2 {
     display: none;

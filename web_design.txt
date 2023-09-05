@@ -72,10 +72,10 @@ AOS 구현
 
 참고
 http://gcgreenvet.co.kr/
-https://kickback.org/
 http://novocellbio.com/
 https://www.makeshop.co.kr/
 https://zero-base.co.kr/event/media_insight_contents_FE_frontend_portfolio_web
+
 
 ========================================
 빵
@@ -92,6 +92,16 @@ https://ssbnc.kr/
 
 ==========================================
 배달의 민족
+
+==============================================
+신발
+필라 nav (팝업, 슬라이드 이미지 분배)
+https://www.fila.co.kr/main/main.asp?utm_source=google&utm_medium=cpc&utm_campaign=sa_%EA%B5%AC%EA%B8%80_%EA%B2%80%EC%83%89_pc&utm_content=%ED%9C%A0%EB%9D%BC_%EB%8C%80%ED%91%9C&utm_term=FILA&gad=1
+올버즈 디자인
+https://www.allbirds.co.kr/?gad=1&gclid=CjwKCAjwo9unBhBTEiwAipC115HyK0UoumBCUnSD0EzSUojyeT3EXiq6lbCifqdqLrh0PKhtJY9yCRoCgecQAvD_BwE
+킥백 레이어 디자인
+https://kickback.org/
+
 
 ===============================================
 경현이의 머릿속

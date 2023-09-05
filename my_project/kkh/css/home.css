@@ -61,6 +61,17 @@ section {
   background-color: #ffc0e3;
 }
 
+.img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.img-box img {
+  width: 100%;
+  height: 25%;
+}
+
 .footer {
   width: 100%;
   background-color: #999999;
