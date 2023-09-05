@@ -15,94 +15,99 @@
     <!-- jq -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
+    <!-- css -->
     <link rel="stylesheet" href="../css/code.css" />
     <link rel="stylesheet" href="../css/data_structure.css" />
     <title>Data structure</title>
   </head>
+
   <body>
-    <div>
-      <!-- sidebar -->
-      <div class="mySidebar sidebar flex-shrink-0 p-3 bg-white">
-        <ul class="list-unstyled">
-          <li>
-            <button
-              class="btn btn-toggle align-items-center rounded collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#sort-collapse"
-              aria-expanded="true"
-            >
-              Sort
-            </button>
-            <div class="collapse" id="sort-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li class="sort-sc" id="sort-sc1" style="cursor: pointer">
-                  O(n**2)
-                </li>
-                <li class="sort-sc" id="sort-sc2" style="cursor: pointer">
-                  Merge sort
-                </li>
-                <li class="sort-sc" id="sort-sc3" style="cursor: pointer">
-                  Quick sort
-                </li>
-                <li class="sort-sc" id="sort-sc4" style="cursor: pointer">
-                  Heap sort
-                </li>
-                <li class="sort-sc" id="sort-sc5" style="cursor: pointer">
-                  Python List.sort()
-                </li>
-              </ul>
-            </div>
-          </li>
-          <hr />
-
-          <li>
-            <button
-              class="btn btn-toggle align-items-center rounded collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#imp-collapse"
-              aria-expanded="true"
-            >
-              Implementation
-            </button>
-            <div class="collapse" id="imp-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li class="imp-sc" id="imp-sc1" style="cursor: pointer">
-                  Find regularity, repeatability of data
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="main-box content">
-        <div class="container">
-          <!-- header -->
-          <header
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    <!-- sidebar -->
+    <div class="sidebar p-3 bg-white">
+      <ul class="list-unstyled">
+        <li>
+          <button
+            class="btn fs-5"
+            data-bs-toggle="collapse"
+            data-bs-target="#sort-collapse"
+            aria-expanded="true"
           >
-            <div class="col-md-3 mb-2 mb-md-0">
-              <a
-                href="/"
-                class="d-inline-flex link-body-emphasis text-decoration-none"
-              >
-                Coding portfolid
-              </a>
-            </div>
-
-            <ul
-              class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
-            >
-              <li><a href="./index.html" class="nav-link px-2">Home</a></li>
-              <li>
-                <a href="#" class="nav-link px-2 link-secondary">Algorithm</a>
+            Sort
+          </button>
+          <div class="collapse show" id="sort-collapse">
+            <ul class="btn-toggle-nav list-unstyled pb-3 fs-6">
+              <li class="sort-sc pb-2" id="sort-sc1" style="cursor: pointer">
+                O(n**2)
               </li>
-              <li><a href="#" class="nav-link px-2">SOLID</a></li>
-              <li><a href="#" class="nav-link px-2">Deep learning</a></li>
+              <li class="sort-sc pb-2" id="sort-sc2" style="cursor: pointer">
+                Merge sort
+              </li>
+              <li class="sort-sc pb-2" id="sort-sc3" style="cursor: pointer">
+                Quick sort
+              </li>
+              <li class="sort-sc pb-2" id="sort-sc4" style="cursor: pointer">
+                Heap sort
+              </li>
+              <li class="sort-sc pb-2" id="sort-sc5" style="cursor: pointer">
+                Python List.sort()
+              </li>
             </ul>
-          </header>
+          </div>
+        </li>
+        <hr />
 
-          <section class="big-sc">
+        <li>
+          <button
+            class="btn fs-5"
+            data-bs-toggle="collapse"
+            data-bs-target="#imp-collapse"
+            aria-expanded="false"
+          >
+            Implementation
+          </button>
+          <div class="collapse" id="imp-collapse">
+            <ul class="btn-toggle-nav list-unstyled pb-3 fs-6">
+              <li class="imp-sc pb-2" id="imp-sc1" style="cursor: pointer">
+                Find regularity, repeatability of data
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-box content">
+      <div class="container">
+        <!-- header -->
+        <header
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+        >
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a
+              href="./index.html"
+              class="d-inline-flex link-body-emphasis text-decoration-none"
+            >
+              Coding portfolid
+            </a>
+          </div>
+
+          <ul
+            class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="./index.html" class="nav-link px-2">Home</a></li>
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Algorithm</a>
+            </li>
+            <li><a href="#" class="nav-link px-2">SOLID</a></li>
+            <li><a href="#" class="nav-link px-2">Deep learning</a></li>
+          </ul>
+        </header>
+
+        <!-- content -->
+        <div class="big-sc">
+          <!-- Sort -->
+          <!-- O(n**2) -->
+          <section class="O(n**2)">
             <h2>정렬 알고리즘 요약</h2>
             <p>시작하기에 앞서 데이터를 정렬하는 방법 살펴보기</p>
 
@@ -142,236 +147,239 @@
                 앞에서부터 뒤로 요소를 하나씩 추가해가며 삽입하며 정렬
               </div>
             </div>
-
-            <div id="sort-scroll2"></div>
-            <div class="sm-sc">
-              <h3>병합 정렬</h3>
-              <hr />
-              <p>배열을 반씩 나눠 합치며 정렬하는 방식</p>
-
-              <div class="bg-dark text-white rounded-1 code">
-                Divide and conquer 방식
-                <br />
-                <br />
-                <p>&#9;</p>
-                1이 될 때까지 배열을 반 씩 쪼갬
-                <br />
-                <br />
-                <p>&#9;</p>
-                두 개의 배열을 합칠 때 두 배열의 제일 앞에 있는 수를 비교하여
-                작은 수를 새로운 배열에 배치,
-                <br />
-                <br />
-                <p>&#9;</p>
-                두 배열을 모두 순회할 때까지 반복
-                <br />
-                <br />
-                <p>&#9;</p>
-                배열이 1개일 경우 반환, 2개 이상일 경우 나머지 배열이 반환되었을
-                경우에만 반환
-              </div>
-              <p>배열을 반 씩 나누며 정렬, 시간복잡도 : O(nlog(n))</p>
-              <p>
-                퀵 정렬보다 조금 느리고 데이터가 2배 더 필요하지만(divide 하면서
-                리턴하기 전까지 데이터를 붙잡고 있어야 함) 데이터의 불균형함에
-                영향을 받지 않는다.
-              </p>
-            </div>
-
-            <div id="sort-scroll3"></div>
-            <div class="sm-sc">
-              <h3>퀵 정렬</h3>
-              <hr />
-              <p>
-                한 요소를 기준점으로 잡고(pivot) 작은 수와 큰 수를 나눠(divide)
-                나뉜 배열에 다시 동일한 작업을 수행(conquer) 하는 방식
-              </p>
-              <p>병합 정렬과 다르게 divide 하는 과정에 배열을 재배치한다</p>
-
-              <div class="bg-dark text-white rounded-1 code">
-                Divide and conquer 방식
-                <br />
-                <br />
-                <p>&#9;</p>
-                한 요소를 기준점으로 잡는다 (pivot)
-                <br />
-                <br />
-                <p>&#9;</p>
-                작은 수는 왼쪽, 큰 수를 오른쪽, pivot 을 가운데 배치한다
-                <br />
-                <br />
-                <p>&#9;</p>
-                pivot 기준 좌우 배열을 다시 pivot 을 잡고 동일한 작업을 수행한다
-              </div>
-              <p>
-                pivot 을 기준으로 배열을 반으로 나누면서 정렬, 시간복잡도 :
-                O(nlog(n))
-              </p>
-              <p>
-                다만, 데이터가 불균형하고 pivot 이 불균형하게 배치된다면 배열을
-                n번씩 모두 순회하게 되므로 이때 시간복잡도는 O(n**2)
-              </p>
-              <p>
-                이를 방지하기 위해 pivot 을 랜덤하게 배치하는 방법 존재 (완벽한
-                해결 방법은 아니다)
-              </p>
-              <p>
-                병합 정렬에 비해 빠르고 추가 메모리 공간이 필요 없지만(배열 생성
-                없이 기존 배열을 재배치하며 진행하기 때문) 데이터가 불균형하면
-                pivot 배치에 따라 정렬이 느려질 수 있다
-              </p>
-            </div>
-
-            <div id="sort-scroll4"></div>
-            <div class="sm-sc">
-              <h3>힙 정렬</h3>
-              <hr />
-              <p>이진 트리: 모든 노드의 자식 노드가 2개 이하인 트리 구조</p>
-              <p>
-                완전 이진 트리: 데이터가 루트 노드부터 시작하여 왼쪽 자식부터,
-                오른쪽 자식 노드로 차근차근 들어가는 구조의 이진 트리
-              </p>
-              <p>
-                힙: 최솟값, 최댓값을 빠르게 찾아낼 때 사용되는 완전 이진 트리
-              </p>
-              <p>
-                부모 노드가 자식 노드들보다 우선 순위가 높을 때 힙 구조라고 볼
-                수 있다
-              </p>
-
-              <br />
-
-              <p>
-                heapify algorithm : 특정 노드와 두 자식 노드에 대해 힙 구조를
-                만족하게 노드를 바꾸는 행위
-              </p>
-
-              <div class="bg-dark text-white rounded-1 code">
-                힙 삽입
-                <br />
-                <br />
-                <p>&#9;</p>
-                가장 끝의 자리에 노드 삽입
-                <br />
-                <br />
-                <p>&#9;</p>
-                부모 노드 heapify 수행
-                <br />
-                <br />
-                <p>&#9;</p>
-                변화가 없다면 종료, 변화가 있다면 위의 부모에 heapify 수행, 루트
-                노드까지 반복
-              </div>
-
-              <p>
-                완전 이진 트리의 높이는 log(n) 이므로 힙 삽입의 시간복잡도는
-                O(log(n)) 이다
-              </p>
-              <p>
-                모든 자료를 집어넣어 모든 노드를 힙 정렬 시키면 총 시간복잡도는
-                O(nlog(n))
-              </p>
-
-              <div class="bg-dark text-white rounded-1 code">
-                힙 삭제
-                <br />
-                <br />
-                <p>&#9;</p>
-                루트 노드 제거, 가장 마지막 노드를 루트 노드에 삽입
-                <br />
-                <br />
-                <p>&#9;</p>
-                루트 노드부터 heapify 수행
-                <br />
-                <br />
-                <p>&#9;</p>
-                변화가 없다면 종료, 변화가 있다면 바뀐 자식 노드에 heapify 수행,
-                마지막 노드까지 반복
-              </div>
-
-              <p>힙 삭제의 경우 O(log(N)) 의 시간이 들어간다</p>
-              <p>
-                힙의 경우 5번째 우선순위의 수를 구하기 위해선 힙 삭제를 4번
-                수행해야 한다
-              </p>
-              <p>배열의 경우 m번째 우선순위의 수를 O(1)로 구할 수 있다</p>
-              <br />
-              <p>
-                힙은 추가적인 메모리가 필요 없고 O(nlog(n))의 빠른 정렬 속도를
-                가지지만, m번째 우선순위의 요소를 구할 땐 부적합하다
-              </p>
-            </div>
-
-            <div id="sort-scroll5"></div>
-            <div class="sm-sc">
-              <h3>파이썬 내장 정렬 함수</h3>
-              <hr />
-              <p>파이썬은 내장 정렬 함수를 가지고 있으므로 활용하면 된다</p>
-
-              <div class="bg-dark text-white rounded-1 code">
-                list = [ ... ]
-                <br />
-                <br />
-                <span class="text-success">// 오름차순 정렬</span>
-                <br />
-                list.sort()
-                <br />
-                <span class="text-success">// 내림차순 정렬</span>
-                <br />
-                list.sort(reverse=False)
-                <br />
-                <br />
-                <span class="text-success">// 2차원 배열 정렬</span>
-                <br />
-                twoDlist = [[...], [...],[...], ... ]
-                <br />
-                <span class="text-success"
-                  >// 첫번째 인덱스 기준으로 오름차순 정렬, 동일한 경우 두번째
-                  인덱스 기준으로 내림차수 정렬</span
-                >
-                <br />
-                twoDlist.sort(key=lambda x: (x[0], -x[1]))
-              </div>
-              <p>단, 모든 상황에서 파이썬 내장 정렬 함수가 좋은 건 아니다</p>
-              <p>
-                삽입, 삭제가 많으면서 데이터가 정렬되어 있어야 한다면 파이썬
-                내장 함수의 경우 매 삽입, 삭제 연산마다 O(n) 의 시간복잡도를
-                가지지만,
-              </p>
-              <p>힙 구조(우선순위 큐)를 활용하면 O(log(n)) 으로 줄일 수 있다</p>
-            </div>
-
-            <div class="space-box"></div>
-
-            <h2>구현</h2>
-            <p>기본적인 문제 풀이를 위해 생각해야 할 요소들</p>
-
-            <div id="imp-scroll1"></div>
-            <div class="sm-sc">
-              <h3>데이터의 규칙성, 반복성 찾기</h3>
-              <p>
-                데이터가 너무 커지거나 많아지면 불필요한 데이터는 날리고 필요한
-                데이터만 뽑아서 사용한다
-              </p>
-              <br />
-              <h3>1. 필요한 데이터만 뽑아내기</h3>
-              <hr />
-              <p>
-                <a href="https://www.acmicpc.net/problem/1009"
-                  >백준 1004번 문제</a
-                >
-              </p>
-              <p>거듭제곱의 1의 자리수를 빠르게 찾는 문제</p>
-              <p>거듭 제곱할 수록 수가 커지기 때문에 연산이 오래 걸린다</p>
-              <p>
-                1의 자리수를 결정하는 요소는 거듭 제곱할 수의 1의 자리수 뿐이기
-                때문에 10의 자리 이상의 수는 필요가 없다
-              </p>
-              <div class="bg-dark text-white rounded-1 code"></div>
-            </div>
-
-            <script src="../js/scrollEvent.js"></script>
           </section>
+
+          <!-- Merge sort -->
+          <div id="sort-scroll2"></div>
+          <section class="merge-sort sm-sc">
+            <h3>병합 정렬</h3>
+            <hr />
+            <p>배열을 반씩 나눠 합치며 정렬하는 방식</p>
+
+            <div class="bg-dark text-white rounded-1 code">
+              Divide and conquer 방식
+              <br />
+              <br />
+              <p>&#9;</p>
+              1이 될 때까지 배열을 반 씩 쪼갬
+              <br />
+              <br />
+              <p>&#9;</p>
+              두 개의 배열을 합칠 때 두 배열의 제일 앞에 있는 수를 비교하여 작은
+              수를 새로운 배열에 배치,
+              <br />
+              <br />
+              <p>&#9;</p>
+              두 배열을 모두 순회할 때까지 반복
+              <br />
+              <br />
+              <p>&#9;</p>
+              배열이 1개일 경우 반환, 2개 이상일 경우 나머지 배열이 반환되었을
+              경우에만 반환
+            </div>
+            <p>배열을 반 씩 나누며 정렬, 시간복잡도 : O(nlog(n))</p>
+            <p>
+              퀵 정렬보다 조금 느리고 데이터가 2배 더 필요하지만(divide 하면서
+              리턴하기 전까지 데이터를 붙잡고 있어야 함) 데이터의 불균형함에
+              영향을 받지 않는다.
+            </p>
+          </section>
+
+          <!-- Quick sort -->
+          <div id="sort-scroll3"></div>
+          <section class="quick-sort sm-sc">
+            <h3>퀵 정렬</h3>
+            <hr />
+            <p>
+              한 요소를 기준점으로 잡고(pivot) 작은 수와 큰 수를 나눠(divide)
+              나뉜 배열에 다시 동일한 작업을 수행(conquer) 하는 방식
+            </p>
+            <p>병합 정렬과 다르게 divide 하는 과정에 배열을 재배치한다</p>
+
+            <div class="bg-dark text-white rounded-1 code">
+              Divide and conquer 방식
+              <br />
+              <br />
+              <p>&#9;</p>
+              한 요소를 기준점으로 잡는다 (pivot)
+              <br />
+              <br />
+              <p>&#9;</p>
+              작은 수는 왼쪽, 큰 수를 오른쪽, pivot 을 가운데 배치한다
+              <br />
+              <br />
+              <p>&#9;</p>
+              pivot 기준 좌우 배열을 다시 pivot 을 잡고 동일한 작업을 수행한다
+            </div>
+            <p>
+              pivot 을 기준으로 배열을 반으로 나누면서 정렬, 시간복잡도 :
+              O(nlog(n))
+            </p>
+            <p>
+              다만, 데이터가 불균형하고 pivot 이 불균형하게 배치된다면 배열을
+              n번씩 모두 순회하게 되므로 이때 시간복잡도는 O(n**2)
+            </p>
+            <p>
+              이를 방지하기 위해 pivot 을 랜덤하게 배치하는 방법 존재 (완벽한
+              해결 방법은 아니다)
+            </p>
+            <p>
+              병합 정렬에 비해 빠르고 추가 메모리 공간이 필요 없지만(배열 생성
+              없이 기존 배열을 재배치하며 진행하기 때문) 데이터가 불균형하면
+              pivot 배치에 따라 정렬이 느려질 수 있다
+            </p>
+          </section>
+
+          <!-- Heap sort -->
+          <div id="sort-scroll4"></div>
+          <section class="heap-sort sm-sc">
+            <h3>힙 정렬</h3>
+            <hr />
+            <p>이진 트리: 모든 노드의 자식 노드가 2개 이하인 트리 구조</p>
+            <p>
+              완전 이진 트리: 데이터가 루트 노드부터 시작하여 왼쪽 자식부터,
+              오른쪽 자식 노드로 차근차근 들어가는 구조의 이진 트리
+            </p>
+            <p>힙: 최솟값, 최댓값을 빠르게 찾아낼 때 사용되는 완전 이진 트리</p>
+            <p>
+              부모 노드가 자식 노드들보다 우선 순위가 높을 때 힙 구조라고 볼 수
+              있다
+            </p>
+
+            <br />
+
+            <p>
+              heapify algorithm : 특정 노드와 두 자식 노드에 대해 힙 구조를
+              만족하게 노드를 바꾸는 행위
+            </p>
+
+            <div class="bg-dark text-white rounded-1 code">
+              힙 삽입
+              <br />
+              <br />
+              <p>&#9;</p>
+              가장 끝의 자리에 노드 삽입
+              <br />
+              <br />
+              <p>&#9;</p>
+              부모 노드 heapify 수행
+              <br />
+              <br />
+              <p>&#9;</p>
+              변화가 없다면 종료, 변화가 있다면 위의 부모에 heapify 수행, 루트
+              노드까지 반복
+            </div>
+
+            <p>
+              완전 이진 트리의 높이는 log(n) 이므로 힙 삽입의 시간복잡도는
+              O(log(n)) 이다
+            </p>
+            <p>
+              모든 자료를 집어넣어 모든 노드를 힙 정렬 시키면 총 시간복잡도는
+              O(nlog(n))
+            </p>
+
+            <div class="bg-dark text-white rounded-1 code">
+              힙 삭제
+              <br />
+              <br />
+              <p>&#9;</p>
+              루트 노드 제거, 가장 마지막 노드를 루트 노드에 삽입
+              <br />
+              <br />
+              <p>&#9;</p>
+              루트 노드부터 heapify 수행
+              <br />
+              <br />
+              <p>&#9;</p>
+              변화가 없다면 종료, 변화가 있다면 바뀐 자식 노드에 heapify 수행,
+              마지막 노드까지 반복
+            </div>
+
+            <p>힙 삭제의 경우 O(log(N)) 의 시간이 들어간다</p>
+            <p>
+              힙의 경우 5번째 우선순위의 수를 구하기 위해선 힙 삭제를 4번
+              수행해야 한다
+            </p>
+            <p>배열의 경우 m번째 우선순위의 수를 O(1)로 구할 수 있다</p>
+            <br />
+            <p>
+              힙은 추가적인 메모리가 필요 없고 O(nlog(n))의 빠른 정렬 속도를
+              가지지만, m번째 우선순위의 요소를 구할 땐 부적합하다
+            </p>
+          </section>
+
+          <!-- Python List.sort() -->
+          <div id="sort-scroll5"></div>
+          <section class="python-method sm-sc">
+            <h3>파이썬 내장 정렬 함수</h3>
+            <hr />
+            <p>파이썬은 내장 정렬 함수를 가지고 있으므로 활용하면 된다</p>
+
+            <div class="bg-dark text-white rounded-1 code">
+              list = [ ... ]
+              <br />
+              <br />
+              <span class="text-success">// 오름차순 정렬</span>
+              <br />
+              list.sort()
+              <br />
+              <span class="text-success">// 내림차순 정렬</span>
+              <br />
+              list.sort(reverse=False)
+              <br />
+              <br />
+              <span class="text-success">// 2차원 배열 정렬</span>
+              <br />
+              twoDlist = [[...], [...],[...], ... ]
+              <br />
+              <span class="text-success"
+                >// 첫번째 인덱스 기준으로 오름차순 정렬, 동일한 경우 두번째
+                인덱스 기준으로 내림차수 정렬</span
+              >
+              <br />
+              twoDlist.sort(key=lambda x: (x[0], -x[1]))
+            </div>
+            <p>단, 모든 상황에서 파이썬 내장 정렬 함수가 좋은 건 아니다</p>
+            <p>
+              삽입, 삭제가 많으면서 데이터가 정렬되어 있어야 한다면 파이썬 내장
+              함수의 경우 매 삽입, 삭제 연산마다 O(n) 의 시간복잡도를 가지지만,
+            </p>
+            <p>힙 구조(우선순위 큐)를 활용하면 O(log(n)) 으로 줄일 수 있다</p>
+          </section>
+
+          <div class="space-box"></div>
+
+          <!-- Implementation -->
+          <h2>구현</h2>
+          <p>기본적인 문제 풀이를 위해 생각해야 할 요소들</p>
+
+          <!-- regularity, repeatability -->
+          <div id="imp-scroll1"></div>
+          <section class="sm-sc">
+            <h3>데이터의 규칙성, 반복성 찾기</h3>
+            <p>
+              데이터가 너무 커지거나 많아지면 불필요한 데이터는 날리고 필요한
+              데이터만 뽑아서 사용한다
+            </p>
+            <br />
+            <h3>1. 필요한 데이터만 뽑아내기</h3>
+            <hr />
+            <p>
+              <a href="https://www.acmicpc.net/problem/1009"
+                >백준 1004번 문제</a
+              >
+            </p>
+            <p>거듭제곱의 1의 자리수를 빠르게 찾는 문제</p>
+            <p>거듭 제곱할 수록 수가 커지기 때문에 연산이 오래 걸린다</p>
+            <p>
+              1의 자리수를 결정하는 요소는 거듭 제곱할 수의 1의 자리수 뿐이기
+              때문에 10의 자리 이상의 수는 필요가 없다
+            </p>
+            <div class="bg-dark text-white rounded-1 code"></div>
+          </section>
+
+          <script src="../js/scrollEvent.js"></script>
         </div>
       </div>
     </div>

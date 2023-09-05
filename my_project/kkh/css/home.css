@@ -61,6 +61,23 @@ section {
   background-color: #ffc0e3;
 }
 
+.img-box {
+  position: relative;
+}
+.img-box img {
+  position: absolute;
+  width: 75%;
+  height: 30%;
+}
+.img-box .img1 {
+  top: 15%;
+  left: 0;
+}
+.img-box .img2 {
+  bottom: 15%;
+  right: 0;
+}
+
 .footer {
   width: 100%;
   background-color: #999999;
