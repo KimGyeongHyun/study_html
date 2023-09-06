@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "East";
+  src: url("../../font/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf");
+  font-weight: 400;
+}
+
+.inner {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+}
+.inner-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-white {
+  color: white;
+  text-shadow: 2px 2px 10px #333333;
+}
+
+#section0 {
+  background: linear-gradient(#000000, #676767);
+  color: white;
+}
+#section0 .text-box {
+  text-align: center;
+}
+#section0 .text-box h1 {
+  font-size: 8vh;
+}
+#section0 .text-box p {
+  font-size: 3vh;
+}
+
+#section1 {
+  background: linear-gradient(#676767, #ffffff);
+}
+#section1 .text-box h2,
+#section2 .text-box h2,
+#section3 .text-box h2 {
+  font-size: 5vh;
+  margin-bottom: 7vh;
+}
+#section1 .text-box p,
+#section2 .text-box p,
+#section3 .text-box p {
+  font-size: 2.5vh;
+}
+#section1 .text-box p span,
+#section3 .text-box p span {
+  font-family: "East";
+  font-size: 6vh;
+}
+
+#section2 .fp-slidesContainer {
+  background: linear-gradient(170deg, #f0f5f9, #c9d6de, #52616a, #3a4148);
+}
+
+#section3 {
+  background: linear-gradient(#ffffff, #bbbbbb);
+}
+
+.active .act1 {
+  animation: fade_in 1.5s forwards;
+  opacity: 0;
+}
+.active .act2 {
+  animation: fade_in 2.5s forwards;
+  opacity: 0;
+}
+.active .delay0 {
+  animation-delay: 0.5s;
+}
+.active .delay1 {
+  animation-delay: 1s;
+}
+.active .delay2 {
+  animation-delay: 1.3s;
+}
+.active .delay3 {
+  animation-delay: 1.6s;
+}
+.active .delay4 {
+  animation-delay: 1.9s;
+}
+.active .delay5 {
+  animation-delay: 2.1s;
+}
+.active .delay6 {
+  animation-delay: 2.4s;
+}
+
+.active .fp-slides .active .sl-act1 {
+  animation: fade_in 1.5s forwards;
+  opacity: 0;
+}
+.active .fp-slides .active .sl-act2 {
+  animation: text_slide_down 1.5s forwards;
+  opacity: 0;
+}
+.active .fp-slides .active .sl-delay0 {
+  animation-delay: 0.7s;
+}
+.active .fp-slides .active .sl-delay1 {
+  animation-delay: 1s;
+}
+.active .fp-slides .active .sl-delay2 {
+  animation-delay: 1.3s;
+}
+.active .fp-slides .active .sl-delay3 {
+  animation-delay: 1.6s;
+}
+.active .fp-slides .active .sl-delay4 {
+  animation-delay: 1.9s;
+}
+.active .fp-slides .active .sl-delay5 {
+  animation-delay: 2.2s;
+}
+.active .fp-slides .active .sl-delay6 {
+  animation-delay: 2.5s;
+}
+.active .fp-slides .active .sl-delay7 {
+  animation-delay: 2.8s;
+}
+
+@keyframes text_slide_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
