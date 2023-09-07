@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 풀페이지 기본 css -->
+    <link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
+    <link rel="stylesheet" href="../css/test.css" />
+  </head>
+  <body>
+    <!-- 풀페이지 구성 -->
+    <div id="fullpage">
+      <div class="section">
+        <div class="slide">Slide 1</div>
+        <div class="slide">Slide 2</div>
+      </div>
+      <div class="section">
+        <div class="slide">Slide 1</div>
+        <div class="slide">Slide 2</div>
+      </div>
+    </div>
+
+    <!-- FullPage.js navigation arrows -->
+    <div class="fp-arrow" id="fp-prev"></div>
+    <div class="fp-arrow" id="fp-next"></div>
+
+    <!-- 풀페이지 자바스크립트 -->
+    <script type="text/javascript" src="../js/fullpage.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          // Configure FullPage.js options here
+          sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE"],
+          afterLoad: function (origin, destination, direction) {
+            var section = destination.item; // Get the current section
+            var slides = $(section).find(".slide"); // Get all slides in the section
+            var currentSlide = destination.index; // Get the index of the current slide
+
+            // Show/hide navigation arrows based on the current slide
+            if (currentSlide === 0) {
+              // First slide, hide the previous arrow
+              $(".fp-prev").css("opacity", "0");
+              $(".fp-next").css("opacity", "1");
+            } else if (currentSlide === slides.length - 1) {
+              // Last slide, hide the next arrow
+              $(".fp-prev").css("opacity", "1");
+              $(".fp-next").css("opacity", "0");
+            } else {
+              // Middle slides, show both arrows
+              $(".fp-prev").css("opacity", "1");
+              $(".fp-next").css("opacity", "1");
+            }
+          },
+
+          afterSlideLoad: function (section, origin, destination, direction) {
+            // The 'destination' parameter contains information about the new slide
+            var sectionIndex = destination.index; // Index of the current section
+            var slideIndex = destination.index; // Index of the current slide
+
+            // You can perform actions here when a new slide becomes active
+            console.log(
+              "Active slide changed in section " +
+                sectionIndex +
+                ", slide " +
+                slideIndex
+            );
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

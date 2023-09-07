@@ -38,15 +38,41 @@
               복잡함에 막막했던 표현으로부터 자유로워지세요
             </p>
             <p class="act1 delay6">
-              곡의 구성, 장르, 코드진행, 멜로디, 템포, 녹음, 믹싱, 음원 발매
-              등의 구체화는 편안하게 맡겨주시기 바랍니다
+              곡의 구체화 작업은 저희와 함께 하면 됩니다
             </p>
           </div>
         </div>
       </div>
 
       <div class="section" id="section2">
-        <div class="slide active">
+        <div class="slide">
+          <div class="inner inner-flex">
+            <div class="text-box">
+              <h2 class="sl-act2 sl-delay0">Step by Step</h2>
+              <br />
+              <p class="sl-act1 sl-delay2">
+                <b>음악</b>은 단시간에 완성되지 않습니다
+              </p>
+              <p class="sl-act1 sl-delay3">
+                <b>악기의 부재</b>와 <b>숙련도 부족</b>으로 인한 퀄리티 저하,
+              </p>
+              <p class="sl-act1 sl-delay4">
+                <b>표현력의 한계</b>와 <b>변심</b>으로 인한 곡의 미완성,
+              </p>
+              <p class="sl-act1 sl-delay5">
+                <b>음악 이론 부재</b>로 인한 음악 구성의 한계,
+                녹음/믹싱/마스터링 등 다양하고 높은 벽을 마주하게 됩니다
+              </p>
+              <br />
+              <p class="sl-act1 sl-delay6">
+                지치지 않고 벽을 허물고 나아가기 위해서
+                <b>한 단계식 진행해야 합니다</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
           <div class="inner inner-flex">
             <div class="text-box">
               <h2 class="sl-act2 sl-delay0">먼저 가사와 분위기 입니다</h2>
@@ -90,9 +116,6 @@
                 않습니다
               </p>
               <br />
-              <p class="sl-act1 sl-delay7">
-                곡을 구성하며 녹음할 악기와 드럼 종류를 선택합니다
-              </p>
             </div>
           </div>
         </div>
@@ -111,13 +134,9 @@
               <p class="sl-act1 sl-delay3">
                 멜로디와 코드 진행은 서로 만나며 조화로움을 표현합니다
               </p>
-              <p class="sl-act1 sl-delay4">
-                멜로디와 코드가 충돌한다면 불협화음이 발생하기 때문에 두 요소는
-                같이 구성해야 합니다
-              </p>
               <br />
 
-              <p class="sl-act1 sl-delay6">
+              <p class="sl-act1 sl-delay5">
                 <b>가사 전달</b>을 위해선 멜로디, <b>분위기 전달</b>을 위해선
                 코드 진행을 먼저 구성하고 이후 남은 작업을 만들어진 요소에 맞춰
                 구성합니다
@@ -133,8 +152,40 @@
                 곡이 구성되었다면 녹음과 믹싱을 진행합니다
               </h2>
               <p class="sl-act1 sl-delay1">
-                <b>멜로디</b>는 가사를 코드 진행과 함께 조화롭게 표현하게 하는
-                수단입니다
+                곡의 구성과 분위기에 따라 녹음할 <b>악기</b>를 선택합니다
+              </p>
+              <p class="sl-act1 sl-delay2">
+                <b>악기</b> 숙련도 부족의 문제는, 숙련된 연주자에게 맡기면
+                됩니다
+              </p>
+              <br />
+              <p class="sl-act1 sl-delay4">
+                녹음이 다 되었다면 음원들을 적절하게 합치는 <b>믹싱</b> 작업을
+                진행합니다
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="inner inner-flex">
+            <div class="text-box text-white">
+              <h2 class="sl-act2 sl-delay0">
+                곡을 배포하는 마스터링 작업입니다
+              </h2>
+              <p class="sl-act1 sl-delay1">
+                <b>마스터링</b>은 곡을 배포하기 위해 최종적으로 다듬는
+                작업입니다
+              </p>
+              <br />
+              <p class="sl-act1 sl-delay3">
+                당신의 표현을 지적 재산의 형태로 표출할 수 있는 아주 기쁜
+                순간이며, 당신의 음악을 전 세계 사람들이 들을 수 있게 됩니다
+              </p>
+              <br />
+              <p class="sl-act1 sl-delay5">
+                단계별로 차근차근 나아간다면 음원 작업은 생각보다 어렵지 않다고
+                느낄 것입니다
               </p>
             </div>
           </div>
@@ -171,7 +222,30 @@
     <!-- 풀페이지 자바스크립트 -->
     <script type="text/javascript" src="../js/fullpage.js"></script>
     <script type="text/javascript">
-      var myFullpage = new fullpage("#fullpage", {});
+      var myFullpage = new fullpage("#fullpage", {
+        // slide arrow custom hide & show event
+        afterSlideLoad: function (section, origin, destination, direction) {
+          // The 'destination' parameter contains information about the new slide
+          var slides = $(section.item).find(".slide"); // Get all slides in the section
+          var slideIndex = destination.index; // Index of the current slide
+          console.log(5 / 2);
+
+          // Show/hide navigation arrows based on the current slide
+          if (slideIndex === 0) {
+            // First slide, hide the previous arrow
+            $(".fp-prev").css("opacity", "0");
+            $(".fp-next").css("opacity", "1");
+          } else if (slideIndex === slides.length - 1) {
+            // Last slide, hide the next arrow
+            $(".fp-prev").css("opacity", "1");
+            $(".fp-next").css("opacity", "0");
+          } else {
+            // Middle slides, show both arrows
+            $(".fp-prev").css("opacity", "1");
+            $(".fp-next").css("opacity", "1");
+          }
+        },
+      });
     </script>
   </body>
 </html>
