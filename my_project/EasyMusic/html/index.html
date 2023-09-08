@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- 풀페이지 기본 css -->
     <link rel="stylesheet" type="text/css" href="../css/fullpage.css" />
     <link rel="stylesheet" href="../css/main.css" />
@@ -13,10 +20,14 @@
     <!-- 풀페이지 구성 -->
     <div id="fullpage">
       <div class="section active" id="section0">
-        <div class="inner inner-flex">
+        <div class="outer inner-flex">
           <div class="text-box">
             <h1 class="act2 delay0">Easy Music</h1>
             <p class="act1 delay1">Take it easy</p>
+          </div>
+          <div class="move-bottom act1 delay6 text-white">
+            <p>press down button</p>
+            <i class="fa-solid fa-caret-down fa-beat fa-xl"></i>
           </div>
         </div>
       </div>
@@ -45,7 +56,16 @@
       </div>
 
       <div class="section" id="section2">
-        <div class="slide">
+        <div class="slide outer">
+          <div class="move-right sl-act1 sl-long-delay">
+            <i class="fa-solid fa-minus fa-fade"></i>
+            <i class="fa-solid fa-minus fa-fade"></i>
+            <i class="fa-solid fa-minus fa-fade"></i>
+            <i
+              class="fa-solid fa-arrow-right fa-fade"
+              style="display: inline"
+            ></i>
+          </div>
           <div class="inner inner-flex">
             <div class="text-box">
               <h2 class="sl-act2 sl-delay0">Step by Step</h2>
@@ -194,7 +214,7 @@
 
       <div class="section" id="section3">
         <div class="inner inner-flex">
-          <div class="text-box">
+          <div class="text-box text-white">
             <h2 class="act2 delay0">모르는 것을 절대 부끄러워하지 마세요</h2>
             <p class="act1 delay1">
               <span>미숙함</span>은 독창적인 표현에 큰 장점이 되기도 합니다
@@ -217,6 +237,25 @@
           </div>
         </div>
       </div>
+
+      <div class="section" id="section4">
+        <div class="outer inner-flex">
+          <div class="text-box text-white">
+            <h2 class="act2 delay0">함께 방향을 잡아갑시다</h2>
+            <p class="act1 delay1">tel : 010 - 1234 - 5678</p>
+            <p class="act1 delay1">fax : 010 - 8765 - 876543</p>
+            <br />
+            <p class="act1 delay2">address : dolpal.drdotk 120-1</p>
+            <p class="act1 delay2">all copyrights reserve to you</p>
+            <br />
+            <p class="act1 delay4 info-tab">더 많은 정보 확인하기</p>
+          </div>
+          <div class="move-top text-white act1 delay6" id="top">
+            <i class="fa-solid fa-caret-up fa-beat fa-xl"></i>
+            <p>top</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 풀페이지 자바스크립트 -->
@@ -228,7 +267,6 @@
           // The 'destination' parameter contains information about the new slide
           var slides = $(section.item).find(".slide"); // Get all slides in the section
           var slideIndex = destination.index; // Index of the current slide
-          console.log(5 / 2);
 
           // Show/hide navigation arrows based on the current slide
           if (slideIndex === 0) {
@@ -244,8 +282,18 @@
             $(".fp-prev").css("opacity", "1");
             $(".fp-next").css("opacity", "1");
           }
+
+          if (slideIndex >= 3) {
+            $(".fp-arrow").addClass("text-white");
+          } else {
+            $(".fp-arrow").removeClass("text-white");
+          }
         },
+        slidesNavigation: true,
       });
     </script>
+
+    <script src="../js/customArrow.js"></script>
+    <script src="../js/scrollEvent.js"></script>
   </body>
 </html>

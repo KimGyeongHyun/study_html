@@ -15,6 +15,24 @@
   justify-content: center;
   align-items: center;
 }
+.outer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.move-right {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.move-right i {
+  margin-left: 2px;
+}
 
 .text-white {
   color: white;
@@ -34,6 +52,16 @@
 #section0 .text-box p {
   font-size: 3vh;
 }
+#section0 .move-bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 #section1 {
   background: linear-gradient(#676767, #ffffff);
@@ -44,10 +72,17 @@
   font-size: 5vh;
   margin-bottom: 7vh;
 }
+#section4 .text-box h2 {
+  font-size: 4vh;
+  margin-bottom: 5vh;
+}
 #section1 .text-box p,
 #section2 .text-box p,
 #section3 .text-box p {
   font-size: 2.5vh;
+}
+#section4 .text-box p {
+  font-size: 2vh;
 }
 #section1 .text-box p span,
 #section3 .text-box p span {
@@ -68,17 +103,30 @@
   background-size: cover;
   transition: 0.7s;
 }
-.fp-arrow.fp-prev {
-  background-image: url(../img/left.png);
-  opacity: 0;
-}
-.fp-arrow.fp-next {
-  background-image: url(../img/right.png);
-  opacity: 1;
-}
 
 #section3 {
-  background: linear-gradient(#ffffff, #bbbbbb);
+  background: linear-gradient(#3a4148, #52616a);
+}
+#section4 {
+  background: linear-gradient(#52616a, #c9d6de);
+}
+#section4 .move-top {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section4 .move-top p {
+  margin: 5px;
+}
+#section4 .text-box .info-tab {
+  cursor: pointer;
+  font-size: 0.7rem;
 }
 
 .active .act1 {
@@ -142,6 +190,17 @@
 }
 .active .fp-slides .active .sl-delay7 {
   animation-delay: 2.8s;
+}
+.active .fp-slides .active .sl-long-delay {
+  animation-delay: 5.5s;
+}
+.fp-slidesNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fp-slidesNav ul li a span {
+  background: white;
 }
 
 @keyframes text_slide_down {
