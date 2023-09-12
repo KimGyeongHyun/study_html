@@ -1,18 +1,8 @@
 # 웹 프로그래밍 예제
 
-가로 전체를 사용하는 서브메뉴
-<a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/05_17_ex/html/ex.html" target="_blank">
-<img src="https://img.shields.io/badge/Submenu-ff0000">
-</a>
-
 타이머
 <a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/07_03_timer/html/ex.html" target="_blank">
 <img src="https://img.shields.io/badge/Timer-fd4659">
-</a>
-
-Swiper slide 를 사용한 산림청 슬라이드
-<a href = "https://kimgyeonghyun.github.io/study_html/study_html_css_js/07_25_swiper_ex/html/ex.html" target="_blank">
-<img src="https://img.shields.io/badge/SwiperSlide-9dbcd4">
 </a>
 
 Fullpage 디자인
