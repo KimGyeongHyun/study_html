@@ -394,6 +394,7 @@ body {
 }
 .product .content .text-box p {
   font-size: 1.5vw;
+  margin-bottom: 2vh;
 }
 
 .rnd {
@@ -472,6 +473,9 @@ body {
   font-weight: bold;
   font-size: 1.3vw;
   margin-bottom: 4vh;
+}
+.CEO .last-com {
+  font-size: 2.3vw;
 }
 
 .community h2 {
@@ -627,20 +631,31 @@ footer .content .text-box p {
     text-align: left;
   }
 
+  .info .text-box h2 {
+    font-size: 10vw;
+  }
+  .info .text-box p {
+    font-size: 4vw;
+    margin: 8vw 0;
+  }
+
   .product .buttons {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+  .product .buttons button {
+    font-size: 15px;
+  }
   .product h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .product .content .tech-box {
     flex-direction: column;
     align-items: center;
   }
   .product .content .tech-img {
-    width: 50vw;
-    height: 30vw;
+    width: 60vw;
+    height: 40vw;
     margin-top: 5vh;
   }
   .product .content .text-box {
@@ -648,17 +663,18 @@ footer .content .text-box p {
     padding: 0;
   }
   .product .content .text-box h3 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 10px;
   }
   .product .content .text-box p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .rnd {
     margin-bottom: 10vh;
   }
   .rnd h2 {
+    font-size: 25px;
     margin-bottom: 7vh;
   }
   .rnd .content {
@@ -671,11 +687,11 @@ footer .content .text-box p {
     width: 100%;
   }
   .rnd .content .text-box h3 {
-    font-size: 4vw;
+    font-size: 23px;
     margin-bottom: 20px;
   }
   .rnd .content .text-box p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .CEO {
@@ -691,8 +707,11 @@ footer .content .text-box p {
   }
   .CEO p {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 4vw;
     margin-bottom: 4vh;
+  }
+  .CEO .last-com {
+    font-size: 6vw;
   }
 
   .community h2 {
@@ -704,13 +723,21 @@ footer .content .text-box p {
   }
   .community .content {
     border-radius: 4px;
-    height: 16vw;
+    height: 24vw;
   }
   .community .content .num-box {
-    font-size: 4vw;
+    font-size: 6vw;
     border-radius: 4px;
-    width: 10vw;
-    height: 10vw;
+    width: 16vw;
+    height: 16vw;
+  }
+  .community .content .text-box h3 {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+  }
+  .community .content .text-box p {
+    font-size: 2vw;
+    width: 100%;
   }
 
   footer .content .logo {
