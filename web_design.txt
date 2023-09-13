@@ -133,3 +133,6 @@ https://nykim.net/
 단순, 스크롤 애니메이션, 호버, 배너루프 (종합)
 https://publ.co/channels/L2NoYW5uZWxzLzYyNw/pages/product?utm_source=google&utm_medium=search&utm_campaign=PC_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC&utm_content=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4&utm_term=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4&gclid=Cj0KCQjwmICoBhDxARIsABXkXlKegDiaXl2ISg1oiqUsvodg9-0Ii2b_PXKPn9BkBZOc9ZprWj734PcaAipxEALw_wcB
 
+===================================================
+background animation
+https://alvarotrigo.com/blog/animated-backgrounds-css/
