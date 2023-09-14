@@ -1,22 +1,21 @@
-.scrollspy-example {
-  position: relative;
-  width: 100vw;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
   height: 100vh;
-  overflow-y: scroll;
 }
 
-#navbar-scrollspy {
-  position: fixed;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
+.inner {
+  width: 80%;
+  height: 80vh;
+  margin: 10vh 10vw 10vh 10vw;
 }
 
-#navbar-scrollspy ul {
+.flex-row {
   display: flex;
-  flex-direction: column;
-}
-
-#navbar-scrollspy ul li .active {
-  background-color: red;
+  justify-content: center;
+  align-items: center;
 }
