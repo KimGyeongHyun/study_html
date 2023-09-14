@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Noto";
+  src: url(../../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+
+.left-top {
+  top: 0;
+  left: 0;
+}
+.right-top {
+  top: 0;
+  right: 0;
+}
+.left-bottom {
+  bottom: 0;
+  left: 0;
+  background-color: aliceblue;
+}
+.right-bottom {
+  bottom: 0;
+  right: 0;
+  background-color: azure;
+}
+
+.info .inner {
+  position: relative;
+}
+.info .inner-box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+.info .text-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: "Noto";
+  padding: 5vw;
+}
+.info .text-box h2 {
+  font-size: 2vw;
+  margin-bottom: 3vh;
+}
+.info .text-box p {
+  font-size: 1vw;
+  margin-bottom: 2vh;
+}
+
+.info .ani-box {
+  position: absolute;
+  width: 20vw;
+  height: 11.547005vw;
+  top: 20%;
+  left: 50%;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.info .ani1 {
+  animation-name: hexOne;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.info .ani2 {
+  animation-name: hexTwo;
+  animation-delay: 0.3s;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+.info .ani3 {
+  animation-name: hexThree;
+  animation-delay: 0.6s;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+@keyframes hexOne {
+  from {
+    transform: rotate(0deg) scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes hexTwo {
+  from {
+    transform: rotate(60deg) scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(60deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes hexThree {
+  from {
+    transform: rotate(120deg) scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(120deg) scale(1);
+    opacity: 1;
+  }
+}
