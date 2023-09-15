@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Mont";
+  src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Noto";
+  src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
 .mind {
   position: relative;
   overflow: hidden;
@@ -5,17 +14,58 @@
 .mind .mind-inner {
   position: absolute;
   left: 10%;
-  top: 10%;
+  top: 5%;
   width: 80vw;
   height: 80vh;
   z-index: 100;
   color: white;
 }
+.mind h2 {
+  font-family: "Mont";
+  font-size: 5vw;
+}
 .mind .content {
+  position: relative;
   width: 60vw;
   height: 55vh;
   margin: 5vh auto 5vh auto;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.mind .content .text-box {
+  position: absolute;
+  top: 3vw;
+  left: 3vw;
+  right: 3vw;
+  transition: 0.5s;
+  text-align: left;
+}
+.mind .content .text-box h2,
+.mind .content .text-box p {
+  transition-delay: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+.mind .content .text-box h2 {
+  font-family: "Mont";
+  font-size: 3vw;
+  transform: translate(0, -100px);
+  margin-bottom: 5vh;
+}
+.mind .content .text-box p {
+  font-family: "Noto";
+  font-size: 1.3vw;
+  transform: translate(-100px, 0);
+}
+.mind .content .active h2,
+.mind .content .active p {
+  transition-delay: 0.3s;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.mind .content .active p {
+  transition-delay: 0.3s;
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .mind .button-box {
   position: relative;
@@ -48,6 +98,12 @@
   height: 3vw;
   border-radius: 1vw;
   background-color: rgba(126, 41, 162, 1);
-  color: white;
   z-index: 500;
+}
+.mind .btn1 {
+  color: white;
+}
+.mind .btn2,
+.mind .btn3 {
+  color: black;
 }

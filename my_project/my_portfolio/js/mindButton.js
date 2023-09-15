@@ -1,6 +1,7 @@
 var idx = 1;
 const content = $(".content");
 const atv_sq = $(".active-btn");
+const btns = $(".btn");
 const btn1 = $(".btn1");
 const btn2 = $(".btn2");
 const btn3 = $(".btn3");
@@ -13,7 +14,7 @@ function idx_count() {
   btn_click(index);
 }
 
-setInterval(idx_count, 1000);
+var inc = setInterval(idx_count, 10000);
 
 // idx 가 바뀔 때 실행되는 함수
 // 버튼을 누를 경우 호출되는 함수
@@ -21,14 +22,21 @@ setInterval(idx_count, 1000);
 function btn_click(index) {
   if (idx == index) return;
 
+  change_atv(index);
+  change_btn_color(index);
+
   change_content(index);
+
+  clearInterval(inc);
+  inc = setInterval(idx_count, 10000);
+
   idx = index;
 }
 
 // 컨텐츠 내용을 바꾸는 함수
 function change_content(index) {
-  change_atv(index);
-  change_btn_color(index);
+  $(".mind .content .text-box").removeClass("active");
+  $(`.mind .content .t${index}`).addClass("active");
 }
 
 // active_btn 의 위치를 index 에 따라 바꿔주는 함수
@@ -37,7 +45,10 @@ function change_atv(index) {
 }
 
 // index 번호에 따라 btn color 를 바꿔주는 함수
-function change_btn_color(index) {}
+function change_btn_color(index) {
+  btns.css("color", "black");
+  $(`.btn${index}`).css("color", "white");
+}
 
 btn1.click(() => {
   btn_click(1);
