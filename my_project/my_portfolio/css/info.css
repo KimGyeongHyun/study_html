@@ -14,14 +14,13 @@
 .left-bottom {
   bottom: 0;
   left: 0;
-  background-color: aliceblue;
 }
 .right-bottom {
   bottom: 0;
   right: 0;
-  background-color: azure;
 }
 
+/* info first */
 .info .inner {
   position: relative;
 }
@@ -31,13 +30,9 @@
   height: 50%;
 }
 .info .text-box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  text-align: left;
   font-family: "Noto";
-  padding: 5vw;
+  padding: 2vw;
 }
 .info .text-box h2 {
   font-size: 2vw;
@@ -48,58 +43,34 @@
   margin-bottom: 2vh;
 }
 
+/* info second */
+.info .ani-big-box {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
 .info .ani-box {
   position: absolute;
   width: 20vw;
   height: 11.547005vw;
-  top: 20%;
-  left: 50%;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
 }
 .info .ani1 {
-  animation-name: hexOne;
   background-color: rgba(255, 0, 0, 0.2);
 }
 .info .ani2 {
-  animation-name: hexTwo;
-  animation-delay: 0.3s;
   background-color: rgba(0, 255, 0, 0.2);
+  transform: rotate(60deg);
 }
 .info .ani3 {
-  animation-name: hexThree;
-  animation-delay: 0.6s;
   background-color: rgba(0, 0, 255, 0.2);
+  transform: rotate(120deg);
 }
 
-@keyframes hexOne {
-  from {
-    transform: rotate(0deg) scale(1.2);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes hexTwo {
-  from {
-    transform: rotate(60deg) scale(1.2);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(60deg) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes hexThree {
-  from {
-    transform: rotate(120deg) scale(1.2);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(120deg) scale(1);
-    opacity: 1;
-  }
+/* info third */
+.info .img-box .my-img {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 6vw;
+  background-color: red;
+  margin: 1vw;
 }

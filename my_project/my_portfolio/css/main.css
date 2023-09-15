@@ -19,10 +19,3 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-.text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}

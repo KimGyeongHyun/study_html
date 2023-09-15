@@ -1,0 +1,53 @@
+.mind {
+  position: relative;
+  overflow: hidden;
+}
+.mind .mind-inner {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 80vw;
+  height: 80vh;
+  z-index: 100;
+  color: white;
+}
+.mind .content {
+  width: 60vw;
+  height: 55vh;
+  margin: 5vh auto 5vh auto;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.mind .button-box {
+  position: relative;
+  background-color: white;
+  width: min-content;
+  border-radius: 1vw;
+  display: flex;
+  margin: 0 auto;
+}
+.mind .btn {
+  cursor: pointer;
+  position: relative;
+  width: 10vw;
+  font-size: 1.3vw;
+  height: 3vw;
+  margin: 1vw;
+  border-radius: 1vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.mind .active-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1vw;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 1vw;
+  background-color: rgba(126, 41, 162, 1);
+  color: white;
+  z-index: 500;
+}
