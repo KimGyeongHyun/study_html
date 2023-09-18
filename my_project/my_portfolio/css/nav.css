@@ -10,7 +10,7 @@
   right: 0%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 200;
+  z-index: 10000;
 }
 
 #navbar-scrollspy ul {
@@ -46,13 +46,13 @@
   background-color: #80d4f6;
 }
 #navbar-scrollspy ul li .active .color2 {
-  background-color: #4e54c8;
+  background-color: #272d9c;
 }
 #navbar-scrollspy ul li .active .color3 {
   background-color: #eab5ff;
 }
 #navbar-scrollspy ul li .active .color4 {
-  background-color: #e94e77;
+  background-color: #eab5ff;
 }
 #navbar-scrollspy ul li .active p {
   opacity: 1;

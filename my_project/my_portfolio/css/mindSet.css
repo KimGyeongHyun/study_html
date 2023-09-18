@@ -48,13 +48,13 @@
 .mind .content .text-box h2 {
   font-family: "Mont";
   font-size: 3vw;
-  transform: translate(0, -100px);
+  transform: translateX(-5vw);
   margin-bottom: 5vh;
 }
 .mind .content .text-box p {
   font-family: "Noto";
   font-size: 1.3vw;
-  transform: translate(-100px, 0);
+  transform: translateX(-4vw);
 }
 .mind .content .active h2,
 .mind .content .active p {

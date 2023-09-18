@@ -23,6 +23,7 @@
 /* info first */
 .info .inner {
   position: relative;
+  color: white;
 }
 .info .inner-box {
   position: absolute;
@@ -32,45 +33,56 @@
 .info .text-box {
   text-align: left;
   font-family: "Noto";
-  padding: 2vw;
+  padding: 5vw;
 }
 .info .text-box h2 {
-  font-size: 2vw;
+  font-size: 3vw;
   margin-bottom: 3vh;
 }
 .info .text-box p {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   margin-bottom: 2vh;
 }
+.info .text-box a {
+  text-decoration: none;
+  color: white;
+}
 
-/* info second */
-.info .ani-big-box {
+.info .main-img {
   position: absolute;
-  top: 20%;
-  left: 20%;
-}
-.info .ani-box {
-  position: absolute;
-  width: 20vw;
-  height: 11.547005vw;
-}
-.info .ani1 {
-  background-color: rgba(255, 0, 0, 0.2);
-}
-.info .ani2 {
-  background-color: rgba(0, 255, 0, 0.2);
-  transform: rotate(60deg);
-}
-.info .ani3 {
-  background-color: rgba(0, 0, 255, 0.2);
-  transform: rotate(120deg);
+  top: 10%;
+  left: 30%;
+  width: 16vw;
+  height: 16vw;
+  border-radius: 8vw;
+  background-color: white;
+
+  animation: bubble 1.5s infinite alternate;
 }
 
 /* info third */
 .info .img-box .my-img {
-  width: 12vw;
-  height: 12vw;
-  border-radius: 6vw;
-  background-color: red;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 5vw;
+  background-color: white;
   margin: 1vw;
+}
+.info .img-box .img1 {
+  animation: bubble 1.7s infinite alternate;
+}
+.info .img-box .img2 {
+  animation: bubble 1.4s infinite alternate;
+}
+.info .img-box .img3 {
+  animation: bubble 2s infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4vh);
+  }
 }
