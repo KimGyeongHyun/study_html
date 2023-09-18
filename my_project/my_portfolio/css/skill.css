@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Mont";
+  src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Noto";
+  src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
+.skill .text-box h2 {
+  font-family: "Mont";
+  font-size: 7vw;
+}
+.skill .text-box p {
+  font-family: "Noto";
+  font-size: 2vw;
+}
+.skill .img-box img {
+  width: 10vw;
+  height: 10vw;
+}
