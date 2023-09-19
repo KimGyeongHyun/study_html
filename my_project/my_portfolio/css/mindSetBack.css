@@ -52,7 +52,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .mind .floating.square {
   display: inline-block;
@@ -62,7 +62,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .mind .floating.triangle {
   display: inline-block;
@@ -72,7 +72,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .mind .floating.cross {
   display: inline-block;
@@ -82,7 +82,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 @keyframes floating {

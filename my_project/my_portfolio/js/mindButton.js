@@ -1,4 +1,5 @@
 var idx = 1;
+var time = -20;
 const content = $(".mind .content");
 const atv_sq = $(".mind .active-btn");
 const btns = $(".mind .btn");
@@ -6,12 +7,32 @@ const btn1 = $(".mind .btn1");
 const btn2 = $(".mind .btn2");
 const btn3 = $(".mind .btn3");
 
+const prog = $(".mind .progress");
+var progInterval = null;
+slide_bar();
+
 // idx 를 바꿔주는 함수
 function idx_count() {
+  slide_bar();
+
   var index = 0;
   if (idx == 3) index = 1;
   else index = idx + 1;
   btn_click(index);
+}
+
+// tab 이 넘어가는 시간을 보여주는 함수
+function slide_bar() {
+  clearInterval(progInterval);
+  time = -20;
+  move_slide_bar();
+}
+// slide bar 를 움직이는 함수
+function move_slide_bar() {
+  progInterval = setInterval(() => {
+    time += 0.01;
+    prog.css("left", `${time}vw`);
+  }, 10);
 }
 
 var inc = setInterval(idx_count, 20000);
@@ -29,6 +50,7 @@ function btn_click(index) {
 
   clearInterval(inc);
   inc = setInterval(idx_count, 20000);
+  time = -20;
 
   idx = index;
 }
