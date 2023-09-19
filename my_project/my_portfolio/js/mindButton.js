@@ -1,10 +1,10 @@
 var idx = 1;
-const content = $(".content");
-const atv_sq = $(".active-btn");
-const btns = $(".btn");
-const btn1 = $(".btn1");
-const btn2 = $(".btn2");
-const btn3 = $(".btn3");
+const content = $(".mind .content");
+const atv_sq = $(".mind .active-btn");
+const btns = $(".mind .btn");
+const btn1 = $(".mind .btn1");
+const btn2 = $(".mind .btn2");
+const btn3 = $(".mind .btn3");
 
 // idx 를 바꿔주는 함수
 function idx_count() {

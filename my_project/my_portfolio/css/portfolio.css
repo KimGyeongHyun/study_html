@@ -1,0 +1,30 @@
+video {
+  width: 45vw;
+  height: 25vw;
+  margin-top: 8vh;
+}
+[class*="port"] h2 {
+  font-size: 4vw;
+}
+[class*="port"] .item-box {
+  display: flex;
+  justify-content: space-around;
+}
+[class*="port"] .item-box .text-box {
+  position: relative;
+  height: 50vh;
+  margin: 2vw;
+}
+[class*="port"] .item-box .text-box h3 {
+  font-size: 2vw;
+  margin-bottom: 5vh;
+}
+[class*="port"] .item-box .text-box button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.port2 .item-box .text-box {
+  margin-top: 8vh;
+}

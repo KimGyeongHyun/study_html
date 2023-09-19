@@ -7,6 +7,9 @@
   src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
 }
 
+.skill {
+  overflow: hidden;
+}
 .skill h2 {
   font-family: "Mont";
   font-size: 5vw;
@@ -17,16 +20,13 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 80vh;
+  height: 60vh;
 }
 .skill .text-box .item-box {
-  width: 50vw;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.rev {
-  flex-direction: row-reverse;
 }
 .skill .text-box p {
   font-family: "Noto";

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/skill.css" />
     <link rel="stylesheet" href="../css/mindSetBack.css" />
     <link rel="stylesheet" href="../css/mindSet.css" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
     <!-- JQuery link -->
@@ -72,6 +73,18 @@
             <a class="nav-link" href="#scrollspyHeading5"
               ><div class="nav-shape color1"></div>
               <p>Portfolio #1</p></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading6"
+              ><div class="nav-shape color1"></div>
+              <p>Portfolio #2</p></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading7"
+              ><div class="nav-shape color1"></div>
+              <p>Portfolio #3</p></a
             >
           </li>
         </ul>
@@ -165,8 +178,8 @@
         <div class="inner">
           <h2>skill</h2>
           <div class="text-box">
-            <div class="item-box">
-              <p>html, css, js</p>
+            <div class="item-box rev" data-aos="fade-left">
+              <p>웹 기본 언어 html, css, js</p>
               <div class="img-box">
                 <img src="../img/html.png" alt="icon" />
                 <img src="../img/css.png" alt="icon" />
@@ -174,21 +187,20 @@
               </div>
             </div>
 
-            <div class="item-box rev">
-              <p>외부 라이브러리</p>
+            <div class="item-box rev" data-aos="fade-left">
+              <p>외부 라이브러리, 프레임워크</p>
               <div class="img-box">
                 <img src="../img/temp-swiper.png" alt="icon" />
                 <img src="../img/temp-fullpage.png" alt="icon" />
+                <img src="../img/bootstrap.png" alt="icon" />
               </div>
             </div>
 
-            <div class="item-box">
-              <p>외부 라이브러리</p>
-              <div class="img-box">
-                <img src="../img/html.png" alt="icon" />
-                <img src="../img/css.png" alt="icon" />
-                <img src="../img/js.png" alt="icon" />
-              </div>
+            <div class="item-box" data-aos="fade-left">
+              <p>그 외</p>
+              <button type="button" class="btn btn-primary">
+                coding portfolio
+              </button>
             </div>
           </div>
         </div>
@@ -497,7 +509,59 @@
       </section>
       <script src="../js/mindButton.js"></script>
 
-      <section id="scrollspyHeading5" class="port1"></section>
+      <section id="scrollspyHeading5" class="port1">
+        <div class="inner">
+          <h2>Portfolio #1</h2>
+          <div class="item-box">
+            <video class="video1" loop muted>
+              <source src="../vid/anywhere2.mp4" type="video/mp4" />
+            </video>
+            <div class="text-box">
+              <h3>Anywhere 배달 회사</h3>
+              <p>Swiper slide, AOS 외부 라이브러리</p>
+              <p>Tracking navigation</p>
+              <p>반응형 웹 디자인</p>
+              <button type="button" class="btn btn-primary">Link</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="scrollspyHeading6" class="port2">
+        <div class="inner">
+          <h2>Portfolio #2</h2>
+          <div class="item-box rev">
+            <video class="video2" loop muted>
+              <source src="../vid/dkr2.mp4" type="video/mp4" />
+            </video>
+            <div class="text-box">
+              <h3>Dr.K 제약 회사</h3>
+              <p>Swiper slide, AOS 외부 라이브러리</p>
+              <p>상단 메뉴와 서브메뉴, mouse hover 디자인</p>
+              <p>background 에 opacity 를 gradient 로 적용</p>
+              <p>반응형 웹 디자인</p>
+              <button type="button" class="btn btn-primary">Link</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="scrollspyHeading7" class="port3">
+        <div class="inner">
+          <h2>Portfolio #3</h2>
+          <div class="item-box">
+            <video class="video3" loop muted>
+              <source src="../vid/easymusic.mp4" type="video/mp4" />
+            </video>
+            <div class="text-box">
+              <h3>Easy Music 작곡 회사</h3>
+              <p>Fullpage.js 외부 라이브러리</p>
+              <p>active class 내부 태그에 애니메이션 적용</p>
+              <p>page 내에 slide, top 버튼</p>
+              <button type="button" class="btn btn-primary">Link</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="../js/videoStartCont.js"></script>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
