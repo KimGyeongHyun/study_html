@@ -14,7 +14,7 @@ function idx_count() {
   btn_click(index);
 }
 
-var inc = setInterval(idx_count, 10000);
+var inc = setInterval(idx_count, 20000);
 
 // idx 가 바뀔 때 실행되는 함수
 // 버튼을 누를 경우 호출되는 함수
@@ -28,7 +28,7 @@ function btn_click(index) {
   change_content(index);
 
   clearInterval(inc);
-  inc = setInterval(idx_count, 10000);
+  inc = setInterval(idx_count, 20000);
 
   idx = index;
 }

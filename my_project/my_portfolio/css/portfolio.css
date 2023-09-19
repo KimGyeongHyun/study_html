@@ -1,30 +1,88 @@
+@font-face {
+  font-family: "Mont";
+  src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Noto";
+  src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
 video {
   width: 45vw;
-  height: 25vw;
+  height: 21.8vw;
   margin-top: 8vh;
+  box-shadow: 0px 0px 1vw 0 #bbbbbb;
+}
+[class*="port"] {
+  overflow: hidden;
 }
 [class*="port"] h2 {
+  font-family: "Mont";
   font-size: 4vw;
 }
 [class*="port"] .item-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
 }
 [class*="port"] .item-box .text-box {
   position: relative;
+  font-family: "Noto";
+  width: 25vw;
   height: 50vh;
-  margin: 2vw;
+  margin: 3vw;
 }
 [class*="port"] .item-box .text-box h3 {
   font-size: 2vw;
   margin-bottom: 5vh;
 }
+[class*="port"] .item-box .text-box p {
+  font-size: 1.2vw;
+  margin-bottom: 4vh;
+}
 [class*="port"] .item-box .text-box button {
   position: absolute;
+  font-size: 1.5vw;
   left: 0;
   bottom: 0;
 }
 
 .port2 .item-box .text-box {
   margin-top: 8vh;
+}
+
+[class*="port"] [class*="deco"] {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
+}
+.port1 .deco1 {
+  background-color: rgb(207, 0, 211);
+  top: -10vw;
+  right: -10vw;
+}
+.port1 .deco2 {
+  background-color: darkviolet;
+  bottom: -10vw;
+  left: -10vw;
+}
+.port2 .deco1 {
+  background-color: blue;
+  top: -10vw;
+  right: -10vw;
+}
+.port2 .deco2 {
+  background-color: rgb(129, 97, 255);
+  bottom: -10vw;
+  left: -10vw;
+}
+.port3 .deco1 {
+  background-color: rgb(148, 0, 211);
+  top: -10vw;
+  left: -10vw;
+}
+.port3 .deco2 {
+  background-color: rgb(211, 0, 151);
+  bottom: -10vw;
+  right: -10vw;
 }
