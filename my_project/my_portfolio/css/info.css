@@ -2,6 +2,10 @@
   font-family: "Noto";
   src: url(../../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
 }
+@font-face {
+  font-family: "Mont";
+  src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
 
 .left-top {
   top: 0;
@@ -34,10 +38,12 @@
   text-align: left;
   font-family: "Noto";
   padding: 5vw;
+  text-shadow: 1px 1px 3px #333333;
 }
 .info .text-box h2 {
+  font-family: "Mont";
   font-size: 3vw;
-  margin-bottom: 3vh;
+  margin-bottom: 10vh;
 }
 .info .text-box p {
   font-size: 1.1vw;

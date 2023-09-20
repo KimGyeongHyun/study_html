@@ -10,6 +10,10 @@
   font-family: "Notob";
   src: url(../../font/Noto_Sans_KR/NotoSansKR-Bold.otf);
 }
+@font-face {
+  font-family: "Hero";
+  src: url(../../font/Heroes/HeroesAssembleBoldExpandtalic-qEn1.ttf);
+}
 
 .mind {
   position: relative;
@@ -25,14 +29,15 @@
   color: white;
 }
 .mind h2 {
-  font-family: "Mont";
-  font-size: 5vw;
+  font-family: "Hero";
+  font-size: 6vw;
+  font-weight: bold;
 }
 .mind .content {
   position: relative;
   width: 60vw;
   height: 55vh;
-  margin: 5vh auto 5vh auto;
+  margin: 3vh auto 3vh auto;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .mind .content .text-box {
@@ -43,17 +48,18 @@
   transition: 0.5s;
   text-align: left;
 }
-.mind .content .text-box h2,
+.mind .content .text-box h3,
 .mind .content .text-box p {
   transition-delay: 0;
   transition: 0.5s;
   opacity: 0;
 }
-.mind .content .text-box h2 {
+.mind .content .text-box h3 {
   font-family: "Mont";
   font-size: 3vw;
+  font-weight: bold;
   transform: translateX(-8vw);
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 .mind .content .text-box p {
   font-family: "Noto";
@@ -64,7 +70,7 @@
   font-family: "Notob";
   font-size: 1.7vw;
 }
-.mind .content .active h2,
+.mind .content .active h3,
 .mind .content .active p {
   transition-delay: 0.3s;
   transform: translate(0, 0);
@@ -111,7 +117,7 @@
 
 .mind .slide-bar {
   position: absolute;
-  bottom: 4vh;
+  bottom: 3vh;
   left: 50%;
   transform: translateX(-50%);
   width: 20vw;
