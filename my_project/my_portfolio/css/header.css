@@ -62,6 +62,14 @@
 .header .text-box {
   font-family: "KungFu";
   color: white;
+  text-shadow: 1vw 1vw 0 #333333;
+  width: 50vw;
+}
+.header .text-box .head-left {
+  text-align: left;
+}
+.header .text-box .head-right {
+  text-align: right;
 }
 .header .text-box h2 {
   font-size: 8vw;
@@ -113,5 +121,26 @@
   }
   to {
     transform: translateY(-50%) rotate(1800deg);
+  }
+}
+
+.header .text-box .head1 {
+  animation: bubble 3s infinite alternate;
+}
+.header .text-box .head2 {
+  animation-delay: 2s;
+  animation: bubble 5s infinite alternate;
+}
+.header .text-box .head3 {
+  animation-delay: 3s;
+  animation: bubble 4s infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2vh);
   }
 }

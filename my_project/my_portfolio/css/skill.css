@@ -10,6 +10,12 @@
 .skill {
   overflow: hidden;
 }
+.skill .skill-inner {
+  position: absolute;
+  width: 80%;
+  height: 80vh;
+  margin: 10vh 13vw 10vh 7vw;
+}
 .skill h2 {
   font-family: "Mont";
   font-size: 5vw;

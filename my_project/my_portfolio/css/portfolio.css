@@ -57,32 +57,33 @@ video {
   border-radius: 10vw;
 }
 .port1 .deco1 {
-  background-color: rgb(207, 0, 211);
+  background: linear-gradient(rgb(207, 0, 211) 50%, darkviolet);
   top: -10vw;
   right: -10vw;
 }
 .port1 .deco2 {
-  background-color: darkviolet;
+  background: linear-gradient(darkviolet, rgb(131, 0, 133) 50%);
   bottom: -10vw;
   left: -10vw;
 }
 .port2 .deco1 {
+  background: linear-gradient(rgb(0, 149, 255) 50%, blue);
   background-color: blue;
   top: -10vw;
   right: -10vw;
 }
 .port2 .deco2 {
-  background-color: rgb(129, 97, 255);
+  background: linear-gradient(rgb(0, 140, 255), blue 50%);
   bottom: -10vw;
   left: -10vw;
 }
 .port3 .deco1 {
-  background-color: rgb(148, 0, 211);
+  background: linear-gradient(rgb(148, 0, 211) 50%, rgb(167, 1, 120));
   top: -10vw;
   left: -10vw;
 }
 .port3 .deco2 {
-  background-color: rgb(211, 0, 151);
+  background: linear-gradient(rgb(126, 1, 91), rgb(167, 1, 120) 50%);
   bottom: -10vw;
   right: -10vw;
 }
