@@ -55,3 +55,31 @@
 .skill button {
   font-size: 1.3vw;
 }
+
+.skill .big-item-box .item1 .img-box img:nth-child(1) {
+  animation: bubble 1.7s infinite alternate;
+}
+.skill .big-item-box .item1 .img-box img:nth-child(2) {
+  animation: bubble 1.4s infinite alternate;
+}
+.skill .big-item-box .item1 .img-box img:nth-child(3) {
+  animation: bubble 2s infinite alternate;
+}
+.skill .big-item-box .item2 .img-box img:nth-child(1) {
+  animation: bubble 1.2s infinite alternate;
+}
+.skill .big-item-box .item2 .img-box img:nth-child(2) {
+  animation: bubble 2s infinite alternate;
+}
+.skill .big-item-box .item2 .img-box img:nth-child(3) {
+  animation: bubble 1.8s infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4vh);
+  }
+}
