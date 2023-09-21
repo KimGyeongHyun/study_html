@@ -161,3 +161,48 @@ video {
   bottom: -10vw;
   right: -10vw;
 }
+
+@media (max-width: 768px) {
+  video {
+    width: 80vw;
+    height: 39vw;
+    margin-top: 6vh;
+    box-shadow: 0px 0px 1vw 0 #bbbbbb;
+  }
+  [class*="port"] h2 {
+    font-size: 10vw;
+  }
+  [class*="port"] .item-box {
+    display: block;
+  }
+  [class*="port"] .item-box .text-box {
+    width: 70vw;
+    height: auto;
+    margin: 3vw;
+    margin-top: 10vh;
+  }
+  [class*="port"] .item-box .text-box h3 {
+    font-family: "Giants-Bold";
+    font-size: 6vw;
+    margin-bottom: 3vh;
+  }
+  [class*="port"] .item-box .text-box p {
+    font-family: "Noto";
+    font-weight: bold;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+  }
+
+  [class*="port"] .item-box .text-box .link-box {
+    margin-top: 5vh;
+    width: 10vw;
+    height: 10vw;
+  }
+  [class*="port"] .item-box .text-box .link-box p {
+    font-size: 5vw;
+    margin: 0 auto 0 0.4vw;
+  }
+  [class*="port"] .item-box .text-box .link-box .hover-bar {
+    display: none;
+  }
+}

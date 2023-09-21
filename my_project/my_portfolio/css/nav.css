@@ -69,3 +69,19 @@
 #navbar-scrollspy ul li .active p {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  #navbar-scrollspy ul li a p {
+    display: none;
+  }
+  #navbar-scrollspy ul li a div {
+    width: 2vw;
+    height: 2vw;
+    margin: 3vw;
+    border-radius: 1vw;
+  }
+  #navbar-scrollspy ul li .active div {
+    width: 4vw;
+    transform: rotate(40deg) translate(0.6vw, -0.6vw);
+  }
+}

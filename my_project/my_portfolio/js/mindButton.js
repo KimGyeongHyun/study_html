@@ -1,5 +1,16 @@
+var time = null;
+// 반응형 시간 변수 초기화 함수
+function init_time() {
+  if (!matchMedia("screen and (min-width: 768px)").matches) {
+    time = -40;
+  } else {
+    time = -20;
+  }
+}
+
+init_time();
 var idx = 1;
-var time = -20;
+
 const content = $(".mind .content");
 const atv_sq = $(".mind .active-btn");
 const btns = $(".mind .btn");
@@ -24,13 +35,18 @@ function idx_count() {
 // tab 이 넘어가는 시간을 보여주는 함수
 function slide_bar() {
   clearInterval(progInterval);
-  time = -20;
+  init_time();
   move_slide_bar();
 }
 // slide bar 를 움직이는 함수
 function move_slide_bar() {
   progInterval = setInterval(() => {
-    time += 0.01;
+    if (!matchMedia("screen and (min-width: 768px)").matches) {
+      time += 0.02;
+    } else {
+      time += 0.01;
+    }
+
     prog.css("left", `${time}vw`);
   }, 10);
 }
@@ -50,7 +66,7 @@ function btn_click(index) {
 
   clearInterval(inc);
   inc = setInterval(idx_count, 20000);
-  time = -20;
+  init_time();
 
   idx = index;
 }
@@ -63,7 +79,13 @@ function change_content(index) {
 
 // active_btn 의 위치를 index 에 따라 바꿔주는 함수
 function change_atv(index) {
-  atv_sq.animate({ left: `${(index - 1) * 12 + 1}vw` });
+  if (!matchMedia("screen and (min-width: 768px)").matches) {
+    atv_sq.animate({ left: `${(index - 1) * 24 + 2}vw` });
+    console.log(1);
+  } else {
+    atv_sq.animate({ left: `${(index - 1) * 12 + 1}vw` });
+    console.log(2);
+  }
 }
 
 // index 번호에 따라 btn color 를 바꿔주는 함수

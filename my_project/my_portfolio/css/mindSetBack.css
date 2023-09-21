@@ -108,3 +108,22 @@
     -webkit-transform: translateY(0%);
   }
 }
+
+@media (max-width: 768px) {
+  .mind .floating.circle {
+    width: 18px;
+    height: 18px;
+  }
+  .mind .floating.square {
+    width: 18px;
+    height: 18px;
+  }
+  .mind .floating.triangle {
+    width: 18px;
+    height: 18px;
+  }
+  .mind .floating.cross {
+    width: 18px;
+    height: 18px;
+  }
+}

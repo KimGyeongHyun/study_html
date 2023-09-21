@@ -15,12 +15,6 @@ section {
   margin: 10vh 10vw 10vh 10vw;
 }
 
-.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .rev {
   flex-direction: row-reverse;
 }

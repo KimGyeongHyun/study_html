@@ -20,6 +20,9 @@
   top: 0;
   overflow: hidden;
 }
+.skill .shapes li {
+  background-color: rgba(41, 53, 220, 0.05);
+}
 
 .skill .shapes .big-circle {
   position: absolute;
@@ -28,7 +31,6 @@
   width: 40vw;
   height: 40vw;
   border-radius: 20vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 3s infinite alternate;
 }
 .skill .shapes .big-circle .inner-circle {
@@ -48,7 +50,6 @@
   width: 20vw;
   height: 20vw;
   border-radius: 10vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 2s infinite alternate;
 }
 .skill .shapes .small-circle .inner-circle {
@@ -68,7 +69,6 @@
   width: 12vw;
   height: 12vw;
   border-radius: 6vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 2.3s infinite alternate;
 }
 .skill .shapes .small-circle2 .inner-circle {
@@ -99,7 +99,6 @@
   width: 3vw;
   height: 3vw;
   border-radius: 1.5vw;
-  background-color: purple;
   animation: bubble 3.5s infinite alternate;
 }
 .skill .shapes .circle2 {
@@ -109,7 +108,6 @@
   width: 2vw;
   height: 2vw;
   border-radius: 1vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 3s infinite alternate;
 }
 .skill .shapes .circle3 {
@@ -119,7 +117,6 @@
   width: 4vw;
   height: 4vw;
   border-radius: 2vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 2.1s infinite alternate;
 }
 .skill .shapes .circle4 {
@@ -129,7 +126,6 @@
   width: 2vw;
   height: 2vw;
   border-radius: 1vw;
-  background-color: rgba(41, 53, 220, 0.05);
   animation: bubble 1.1s infinite alternate;
 }
 
@@ -226,5 +222,64 @@
   }
   100% {
     transform: translateY(-4vh);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill h2 {
+    font-size: 10vw;
+    margin-bottom: 8vh;
+  }
+
+  .skill .big-item-box .item1 {
+    top: 0%;
+    left: 10%;
+    animation: bubble 5s infinite alternate;
+  }
+  .skill .big-item-box .item2 {
+    top: 40%;
+    left: 30%;
+    animation: bubble 5.5s infinite alternate;
+  }
+  .skill .big-item-box .item3 {
+    top: 80%;
+    left: 10%;
+    animation: bubble 6s infinite alternate;
+  }
+
+  .skill .item-box .text-box {
+    padding: 2vw;
+  }
+  .skill p {
+    font-size: 4vw;
+  }
+  .skill .img-box {
+    padding: 2vw;
+    background-color: rgba(41, 53, 220, 0.05);
+  }
+  .skill .img-box img {
+    margin: 0 2vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  .skill .item-box {
+    box-shadow: 0.1vw 0.1vw 0.6vw #333333;
+  }
+  .skill .item-box .link-box {
+    height: 8vw;
+  }
+  .skill .item-box .link-box p {
+    font-size: 5vw;
+    margin: 0 auto 0 0.4vw;
+  }
+  .skill .item-box .link-box .hover-bar {
+    left: -100%;
+    width: 70%;
+    height: 0.2vw;
+    transition: 0.2s;
+  }
+  .skill .item-box .link-box:hover .hover-bar {
+    transform: translateX(100%);
+    background-color: rgb(71, 77, 168);
   }
 }

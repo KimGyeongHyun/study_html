@@ -138,3 +138,66 @@
   border-radius: 0.3vw;
   background: linear-gradient(rgba(255, 215, 252, 1), rgb(255, 96, 252));
 }
+
+@media (max-width: 768px) {
+  .mind h2 {
+    font-size: 12vw;
+    text-shadow: 1vw 1vw 0 #333333;
+  }
+  .mind .content {
+    width: 75vw;
+    height: 65vh;
+  }
+  .mind .content .text-box {
+    text-shadow: 0.3vw 0.3vw 0.9vw #333333;
+  }
+  .mind .content .text-box h3 {
+    font-size: 9vw;
+    margin-bottom: 3vh;
+  }
+  .mind .content .text-box p {
+    font-size: 3vw;
+    line-height: 7vw;
+  }
+  .mind .content .text-box p span {
+    font-size: 5vw;
+  }
+
+  .mind .button-box {
+    width: min-content;
+    border-radius: 2vw;
+  }
+  .mind .btn {
+    width: 20vw;
+    font-size: 3vw;
+    height: 10vw;
+    margin: 2vw;
+    border-radius: 2vw;
+  }
+  .mind .active-btn {
+    left: 2vw;
+    width: 20vw;
+    height: 10vw;
+    border-radius: 2vw;
+  }
+
+  .mind .slide-bar {
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 1.2vw;
+    border-radius: 0.6vw;
+    background-color: white;
+    z-index: 200;
+    overflow: hidden;
+  }
+  .mind .slide-bar .progress {
+    position: absolute;
+    left: -100%;
+    width: 40vw;
+    height: 1.2vw;
+    border-radius: 0.6vw;
+    background: linear-gradient(rgba(255, 215, 252, 1), rgb(255, 96, 252));
+  }
+}
