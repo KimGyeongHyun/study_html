@@ -18,11 +18,29 @@
   font-family: "Robo";
   src: url(../../font/Roboto/Roboto-BoldItalic.ttf);
 }
+@font-face {
+  font-family: "Giants-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ChungJu";
+  src: url(../../font/Roboto/Roboto-BoldItalic.ttf);
+}
+@font-face {
+  font-family: "Cafe24";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 
 video {
   width: 45vw;
   height: 21.8vw;
-  margin-top: 8vh;
+  margin-top: 12vh;
   box-shadow: 0px 0px 1vw 0 #bbbbbb;
 }
 [class*="port"] {
@@ -30,7 +48,7 @@ video {
 }
 [class*="port"] h2 {
   font-family: "Kungfu";
-  font-size: 4vw;
+  font-size: 5vw;
 }
 [class*="port"] .item-box {
   display: flex;
@@ -38,28 +56,29 @@ video {
 }
 [class*="port"] .item-box .text-box {
   position: relative;
+  margin-top: 10vh;
   width: 25vw;
-  height: 55vh;
+  height: 45vh;
   margin: 3vw;
 }
 [class*="port"] .item-box .text-box h3 {
-  font-family: "Dongle";
-  font-size: 4vw;
+  font-family: "Giants-Bold";
+  font-size: 2vw;
   margin-bottom: 5vh;
 }
 [class*="port"] .item-box .text-box p {
   font-family: "Noto";
+  font-weight: bold;
   font-size: 1.2vw;
   margin-bottom: 3.5vh;
 }
 
 [class*="port"] .item-box .text-box .link-box {
-  position: absolute;
+  margin-top: 14vh;
+  position: relative;
   cursor: pointer;
   width: 5vw;
   height: 2.5vw;
-  left: 0;
-  bottom: 0;
   overflow: hidden;
 }
 [class*="port"] .item-box .text-box .link-box p {

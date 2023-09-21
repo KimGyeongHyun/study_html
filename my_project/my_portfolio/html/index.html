@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="../css/portfolio.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- JQuery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
@@ -48,7 +57,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="#scrollspyHeading1">
               <div class="nav-shape color1"></div>
-              <p style="color: #eeeeee">Header</p>
+              <p style="color: #eeeeee">Home</p>
             </a>
           </li>
           <li class="nav-item">
@@ -128,17 +137,18 @@
 
         <!-- header -->
         <section id="scrollspyHeading1" class="header flex-row">
-          <div class="header-nav">
-            <h2>KKH's WEB portfolio</h2>
+          <div class="header-box">
             <div class="ani-block ani1"></div>
             <div class="ani-block ani2"></div>
             <div class="ani-block ani3"></div>
             <div class="ani-block ani4"></div>
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Passion</li>
-              <li>Portfolio</li>
+
+            <h2>KKH's WEB portfolio</h2>
+            <ul class="header-nav">
+              <li onclick="location.href='#scrollspyHeading2'">About Me</li>
+              <li onclick="location.href='#scrollspyHeading3'">Skill</li>
+              <li onclick="location.href='#scrollspyHeading4'">Mind Set</li>
+              <li onclick="location.href='#scrollspyHeading5'">Portfolio</li>
             </ul>
           </div>
           <div class="text-box">
@@ -159,9 +169,12 @@
                 <p>e-mail : ******@naver.com</p>
                 <p>tel : 010 - **** - ****</p>
                 <p>
-                  <a href="https://github.com/KimGyeongHyun"
-                    >https://github.com/KimGyeongHyun</a
-                  >
+                  <a href="https://github.com/KimGyeongHyun" title="Github"
+                    ><i
+                      class="fa-brands fa-github-alt fa-2x"
+                      style="color: white"
+                    ></i
+                  ></a>
                 </p>
               </div>
             </div>
@@ -191,6 +204,23 @@
 
       <!-- skill -->
       <section id="scrollspyHeading3" class="skill">
+        <ul class="shapes">
+          <li class="big-circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="small-circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="small-circle2">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="triangle"></li>
+          <li class="circle1"></li>
+          <li class="circle2"></li>
+          <li class="circle3"></li>
+          <li class="circle4"></li>
+        </ul>
+
         <div class="skill-inner">
           <h2>skill</h2>
           <div class="big-item-box">
@@ -209,7 +239,7 @@
             <div class="item-box item2">
               <div class="text-box">
                 <p>외부 라이브러리, 프레임워크</p>
-                <p>Swiper slide, fullpage.js, Bootstrap ...</p>
+                <p>Swiper slide, fullpage.js ...</p>
               </div>
 
               <div class="img-box">
@@ -219,19 +249,17 @@
               </div>
             </div>
 
-            <div class="item-box item3">
-              <div class="text-box">
-                <p>그 외의 경험</p>
-                <p>자료구조, 알고리즘, SOLID programming 등 ...</p>
+            <div class="item-box item3" style="padding: 1vw">
+              <div class="text-box" style="padding: 0">
+                <p style="margin-bottom: 1vh">그 외의 경험들</p>
               </div>
-
-              <button
-                type="button"
-                class="btn btn-primary"
+              <div
+                class="link-box"
                 onclick="location.href='../../kkh/html/index.html'"
               >
-                coding portfolio
-              </button>
+                <p>Link</p>
+                <div class="hover-bar"></div>
+              </div>
             </div>
           </div>
         </div>

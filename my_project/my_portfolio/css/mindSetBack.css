@@ -43,6 +43,7 @@
   -webkit-animation-duration: 5s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  filter: blur(0.1vw);
 }
 .mind .floating.circle {
   display: inline-block;
