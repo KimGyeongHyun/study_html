@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/mindSetBack.css" />
     <link rel="stylesheet" href="../css/mindSet.css" />
     <link rel="stylesheet" href="../css/portfolio.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
     <!-- icon -->
@@ -608,7 +609,12 @@
         <div class="inner">
           <h2>Portfolio #1</h2>
           <div class="item-box">
-            <video class="video1" loop muted>
+            <video
+              class="video1"
+              onclick="location.href='../../anywhere/html/index.html'"
+              loop
+              muted
+            >
               <source src="../vid/anywhere2.mp4" type="video/mp4" />
             </video>
             <div class="text-box">
@@ -635,7 +641,12 @@
         <div class="inner">
           <h2>Portfolio #2</h2>
           <div class="item-box rev">
-            <video class="video2" loop muted>
+            <video
+              class="video2"
+              onclick="location.href='../../Dr_K/html/index.html'"
+              loop
+              muted
+            >
               <source src="../vid/dkr2.mp4" type="video/mp4" />
             </video>
             <div class="text-box">
@@ -663,7 +674,12 @@
         <div class="inner">
           <h2>Portfolio #3</h2>
           <div class="item-box">
-            <video class="video3" loop muted>
+            <video
+              class="video3"
+              onclick="location.href='../../EasyMusic/html/index.html'"
+              loop
+              muted
+            >
               <source src="../vid/easymusic.mp4" type="video/mp4" />
             </video>
             <div class="text-box">
@@ -683,9 +699,49 @@
           </div>
         </div>
       </section>
-
-      <section id="scrollspyHeading8" class="footer"></section>
       <script src="../js/videoStartCont.js"></script>
+
+      <!-- footer -->
+      <section id="scrollspyHeading8" class="footer">
+        <div class="diag"></div>
+        <div class="footer-inner">
+          <div class="img-box">
+            <div class="item-box"></div>
+            <div class="item-box"></div>
+            <div class="item-box"></div>
+            <div class="item-box"></div>
+            <div class="item-box"></div>
+            <div class="item-box"></div>
+          </div>
+
+          <div class="text-box">
+            <p data-aos="fade-right">
+              저는 모르는 것이 많습니다<br />하지만 모르는 것에 대한 호기심,
+              탐구력이 높습니다<br />모르는 것을 탐구하는 것은 저의 삶에 동기
+              부여가 됩니다
+            </p>
+            <p data-aos="fade-right">
+              현재 html, css, js 의 웹 디자인 위주의 언어를 공부하고 있으며,<br />
+              백엔드 과정도 공부하여 풀스택 개발자가 되는 것이 저의 꿈입니다
+            </p>
+            <p data-aos="fade-right">
+              저의 탐구력의 장점을 밀어붙혀 프론트엔드, 백엔드를 병행하는
+              과정에서 <br />어느 한 쪽이 부족하지 않도록 열심히 할 것입니다.
+            </p>
+          </div>
+        </div>
+        <div class="top-box" onclick="location.href='#scrollspyHeading1'">
+          <i
+            class="fa-solid fa-caret-up fa-beat fa-xl"
+            style="
+              --fa-beat-scale: 1.5;
+              --fa-animation-duration: 1s;
+              margin-bottom: 1vh;
+            "
+          ></i>
+          <p>top</p>
+        </div>
+      </section>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

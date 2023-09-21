@@ -38,6 +38,7 @@
 }
 
 video {
+  cursor: pointer;
   width: 45vw;
   height: 21.8vw;
   margin-top: 12vh;

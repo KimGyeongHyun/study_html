@@ -99,7 +99,7 @@
   width: 3vw;
   height: 3vw;
   border-radius: 1.5vw;
-  background-color: rgb(71, 77, 168);
+  background-color: purple;
   animation: bubble 3.5s infinite alternate;
 }
 .skill .shapes .circle2 {
@@ -157,9 +157,11 @@
   border-radius: 0.5vw;
   background-color: white;
   box-shadow: 0.05vw 0.05vw 0.2vw #333333;
+  transition: 0.2s;
   overflow: hidden;
 }
 .skill .item-box:hover {
+  transform: scale(1.2);
   box-shadow: 0.05vw 0.05vw 0.4vw #333333;
 }
 .skill .big-item-box .item1 {

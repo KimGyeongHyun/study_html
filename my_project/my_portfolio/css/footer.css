@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Giants-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.footer {
+  background-color: aliceblue;
+  overflow: hidden;
+}
+.footer .diag {
+  position: absolute;
+  width: 200vw;
+  height: 85vh;
+  left: -50vw;
+  top: 30vh;
+  transform: rotate(15deg);
+  background-color: white;
+}
+.footer .footer-inner {
+  position: absolute;
+  width: 70vw;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+}
+
+.footer .img-box {
+  position: absolute;
+  width: 35vw;
+  height: 50vh;
+  top: 5vh;
+  left: 0;
+  background-color: red;
+}
+
+.footer .text-box {
+  position: absolute;
+  right: -5vw;
+  top: 45%;
+}
+.footer .text-box p {
+  font-family: "Giants-Bold";
+  font-size: 1vw;
+  margin-bottom: 5vh;
+}
+
+.footer .top-box {
+  cursor: pointer;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
