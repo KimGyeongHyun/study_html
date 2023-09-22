@@ -38,6 +38,8 @@
 }
 
 video {
+  position: relative;
+  z-index: 10;
   cursor: pointer;
   width: 45vw;
   height: 21.8vw;
@@ -48,10 +50,14 @@ video {
   overflow: hidden;
 }
 [class*="port"] h2 {
+  position: relative;
+  z-index: 10;
   font-family: "Kungfu";
   font-size: 5vw;
 }
 [class*="port"] .item-box {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: left;
 }
@@ -121,6 +127,7 @@ video {
 
 [class*="port"] [class*="deco"] {
   position: absolute;
+  z-index: 10;
   width: 20vw;
   height: 20vw;
   border-radius: 10vw;
@@ -160,6 +167,37 @@ video {
   /* background: linear-gradient(rgb(126, 1, 91), rgb(167, 1, 120) 50%); */
   bottom: -10vw;
   right: -10vw;
+}
+
+[class*="port"] .big-circle {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(41, 53, 220, 0.05);
+  width: 50vw;
+  height: 50vw;
+  border-radius: 25vw;
+  top: 5%;
+  left: 40%;
+}
+[class*="port"] .big-circle .sm-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20vw;
+  transform: translate(-50%, -50%);
+}
+.port2 .big-circle {
+  top: 10%;
+  left: -3%;
+}
+.port1 .big-circle .sm-circle,
+.port3 .big-circle .sm-circle {
+  background-color: aliceblue;
+}
+.port2 .big-circle .sm-circle {
+  background-color: azure;
 }
 
 @media (max-width: 768px) {

@@ -7,7 +7,8 @@
 }
 
 .footer {
-  background-color: aliceblue;
+  background-color: rgb(226, 242, 255);
+  /* background: linear-gradient(160deg, rgb(226, 242, 255), white); */
   overflow: hidden;
 }
 .footer .diag {
@@ -32,8 +33,21 @@
   width: 35vw;
   height: 50vh;
   top: 5vh;
-  left: 0;
-  background-color: red;
+  left: -5vw;
+  display: flex;
+}
+.footer .img-box .sm-img-box:nth-child(1) {
+  transform: translateY(-20%);
+}
+.footer .img-box .sm-img-box:nth-child(3) {
+  transform: translateY(20%);
+}
+.footer .img-box .sm-img-box .item-box {
+  width: 12vw;
+  height: 20vh;
+  margin: 2vw 1vw;
+  box-shadow: 0.2vw 0.2vw 0.4vw #333333;
+  background-color: white;
 }
 
 .footer .text-box {
@@ -57,4 +71,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Giants-Bold";
+  font-size: 1vw;
 }

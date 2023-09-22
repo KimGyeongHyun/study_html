@@ -85,12 +85,14 @@
   position: absolute;
   top: 75%;
   left: 84%;
-  width: 4vw;
-  height: 4vw;
-  background-image: url(../img/green_tri.png);
-  background-size: cover;
-  background-position: center;
-  animation: bubble 2.2s infinite alternate;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 3vw solid rgba(41, 53, 220, 0.05);
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+  transform: rotate(-35deg);
+  animation: tri_bubble 2.2s infinite alternate;
 }
 .skill .shapes .circle1 {
   position: absolute;
@@ -186,7 +188,6 @@
 }
 .skill .img-box {
   padding: 1vw;
-  background-color: rgba(41, 53, 220, 0.05);
 }
 .skill .img-box img {
   margin: 0 1vw;
@@ -222,6 +223,14 @@
   }
   100% {
     transform: translateY(-4vh);
+  }
+}
+@keyframes tri_bubble {
+  0% {
+    transform: rotate(-35deg) translateY(0);
+  }
+  100% {
+    transform: rotate(-35deg) translateY(-4vh);
   }
 }
 

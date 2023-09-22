@@ -125,6 +125,9 @@
     top: 30%;
     right: 5%;
   }
+  .info {
+    height: 100vh;
+  }
   .info .inner-box {
     position: absolute;
     width: 80%;
@@ -133,7 +136,7 @@
     padding: 0;
   }
   .info .text-box h2 {
-    font-size: 5vw;
+    font-size: 6.5vw;
     margin-bottom: 3vh;
   }
   .info .text-box p {

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Robo";
+  src: url(../../font/Roboto/Roboto-Bold.ttf);
+}
+
 .scrollspy-example {
   position: relative;
   width: 100vw;
@@ -31,6 +36,7 @@
   background-color: #aaaaaa;
 }
 #navbar-scrollspy ul li a p {
+  font-family: "Robo";
   opacity: 0;
   width: 8vw;
   font-size: 15px;
@@ -75,13 +81,13 @@
     display: none;
   }
   #navbar-scrollspy ul li a div {
-    width: 2vw;
-    height: 2vw;
-    margin: 3vw;
-    border-radius: 1vw;
+    width: 3vw;
+    height: 3vw;
+    margin: 4vw;
+    border-radius: 1.5vw;
   }
   #navbar-scrollspy ul li .active div {
-    width: 4vw;
-    transform: rotate(40deg) translate(0.6vw, -0.6vw);
+    width: 8vw;
+    transform: rotate(40deg) translate(1.7vw, -1.7vw);
   }
 }
