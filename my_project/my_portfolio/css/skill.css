@@ -150,71 +150,61 @@
   height: 60vh;
 }
 
-.skill .item-box {
+.skill .big-item-box .icon-box {
   position: absolute;
-  border-radius: 0.5vw;
-  background-color: white;
-  box-shadow: 0.05vw 0.05vw 0.2vw #333333;
-  transition: 0.2s;
-  overflow: hidden;
-}
-.skill .item-box:hover {
-  transform: scale(1.2);
-  box-shadow: 0.05vw 0.05vw 0.4vw #333333;
-}
-.skill .big-item-box .item1 {
-  left: 0%;
-  top: 40%;
-  animation: bubble 5s infinite alternate;
-}
-.skill .big-item-box .item2 {
-  left: 37%;
-  top: 0%;
-  animation: bubble 5.5s infinite alternate;
-}
-.skill .big-item-box .item3 {
-  left: 85%;
   top: 30%;
-  animation: bubble 6s infinite alternate;
+  left: 30%;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 4vw;
+  box-shadow: 0.05vw 0.05vw 0.2vw #333333;
+  background-image: url(../img/html.png);
+  background-position: center;
+  background-size: 5vw 5vw;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  background-color: white;
 }
-
-.skill .item-box .text-box {
-  padding: 1vw;
-}
-.skill p {
-  font-family: "Noto";
-  font-size: 1.3vw;
-  margin-bottom: 0;
-}
-.skill .img-box {
-  padding: 1vw;
-}
-.skill .img-box img {
-  margin: 0 1vw;
-  width: 5vw;
-  height: 5vw;
-}
-.skill .item-box .link-box {
-  position: relative;
-  cursor: pointer;
-  height: 3.5vw;
+.skill .big-item-box .icon-box .inner-color {
+  display: none;
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 0.25vw;
+  color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  transition: 0.7s;
 }
-.skill .item-box .link-box p {
-  font-family: "Robo";
-  font-size: 2vw;
-  margin: 0 auto 0 0.4vw;
+.skill .big-item-box .icon-box .inner-color .innter-text {
+  width: 0.5vw;
+  height: 0.5vw;
+  font-size: 0.01vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 1s;
 }
-.skill .item-box .link-box .hover-bar {
-  position: absolute;
-  left: -100%;
-  width: 70%;
-  height: 0.2vw;
-  transition: 0.2s;
+.skill .big-item-box .icon-box:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
 }
-.skill .item-box .link-box:hover .hover-bar {
-  transform: translateX(100%);
-  background-color: rgb(71, 77, 168);
+.skill .big-item-box .icon-box:hover .inner-color {
+  display: block;
+  transform: scale(20);
+  transition-delay: 0.5s;
+  transition: 0.5s;
+}
+.skill .big-item-box .icon-box:hover .inner-color .inner-text {
+  transform: scale(10);
+  transition-delay: 1s;
+  transition: 0.5s;
 }
 
 @keyframes bubble {
