@@ -63,12 +63,14 @@
   position: absolute;
   top: 10%;
   left: 30%;
-  width: 16vw;
-  height: 16vw;
-  border-radius: 8vw;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
   background-color: white;
+  background-image: url(../img/infoImg/info1.jpg);
+  background-position: top;
+  background-size: cover;
   box-shadow: 0.2vw 0.2vw 0.3vw #333333;
-
   animation: bubble 1.5s infinite alternate;
 }
 
@@ -87,17 +89,23 @@
   height: 10vw;
   border-radius: 5vw;
   background-color: white;
+  background-position: center;
+  background-size: cover;
   box-shadow: 0.2vw 0.2vw 0.3vw #333333;
   margin: 1vw;
 }
 .info .img-box .img1 {
+  background-image: url(../img/infoImg/keyboard2.png);
   animation: bubble 1.7s infinite alternate;
 }
 .info .img-box .img2 {
+  background-image: url(../img/infoImg/key.jpg);
   animation: bubble 1.4s infinite alternate;
 }
 .info .img-box .img3 {
+  background-image: url(../img/infoImg/calm.jpg);
   animation: bubble 2s infinite alternate;
+  background-position: right;
 }
 
 @keyframes bubble {
