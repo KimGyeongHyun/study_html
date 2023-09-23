@@ -152,8 +152,8 @@
 
 .skill .big-item-box .icon-box {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 10vw;
+  left: 30vw;
   width: 8vw;
   height: 8vw;
   border-radius: 4vw;
@@ -165,46 +165,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+  transition: 0.7s;
+  transition-delay: 0.2s;
   background-color: white;
+  overflow: hidden;
 }
 .skill .big-item-box .icon-box .inner-color {
-  display: none;
-  width: 0.5vw;
-  height: 0.5vw;
-  border-radius: 0.25vw;
+  width: 0vw;
+  height: 0vw;
+  border-radius: 0vw;
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.7s;
+  transition-delay: 0.15s;
+}
+.skill .big-item-box .icon-box .inner-color .inner-text {
+  width: 0vw;
+  height: 0vw;
+  border-radius: 0vw;
+  font-size: 2vw;
   color: orangered;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   transition: 0.7s;
 }
-.skill .big-item-box .icon-box .inner-color .innter-text {
-  width: 0.5vw;
-  height: 0.5vw;
-  font-size: 0.01vw;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 1s;
-}
 .skill .big-item-box .icon-box:hover {
-  transform: scale(1.5);
-  transition: 0.5s;
+  width: 12vw;
+  height: 12vw;
+  left: 28vw;
+  top: 8vw;
+  border-radius: 6vw;
 }
 .skill .big-item-box .icon-box:hover .inner-color {
-  display: block;
-  transform: scale(20);
-  transition-delay: 0.5s;
-  transition: 0.5s;
+  transition-delay: 0.05s;
+  width: 14vw;
+  height: 14vw;
+  border-radius: 7vw;
 }
 .skill .big-item-box .icon-box:hover .inner-color .inner-text {
-  transform: scale(10);
-  transition-delay: 1s;
-  transition: 0.5s;
+  transition-delay: 0.2s;
+  width: 14vw;
+  height: 14vw;
+  border-radius: 7vw;
 }
 
 @keyframes bubble {
