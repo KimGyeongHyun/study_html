@@ -6,6 +6,10 @@
   font-family: "Noto";
   src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
 }
+@font-face {
+  font-family: "Robo";
+  src: url(../../font/Roboto/Roboto-BoldItalic.ttf);
+}
 
 .skill {
   overflow: hidden;
@@ -26,7 +30,7 @@
 
 .skill .shapes .big-circle {
   position: absolute;
-  left: -5%;
+  left: 5%;
   top: 30%;
   width: 40vw;
   height: 40vw;
@@ -45,11 +49,11 @@
 }
 .skill .shapes .small-circle {
   position: absolute;
-  left: 65%;
-  top: 20%;
-  width: 20vw;
-  height: 20vw;
-  border-radius: 10vw;
+  left: 47%;
+  top: 7%;
+  width: 32vw;
+  height: 32vw;
+  border-radius: 16vw;
   animation: bubble 2s infinite alternate;
 }
 .skill .shapes .small-circle .inner-circle {
@@ -57,15 +61,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 15vw;
-  height: 15vw;
-  border-radius: 7.5vw;
+  width: 24vw;
+  height: 24vw;
+  border-radius: 12vw;
   background-color: white;
 }
 .skill .shapes .small-circle2 {
   position: absolute;
-  left: 55%;
-  top: 62%;
+  left: 50%;
+  top: 70%;
   width: 12vw;
   height: 12vw;
   border-radius: 6vw;
@@ -115,7 +119,7 @@
 .skill .shapes .circle3 {
   position: absolute;
   top: 18%;
-  left: 62%;
+  left: 82%;
   width: 4vw;
   height: 4vw;
   border-radius: 2vw;
@@ -152,13 +156,10 @@
 
 .skill .big-item-box .icon-box {
   position: absolute;
-  top: 10vw;
-  left: 30vw;
   width: 8vw;
   height: 8vw;
   border-radius: 4vw;
   box-shadow: 0.05vw 0.05vw 0.2vw #333333;
-  background-image: url(../img/html.png);
   background-position: center;
   background-size: 5vw 5vw;
   background-repeat: no-repeat;
@@ -174,7 +175,6 @@
   width: 0vw;
   height: 0vw;
   border-radius: 0vw;
-  background-color: orangered;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,20 +186,25 @@
   width: 0vw;
   height: 0vw;
   border-radius: 0vw;
-  font-size: 2vw;
-  color: orangered;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   transition: 0.7s;
+  text-align: center;
+  overflow: hidden;
+}
+.skill .big-item-box .icon-box .inner-color .inner-text > div {
+  font-family: "Robo";
+  font-size: 2vw;
+  width: 14vw;
+  height: 14vw;
+  line-height: 14vw;
+  text-align: center;
 }
 .skill .big-item-box .icon-box:hover {
   width: 12vw;
   height: 12vw;
-  left: 28vw;
-  top: 8vw;
   border-radius: 6vw;
 }
 .skill .big-item-box .icon-box:hover .inner-color {
@@ -209,10 +214,146 @@
   border-radius: 7vw;
 }
 .skill .big-item-box .icon-box:hover .inner-color .inner-text {
-  transition-delay: 0.2s;
+  transition-delay: 0.28s;
   width: 14vw;
   height: 14vw;
   border-radius: 7vw;
+}
+
+.skill .big-item-box .icon-html {
+  background-image: url(../img/html.png);
+  top: 30vh;
+  left: 5vw;
+  animation: bubble 2.4s infinite alternate;
+}
+.skill .big-item-box .icon-html .inner-color {
+  background-color: orangered;
+}
+.skill .big-item-box .icon-html .inner-color .inner-text {
+  color: orangered;
+  background-color: white;
+}
+.skill .big-item-box .icon-html:hover {
+  top: 27vh;
+  left: 3vw;
+  box-shadow: 0 0 0.2vw orangered;
+}
+
+.skill .big-item-box .icon-css {
+  background-image: url(../img/css.png);
+  top: 10vh;
+  left: 15vw;
+  animation: bubble 2.9s infinite alternate;
+}
+.skill .big-item-box .icon-css .inner-color {
+  background-color: rgb(21, 114, 182);
+}
+.skill .big-item-box .icon-css .inner-color .inner-text {
+  color: rgb(21, 114, 182);
+  background-color: white;
+}
+.skill .big-item-box .icon-css:hover {
+  top: 7vh;
+  left: 13vw;
+  box-shadow: 0 0 0.2vw rgb(21, 114, 182);
+}
+
+.skill .big-item-box .icon-js {
+  background-image: url(../img/js.png);
+  top: 40vh;
+  left: 23vw;
+  animation: bubble 2.4s infinite alternate;
+}
+.skill .big-item-box .icon-js .inner-color {
+  background-color: rgb(245, 222, 25);
+}
+.skill .big-item-box .icon-js .inner-color .inner-text {
+  color: rgb(245, 222, 25);
+  background-color: white;
+}
+.skill .big-item-box .icon-js:hover {
+  top: 37vh;
+  left: 21vw;
+  box-shadow: 0 0 0.2vw rgb(245, 222, 25);
+}
+
+.skill .big-item-box .icon-swiper {
+  background-image: url(../img/temp-swiper.png);
+  top: -5vh;
+  left: 42vw;
+  animation: bubble 3.1s infinite alternate;
+}
+.skill .big-item-box .icon-swiper .inner-color {
+  background-color: rgb(0, 128, 255);
+}
+.skill .big-item-box .icon-swiper .inner-color .inner-text {
+  color: rgb(0, 128, 255);
+  background-color: white;
+}
+.skill .big-item-box .icon-swiper:hover {
+  top: -8vh;
+  left: 40vw;
+  box-shadow: 0 0 0.2vw rgb(0, 128, 255);
+}
+
+.skill .big-item-box .icon-fp {
+  background-image: url(../img/temp-fullpage.png);
+  top: -16vh;
+  left: 56vw;
+  animation: bubble 2.8s infinite alternate;
+}
+.skill .big-item-box .icon-fp .inner-color {
+  background-color: rgb(245, 100, 67);
+}
+.skill .big-item-box .icon-fp .inner-color .inner-text {
+  color: rgb(245, 100, 67);
+  background-color: white;
+}
+.skill .big-item-box .icon-fp:hover {
+  top: -19vh;
+  left: 54vw;
+  box-shadow: 0 0 0.2vw rgb(245, 100, 67);
+}
+
+.skill .big-item-box .icon-boot {
+  background-image: url(../img/bootstrap.png);
+  top: 10vh;
+  left: 55vw;
+  animation: bubble 2.5s infinite alternate;
+}
+.skill .big-item-box .icon-boot .inner-color {
+  background-color: black;
+}
+.skill .big-item-box .icon-boot .inner-color .inner-text {
+  color: black;
+  background-color: white;
+}
+.skill .big-item-box .icon-boot:hover {
+  top: 7vh;
+  left: 53vw;
+}
+
+.skill .big-item-box .icon-code {
+  background-image: url(../img/algorithm.PNG);
+  top: 40vh;
+  left: 66vw;
+  animation: bubble 3.5s infinite alternate;
+}
+.skill .big-item-box .icon-code .inner-color {
+  background-color: rgb(78, 0, 78);
+}
+.skill .big-item-box .icon-code .inner-color .inner-text {
+  color: rgb(78, 0, 78);
+  background-color: white;
+}
+.skill .big-item-box .icon-code:hover {
+  top: 37vh;
+  left: 64vw;
+  box-shadow: 0 0 0.2vw rgb(78, 0, 78);
+}
+.skill .big-item-box .icon-code .inner-color .inner-text > div {
+  cursor: pointer;
+  text-decoration: underline rgb(78, 0, 78);
 }
 
 @keyframes bubble {
