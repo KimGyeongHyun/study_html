@@ -2,7 +2,14 @@
   width: 50px;
   height: 50px;
   padding: 10px;
+  margin: 100px;
   background-color: red;
+  transition: 1s;
+}
+
+.big:hover {
+  transform: scale(1.5);
+  transition: 1s;
 }
 
 .small {
@@ -11,4 +18,18 @@
   height: 100%;
   padding: 10px;
   background-color: blue;
+}
+
+@keyframes scale_up {
+  0% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
 }

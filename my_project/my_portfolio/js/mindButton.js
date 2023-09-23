@@ -81,10 +81,8 @@ function change_content(index) {
 function change_atv(index) {
   if (!matchMedia("screen and (min-width: 768px)").matches) {
     atv_sq.animate({ left: `${(index - 1) * 24 + 2}vw` });
-    console.log(1);
   } else {
     atv_sq.animate({ left: `${(index - 1) * 12 + 1}vw` });
-    console.log(2);
   }
 }
 
