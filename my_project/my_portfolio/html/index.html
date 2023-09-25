@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>KKH's WEB Portfolio</title>
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/headerBack.css" />
@@ -24,12 +24,8 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- JQuery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
     <!-- AOS link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- bootstrap link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -40,17 +36,16 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   </head>
   <body>
-    <!-- big div -->
     <div
-      class="main-body"
+      class="scrollspy-example"
+      id="mainBox"
       data-bs-spy="scroll"
       data-bs-target="#navbar-scrollspy"
-      data-bs-root-margin="0px 0px -40%"
-      data-bs-smooth-scroll="true"
-      class="scrollspy-example bg-body-tertiary p-3 rounded-2"
-      tabindex="0"
     >
       <!-- navigation scroll spy -->
       <nav id="navbar-scrollspy" class="navbar">
@@ -223,7 +218,7 @@
         </ul>
 
         <div class="skill-inner">
-          <h2>skill</h2>
+          <h2>Skill</h2>
           <div class="big-item-box">
             <div class="icon-box icon-html">
               <div class="inner-color">
@@ -791,7 +786,8 @@
               data-aos="fade-right"
             >
               저의 탐구력의 장점을 밀어붙혀 프론트엔드, 백엔드를 병행하는
-              과정에서 <br />어느 한 쪽이 부족하지 않도록 열심히 할 것입니다.
+              과정에서
+              <br />어느 한 쪽이 부족하지 않도록 열심히 할 것입니다.
             </p>
           </div>
         </div>
@@ -809,7 +805,7 @@
       </section>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>

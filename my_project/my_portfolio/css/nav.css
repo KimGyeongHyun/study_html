@@ -26,7 +26,8 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  padding: 0.6vw;
+  padding: 0;
+  height: 50px;
 }
 #navbar-scrollspy ul li a div {
   transition: 0.15s;

@@ -30,7 +30,7 @@
   position: relative;
 }
 .right-bottom {
-  top: 40%;
+  top: 50%;
   right: 0;
 }
 
@@ -52,8 +52,8 @@
   margin-bottom: 6vh;
 }
 .info .text-box p {
-  font-size: 1.4vw;
-  margin-bottom: 3vh;
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
 }
 .info .text-box a {
   text-decoration: none;

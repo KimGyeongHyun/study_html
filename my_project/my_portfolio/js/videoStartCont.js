@@ -1,12 +1,12 @@
-window.addEventListener("scroll", () => {
-  const posY = this.window.pageYOffset;
+mainBox.addEventListener("scroll", () => {
+  const posY = this.pageYOffset;
   const vid1Y =
-    this.document.querySelector(".video1").getBoundingClientRect().top + posY;
+    document.querySelector(".video1").getBoundingClientRect().top + posY;
   const vid2Y =
-    this.document.querySelector(".video2").getBoundingClientRect().top + posY;
+    document.querySelector(".video2").getBoundingClientRect().top + posY;
   const vid3Y =
-    this.document.querySelector(".video3").getBoundingClientRect().top + posY;
-  const scBottom = posY + window.innerHeight;
+    document.querySelector(".video3").getBoundingClientRect().top + posY;
+  const scBottom = posY + this.innerHeight;
 
   const vid1 = $(".video1");
   const vid2 = $(".video2");

@@ -53,7 +53,7 @@
 }
 .mind .content .text-box h3,
 .mind .content .text-box p {
-  transition-delay: 0;
+  transition-delay: 0s;
   transition: 0.5s;
   opacity: 0;
 }
