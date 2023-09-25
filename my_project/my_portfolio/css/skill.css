@@ -223,7 +223,7 @@
 .skill .big-item-box .icon-html {
   background-image: url(../img/html.png);
   top: 30vh;
-  left: 5vw;
+  left: 2vw;
   animation: bubble 2.4s infinite alternate;
 }
 .skill .big-item-box .icon-html .inner-color {
@@ -235,13 +235,13 @@
 }
 .skill .big-item-box .icon-html:hover {
   top: 27vh;
-  left: 3vw;
+  left: 0vw;
   box-shadow: 0 0 0.2vw orangered;
 }
 
 .skill .big-item-box .icon-css {
   background-image: url(../img/css.png);
-  top: 10vh;
+  top: 5vh;
   left: 15vw;
   animation: bubble 2.9s infinite alternate;
 }
@@ -253,7 +253,7 @@
   background-color: white;
 }
 .skill .big-item-box .icon-css:hover {
-  top: 7vh;
+  top: 2vh;
   left: 13vw;
   box-shadow: 0 0 0.2vw rgb(21, 114, 182);
 }
@@ -298,8 +298,8 @@
 
 .skill .big-item-box .icon-fp {
   background-image: url(../img/temp-fullpage.png);
-  top: -16vh;
-  left: 56vw;
+  top: -20vh;
+  left: 60vw;
   animation: bubble 2.8s infinite alternate;
 }
 .skill .big-item-box .icon-fp .inner-color {
@@ -310,15 +310,15 @@
   background-color: white;
 }
 .skill .big-item-box .icon-fp:hover {
-  top: -19vh;
-  left: 54vw;
+  top: -23vh;
+  left: 58vw;
   box-shadow: 0 0 0.2vw rgb(245, 100, 67);
 }
 
 .skill .big-item-box .icon-boot {
   background-image: url(../img/bootstrap.png);
-  top: 10vh;
-  left: 55vw;
+  top: 13vh;
+  left: 58vw;
   animation: bubble 2.5s infinite alternate;
 }
 .skill .big-item-box .icon-boot .inner-color {
@@ -329,8 +329,8 @@
   background-color: white;
 }
 .skill .big-item-box .icon-boot:hover {
-  top: 7vh;
-  left: 53vw;
+  top: 10vh;
+  left: 56vw;
 }
 
 .skill .big-item-box .icon-code {
@@ -379,55 +379,163 @@
     margin-bottom: 8vh;
   }
 
-  .skill .big-item-box .item1 {
-    top: 0%;
-    left: 10%;
-    animation: bubble 5s infinite alternate;
+  .skill .shapes .big-circle {
+    left: 5%;
+    top: 50%;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 30vw;
   }
-  .skill .big-item-box .item2 {
-    top: 40%;
-    left: 30%;
-    animation: bubble 5.5s infinite alternate;
+  .skill .shapes .big-circle .inner-circle {
+    width: 45vw;
+    height: 45vw;
+    border-radius: 27.5vw;
   }
-  .skill .big-item-box .item3 {
-    top: 80%;
+  .skill .shapes .small-circle {
+    left: 40%;
+    top: 15%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 25vw;
+  }
+  .skill .shapes .small-circle .inner-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 35vw;
+    border-radius: 17.5vw;
+  }
+  .skill .shapes .small-circle2 {
     left: 10%;
-    animation: bubble 6s infinite alternate;
+    top: 30%;
+  }
+  .skill .shapes .triangle {
+    top: 90%;
+    left: 35%;
+    border-bottom: 6vw solid rgba(41, 53, 220, 0.05);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+  }
+  .skill .shapes .circle1 {
+    top: 85%;
+    left: 10%;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 3vw;
+  }
+  .skill .shapes .circle2 {
+    top: 20%;
+    left: 32%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
+  }
+  .skill .shapes .circle3 {
+    top: 15%;
+    left: 82%;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 4vw;
+  }
+  .skill .shapes .circle4 {
+    top: 50%;
+    left: 70%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
   }
 
-  .skill .item-box .text-box {
-    padding: 2vw;
+  /* icon */
+  .skill .big-item-box .icon-box {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 9vw;
+    box-shadow: 0.1vw 0.1vw 0.4vw #333333;
+    background-size: 12vw 12vw;
   }
-  .skill p {
+  .skill .big-item-box .icon-box .inner-color .inner-text > div {
     font-size: 4vw;
+    width: 24vw;
+    height: 24vw;
+    line-height: 24vw;
   }
-  .skill .img-box {
-    padding: 2vw;
-    background-color: rgba(41, 53, 220, 0.05);
+  .skill .big-item-box .icon-box:hover {
+    width: 24vw;
+    height: 24vw;
+    border-radius: 12vw;
   }
-  .skill .img-box img {
-    margin: 0 2vw;
-    width: 10vw;
-    height: 10vw;
+  .skill .big-item-box .icon-box:hover .inner-color {
+    width: 24vw;
+    height: 24vw;
+    border-radius: 12vw;
   }
-  .skill .item-box {
-    box-shadow: 0.1vw 0.1vw 0.6vw #333333;
+  .skill .big-item-box .icon-box:hover .inner-color .inner-text {
+    width: 24vw;
+    height: 24vw;
+    border-radius: 12vw;
   }
-  .skill .item-box .link-box {
-    height: 8vw;
+
+  .skill .big-item-box .icon-html {
+    top: 38vh;
+    left: 2vw;
   }
-  .skill .item-box .link-box p {
-    font-size: 5vw;
-    margin: 0 auto 0 0.4vw;
+  .skill .big-item-box .icon-html:hover {
+    top: 36vh;
+    left: -1vw;
   }
-  .skill .item-box .link-box .hover-bar {
-    left: -100%;
-    width: 70%;
-    height: 0.2vw;
-    transition: 0.2s;
+
+  .skill .big-item-box .icon-css {
+    top: 26vh;
+    left: 20vw;
   }
-  .skill .item-box .link-box:hover .hover-bar {
-    transform: translateX(100%);
-    background-color: rgb(71, 77, 168);
+  .skill .big-item-box .icon-css:hover {
+    top: 24vh;
+    left: 17vw;
+  }
+
+  .skill .big-item-box .icon-js {
+    top: 46vh;
+    left: 36vw;
+  }
+  .skill .big-item-box .icon-js:hover {
+    top: 44vh;
+    left: 33vw;
+  }
+
+  .skill .big-item-box .icon-swiper {
+    top: 0vh;
+    left: 30vw;
+  }
+  .skill .big-item-box .icon-swiper:hover {
+    top: -2vh;
+    left: 27vw;
+  }
+
+  .skill .big-item-box .icon-fp {
+    top: -10vh;
+    left: 55vw;
+  }
+  .skill .big-item-box .icon-fp:hover {
+    top: -12vh;
+    left: 52vw;
+  }
+
+  .skill .big-item-box .icon-boot {
+    top: 10vh;
+    left: 58vw;
+  }
+  .skill .big-item-box .icon-boot:hover {
+    top: 8vh;
+    left: 55vw;
+  }
+
+  .skill .big-item-box .icon-code {
+    top: 60vh;
+    left: 60vw;
+  }
+  .skill .big-item-box .icon-code:hover {
+    top: 58vh;
+    left: 57vw;
   }
 }

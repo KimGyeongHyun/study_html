@@ -170,14 +170,17 @@
     display: none;
   }
 
+  .header .text-box {
+    width: 70vw;
+  }
   .header .text-box .head-right {
     text-align: right;
   }
   .header .text-box h2 {
-    font-size: 10vw;
+    font-size: 14vw;
     margin: 5vh 0;
   }
   .header span {
-    font-size: 11vw;
+    font-size: 16vw;
   }
 }

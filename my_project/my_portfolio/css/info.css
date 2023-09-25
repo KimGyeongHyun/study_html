@@ -7,8 +7,13 @@
   src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
 }
 
-.info {
-  height: 120vh;
+.info-inner {
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  color: white;
 }
 
 .left-top {
@@ -20,20 +25,16 @@
   right: 0;
 }
 .left-bottom {
-  bottom: 0;
+  top: 46%;
   left: 0;
   position: relative;
 }
 .right-bottom {
-  bottom: 0;
+  top: 40%;
   right: 0;
 }
 
 /* info first */
-.info .inner {
-  position: relative;
-  color: white;
-}
 .info .inner-box {
   position: absolute;
   width: 50%;
@@ -48,7 +49,7 @@
 .info .text-box h2 {
   font-family: "Mont";
   font-size: 3vw;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
 }
 .info .text-box p {
   font-size: 1.4vw;
@@ -132,9 +133,6 @@
   .right-bottom {
     top: 30%;
     right: 5%;
-  }
-  .info {
-    height: 100vh;
   }
   .info .inner-box {
     position: absolute;
