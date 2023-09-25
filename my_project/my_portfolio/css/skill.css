@@ -483,6 +483,7 @@
   .skill .big-item-box .icon-html:hover {
     top: 36vh;
     left: -1vw;
+    box-shadow: 0 0 0.5vw orangered;
   }
 
   .skill .big-item-box .icon-css {
@@ -492,6 +493,7 @@
   .skill .big-item-box .icon-css:hover {
     top: 24vh;
     left: 17vw;
+    box-shadow: 0 0 0.5vw rgb(21, 114, 182);
   }
 
   .skill .big-item-box .icon-js {
@@ -501,6 +503,7 @@
   .skill .big-item-box .icon-js:hover {
     top: 44vh;
     left: 33vw;
+    box-shadow: 0 0 0.5vw rgb(245, 222, 25);
   }
 
   .skill .big-item-box .icon-swiper {
@@ -510,6 +513,7 @@
   .skill .big-item-box .icon-swiper:hover {
     top: -2vh;
     left: 27vw;
+    box-shadow: 0 0 0.5vw rgb(0, 128, 255);
   }
 
   .skill .big-item-box .icon-fp {
@@ -519,6 +523,7 @@
   .skill .big-item-box .icon-fp:hover {
     top: -12vh;
     left: 52vw;
+    box-shadow: 0 0 0.5vw rgb(245, 100, 67);
   }
 
   .skill .big-item-box .icon-boot {
@@ -528,6 +533,7 @@
   .skill .big-item-box .icon-boot:hover {
     top: 8vh;
     left: 55vw;
+    box-shadow: 0 0 0.5vw rgb(78, 0, 78);
   }
 
   .skill .big-item-box .icon-code {

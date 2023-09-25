@@ -68,7 +68,7 @@
   height: 20vw;
   border-radius: 10vw;
   background-color: white;
-  background-image: url(../img/infoImg/info1.jpg);
+  /* background-image: url(../img/infoImg/info1.jpg); */
   background-position: top;
   background-size: cover;
   box-shadow: 0.2vw 0.2vw 0.3vw #333333;
