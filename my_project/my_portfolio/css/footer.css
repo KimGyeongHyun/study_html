@@ -24,7 +24,7 @@
   position: absolute;
   width: 80vw;
   height: 80vh;
-  top: 10vh;
+  top: 5vh;
   left: 7vw;
 }
 
@@ -33,7 +33,7 @@
   width: 35vw;
   height: 50vh;
   top: 5vh;
-  left: -5vw;
+  left: 0vw;
   display: flex;
 }
 .footer .img-box .sm-img-box:nth-child(1) {
@@ -83,8 +83,8 @@
 
 .footer .text-box {
   position: absolute;
-  right: 0;
-  top: 45%;
+  right: 5vw;
+  top: 50%;
 }
 .footer .text-box p {
   font-family: "Giants-Bold";
@@ -117,37 +117,40 @@
   .footer .img-box {
     width: 80vw;
     height: 40vh;
-    top: 10vh;
+    top: 0vh;
     left: -5vw;
   }
   .footer .img-box .sm-img-box:nth-child(1) {
-    transform: translateY(-4vh);
+    transform: translateY(5vh);
   }
   .footer .img-box .sm-img-box:nth-child(3) {
-    transform: translateY(4vh);
+    display: none;
   }
 
   .footer .img-box .sm-img-box .item-box {
-    width: 20vw;
-    height: 7vh;
-    margin: 2vw 2vw;
+    width: 30vw;
+    height: 10vh;
+    margin: 3vw 3vw;
     box-shadow: 0.1vw 0.1vw 0.2vw #333333;
   }
   .footer .img-box .sm-img-box:nth-child(1) .item-box:nth-child(1) {
-    width: 28vw;
-    height: 8vh;
+    width: 40vw;
+    height: 12vh;
   }
   .footer .img-box .sm-img-box:nth-child(1) .item-box:nth-child(2) {
-    width: 28vw;
-    height: 8vh;
+    width: 40vw;
+    height: 12vh;
   }
 
   .footer .text-box {
-    right: 0;
+    left: 0vw;
     top: 60%;
   }
   .footer .text-box p {
-    font-size: 1vw;
+    font-size: 10px;
     margin-bottom: 5vh;
+  }
+  .footer .text-box p br {
+    display: none;
   }
 }
