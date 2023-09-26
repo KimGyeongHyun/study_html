@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+.footer-fade-ani {
+  transform: translateY(-10vh) !important;
+  opacity: 1 !important;
+}
+
 .footer {
   background-color: rgb(226, 242, 255);
   /* background: linear-gradient(160deg, rgb(226, 242, 255), white); */
@@ -24,7 +29,7 @@
   position: absolute;
   width: 80vw;
   height: 80vh;
-  top: 5vh;
+  top: 15vh;
   left: 7vw;
 }
 
@@ -50,6 +55,9 @@
   background-color: white;
   background-size: cover;
   background-position: center;
+
+  transition: 0.6s;
+  opacity: 0;
 }
 .footer .img-box .sm-img-box:nth-child(1) .item-box:nth-child(1) {
   background-image: url(../img/footerImg/imagetext.png);
@@ -90,6 +98,9 @@
   font-family: "Giants-Bold";
   font-size: 1vw;
   margin-bottom: 5vh;
+
+  transition: 0.4s;
+  opacity: 0;
 }
 
 .footer .top-box {
