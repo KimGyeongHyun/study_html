@@ -17,19 +17,22 @@
 }
 
 .left-top {
+  position: absolute;
   top: 0;
   left: 0;
 }
 .right-top {
+  position: absolute;
   top: 0;
   right: 0;
 }
 .left-bottom {
+  position: absolute;
   top: 46%;
   left: 0;
-  position: relative;
 }
 .right-bottom {
+  position: absolute;
   top: 50%;
   right: 0;
 }
@@ -128,28 +131,29 @@
   .right-top {
     display: none;
   }
-  .left-bottom {
-    top: 50%;
-    left: 5%;
-  }
   .right-bottom {
-    top: 30%;
+    top: 200px;
     right: 5%;
+  }
+  .left-bottom {
+    top: 500px;
+    left: 5%;
   }
   .info .inner-box {
     position: absolute;
     width: 80%;
+    height: auto;
   }
   .info .text-box {
     padding: 0;
   }
   .info .text-box h2 {
-    font-size: 6.5vw;
-    margin-bottom: 3vh;
+    font-size: 25px;
+    margin-bottom: 25px;
   }
   .info .text-box p {
-    font-size: 4vw;
-    margin-bottom: 1vh;
+    font-size: 13px;
+    margin-bottom: 13px;
   }
   .info .img-box .my-img {
     width: 24vw;
