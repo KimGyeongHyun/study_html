@@ -167,4 +167,8 @@
   .footer .text-box p br {
     display: none;
   }
+
+  .footer .top-box {
+    font-size: 10px;
+  }
 }
