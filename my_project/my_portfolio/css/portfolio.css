@@ -1,18 +1,10 @@
 @font-face {
-  font-family: "Mont";
-  src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
-}
-@font-face {
   font-family: "Noto";
   src: url(../../font/Noto_Sans_KR/NotoSansKR-Regular.otf);
 }
 @font-face {
   font-family: "Kungfu";
   src: url(../../font/KungFu/KungFuMasterLeftalic-nRjBV.otf);
-}
-@font-face {
-  font-family: "Dongle";
-  src: url(../../font/Dongle/Dongle-Bold.ttf);
 }
 @font-face {
   font-family: "Robo";
@@ -25,18 +17,90 @@
   font-weight: 700;
   font-style: normal;
 }
-@font-face {
-  font-family: "ChungJu";
-  src: url(../../font/Roboto/Roboto-BoldItalic.ttf);
-}
-@font-face {
-  font-family: "Cafe24";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
+
+[class*="port"] {
+  overflow: hidden;
 }
 
+/* background */
+[class*="port"] [class*="deco"] {
+  position: absolute;
+  z-index: 10;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
+}
+.port1 {
+  background-color: aliceblue;
+}
+.port2 {
+  background-color: azure;
+}
+.port3 {
+  background-color: aliceblue;
+}
+.port1 .deco1 {
+  background-color: darkviolet;
+  top: -10vw;
+  right: -10vw;
+}
+.port1 .deco2 {
+  background-color: darkviolet;
+  bottom: -10vw;
+  left: -10vw;
+}
+.port2 .deco1 {
+  background-color: #4d58cb;
+  top: -10vw;
+  right: -10vw;
+}
+.port2 .deco2 {
+  background-color: #4d58cb;
+  bottom: -10vw;
+  left: -10vw;
+}
+.port3 .deco1 {
+  background-color: darkviolet;
+  top: -10vw;
+  left: -10vw;
+}
+.port3 .deco2 {
+  background-color: darkviolet;
+  bottom: -10vw;
+  right: -10vw;
+}
+[class*="port"] .big-circle {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(41, 53, 220, 0.05);
+  width: 50vw;
+  height: 50vw;
+  border-radius: 25vw;
+  top: 5%;
+  left: 40%;
+}
+[class*="port"] .big-circle .sm-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20vw;
+  transform: translate(-50%, -50%);
+}
+.port2 .big-circle {
+  top: 10%;
+  left: -3%;
+}
+.port1 .big-circle .sm-circle,
+.port3 .big-circle .sm-circle {
+  background-color: aliceblue;
+}
+.port2 .big-circle .sm-circle {
+  background-color: azure;
+}
+
+/* video */
 video {
   position: relative;
   z-index: 10;
@@ -46,9 +110,8 @@ video {
   margin-top: 12vh;
   box-shadow: 0px 0px 1vw 0 #bbbbbb;
 }
-[class*="port"] {
-  overflow: hidden;
-}
+
+/* text */
 [class*="port"] h2 {
   position: relative;
   z-index: 10;
@@ -80,6 +143,7 @@ video {
   margin-bottom: 3.5vh;
 }
 
+/* link text */
 [class*="port"] .item-box .text-box .link-box {
   margin-top: 14vh;
   position: relative;
@@ -113,91 +177,6 @@ video {
 
 .port2 .item-box .text-box {
   margin-top: 8vh;
-}
-
-.port1 {
-  background-color: aliceblue;
-}
-.port2 {
-  background-color: azure;
-}
-.port3 {
-  background-color: aliceblue;
-}
-
-[class*="port"] [class*="deco"] {
-  position: absolute;
-  z-index: 10;
-  width: 20vw;
-  height: 20vw;
-  border-radius: 10vw;
-}
-.port1 .deco1 {
-  background-color: darkviolet;
-  /* background: linear-gradient(rgb(207, 0, 211) 50%, darkviolet); */
-  top: -10vw;
-  right: -10vw;
-}
-.port1 .deco2 {
-  background-color: darkviolet;
-  /* background: linear-gradient(darkviolet, rgb(131, 0, 133) 50%); */
-  bottom: -10vw;
-  left: -10vw;
-}
-.port2 .deco1 {
-  background-color: #4d58cb;
-  /* background: linear-gradient(rgb(0, 149, 255) 50%, blue); */
-  top: -10vw;
-  right: -10vw;
-}
-.port2 .deco2 {
-  background-color: #4d58cb;
-  /* background: linear-gradient(rgb(0, 140, 255), blue 50%); */
-  bottom: -10vw;
-  left: -10vw;
-}
-.port3 .deco1 {
-  background-color: darkviolet;
-  /* background: linear-gradient(rgb(148, 0, 211) 50%, rgb(167, 1, 120)); */
-  top: -10vw;
-  left: -10vw;
-}
-.port3 .deco2 {
-  background-color: darkviolet;
-  /* background: linear-gradient(rgb(126, 1, 91), rgb(167, 1, 120) 50%); */
-  bottom: -10vw;
-  right: -10vw;
-}
-
-[class*="port"] .big-circle {
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(41, 53, 220, 0.05);
-  width: 50vw;
-  height: 50vw;
-  border-radius: 25vw;
-  top: 5%;
-  left: 40%;
-}
-[class*="port"] .big-circle .sm-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40vw;
-  height: 40vw;
-  border-radius: 20vw;
-  transform: translate(-50%, -50%);
-}
-.port2 .big-circle {
-  top: 10%;
-  left: -3%;
-}
-.port1 .big-circle .sm-circle,
-.port3 .big-circle .sm-circle {
-  background-color: aliceblue;
-}
-.port2 .big-circle .sm-circle {
-  background-color: azure;
 }
 
 @media (max-width: 768px) {

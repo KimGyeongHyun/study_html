@@ -1,3 +1,4 @@
+/* bubble animation */
 .area {
   background: linear-gradient(#353866, #4f86c6);
 }
@@ -169,6 +170,7 @@
   }
 }
 
+/* wave animation */
 .area {
   position: relative;
   width: 100%;

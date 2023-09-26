@@ -3,6 +3,7 @@
   src: url(../../font/KungFu/KungFuMasterLeftalic-nRjBV.otf);
 }
 
+/* header */
 .header {
   display: flex;
   justify-content: center;
@@ -25,6 +26,39 @@
   margin: 0;
   font-size: 1.5vw;
 }
+
+/* header upper navigation */
+.header-box .header-nav {
+  list-style: none;
+  display: flex;
+  width: 35vw;
+  justify-content: space-around;
+  text-align: center;
+}
+.header-box .header-nav li {
+  cursor: pointer;
+}
+.header .text-box {
+  font-family: "KungFu";
+  color: white;
+  text-shadow: 1vw 1vw 0 #333333;
+  width: 50vw;
+}
+.header .text-box .head-left {
+  text-align: left;
+}
+.header .text-box .head-right {
+  text-align: right;
+}
+.header .text-box h2 {
+  font-size: 8vw;
+}
+.header span {
+  color: lightblue;
+  font-size: 9vw;
+}
+
+/* animation icon */
 .header-box .ani-block {
   position: absolute;
   top: 50%;
@@ -52,37 +86,7 @@
   animation-name: five;
 }
 
-.header-box .header-nav {
-  list-style: none;
-  display: flex;
-  width: 35vw;
-  justify-content: space-around;
-  text-align: center;
-}
-.header-box .header-nav li {
-  cursor: pointer;
-}
-
-.header .text-box {
-  font-family: "KungFu";
-  color: white;
-  text-shadow: 1vw 1vw 0 #333333;
-  width: 50vw;
-}
-.header .text-box .head-left {
-  text-align: left;
-}
-.header .text-box .head-right {
-  text-align: right;
-}
-.header .text-box h2 {
-  font-size: 8vw;
-}
-.header span {
-  color: lightblue;
-  font-size: 9vw;
-}
-
+/* icon animation */
 @keyframes one {
   from {
     transform: translateY(-50%) rotate(0deg);
@@ -128,6 +132,7 @@
   }
 }
 
+/* logo */
 .header .text-box .head1 {
   animation: bubble 3s infinite alternate;
 }
@@ -140,6 +145,7 @@
   animation: bubble 4s infinite alternate;
 }
 
+/* logo bubble animaton */
 @keyframes bubble {
   0% {
     transform: translateY(0);

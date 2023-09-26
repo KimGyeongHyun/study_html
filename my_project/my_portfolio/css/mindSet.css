@@ -34,6 +34,8 @@
   font-weight: bold;
   text-shadow: 0.5vw 0.5vw 0 #333333;
 }
+
+/* mind set text area */
 .mind .content {
   position: relative;
   width: 60vw;
@@ -84,6 +86,8 @@
   transform: translate(0, 0);
   opacity: 1;
 }
+
+/* buttons */
 .mind .button-box {
   position: relative;
   background-color: white;
@@ -118,6 +122,7 @@
   z-index: 500;
 }
 
+/* slide bar */
 .mind .slide-bar {
   position: absolute;
   bottom: 3vh;

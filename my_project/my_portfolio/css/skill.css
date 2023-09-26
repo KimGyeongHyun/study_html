@@ -3,10 +3,6 @@
   src: url(../../font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
 }
 @font-face {
-  font-family: "Noto";
-  src: url(../../font/Noto_Sans_KR/NotoSansKR-Light.otf);
-}
-@font-face {
   font-family: "Robo";
   src: url(../../font/Roboto/Roboto-BoldItalic.ttf);
 }
@@ -15,6 +11,7 @@
   overflow: hidden;
 }
 
+/* background */
 .skill .shapes {
   list-style: none;
   position: absolute;
@@ -28,6 +25,7 @@
   background-color: rgba(41, 53, 220, 0.05);
 }
 
+/* background animation */
 .skill .shapes .big-circle {
   position: absolute;
   left: 5%;
@@ -135,6 +133,7 @@
   animation: bubble 1.1s infinite alternate;
 }
 
+/* skill */
 .skill .skill-inner {
   position: absolute;
   width: 80%;
@@ -147,13 +146,13 @@
   font-size: 6vw;
   margin-bottom: 8vh;
 }
-
 .skill .big-item-box {
   position: relative;
   width: 80vw;
   height: 60vh;
 }
 
+/* icon settings */
 .skill .big-item-box .icon-box {
   position: absolute;
   width: 10vw;
@@ -220,6 +219,7 @@
   border-radius: 7vw;
 }
 
+/* icons */
 .skill .big-item-box .icon-html {
   background-image: url(../img/html.png);
   top: 30vh;
@@ -334,7 +334,7 @@
 }
 
 .skill .big-item-box .icon-code {
-  background-image: url(../img/algorithm.PNG);
+  background-image: url(../img/others.png);
   top: 40vh;
   left: 66vw;
   animation: bubble 3.5s infinite alternate;
@@ -356,6 +356,7 @@
   text-decoration: underline rgb(78, 0, 78);
 }
 
+/* bubble animation */
 @keyframes bubble {
   0% {
     transform: translateY(0);

@@ -4,6 +4,25 @@
   scroll-behavior: smooth;
 }
 
+.scrollspy-example {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.scrollspy-example::-webkit-scrollbar {
+  width: 0.5vw; /* 스크롤바의 너비 */
+}
+.scrollspy-example::-webkit-scrollbar-thumb {
+  height: 12.5%; /* 스크롤바의 길이 */
+  background: #666666; /* 스크롤바의 색상 */
+
+  border-radius: 0.25vw;
+}
+.scrollspy-example::-webkit-scrollbar-track {
+  background: #bbbbbb; /*스크롤바 뒷 배경 색상*/
+}
+
 section {
   width: 100%;
   height: 100vh;
@@ -18,4 +37,10 @@ section {
 
 .rev {
   flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .scrollspy-example::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -34,7 +34,7 @@
   right: 0;
 }
 
-/* info first */
+/* info first, fourth */
 .info .inner-box {
   position: absolute;
   width: 50%;
@@ -60,6 +60,7 @@
   color: white;
 }
 
+/* info second */
 .info .main-img {
   position: absolute;
   top: 10%;
@@ -68,7 +69,7 @@
   height: 20vw;
   border-radius: 10vw;
   background-color: white;
-  /* background-image: url(../img/infoImg/info1.jpg); */
+  background-image: url(../img/infoImg/info1.jpg);
   background-position: top;
   background-size: cover;
   box-shadow: 0.2vw 0.2vw 0.3vw #333333;
@@ -109,6 +110,7 @@
   background-position: right;
 }
 
+/* bubble animation */
 @keyframes bubble {
   0% {
     transform: translateY(0);

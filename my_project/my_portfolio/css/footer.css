@@ -6,6 +6,7 @@
   font-style: normal;
 }
 
+/* footer animation */
 .footer-fade-ani {
   transform: translateY(-10vh) !important;
   opacity: 1 !important;
@@ -33,6 +34,7 @@
   left: 7vw;
 }
 
+/* images */
 .footer .img-box {
   position: absolute;
   width: 35vw;
@@ -56,7 +58,7 @@
   background-size: cover;
   background-position: center;
 
-  transition: 0.6s;
+  transition: 0.8s;
   opacity: 0;
 }
 .footer .img-box .sm-img-box:nth-child(1) .item-box:nth-child(1) {
@@ -89,6 +91,7 @@
   background-image: url(../img/footerImg/computer.png);
 }
 
+/* text */
 .footer .text-box {
   position: absolute;
   right: 5vw;
@@ -121,7 +124,7 @@
   .footer .footer-inner {
     width: 80vw;
     height: 80vh;
-    top: 5vh;
+    top: 15vh;
     left: 10vw;
   }
 
