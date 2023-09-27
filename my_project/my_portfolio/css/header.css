@@ -39,16 +39,12 @@
   cursor: pointer;
 }
 .header .text-box {
+  position: relative;
   font-family: "KungFu";
   color: white;
   text-shadow: 1vw 1vw 0 #333333;
   width: 50vw;
-}
-.header .text-box .head-left {
-  text-align: left;
-}
-.header .text-box .head-right {
-  text-align: right;
+  height: 36vw;
 }
 .header .text-box h2 {
   font-size: 8vw;
@@ -134,15 +130,24 @@
 
 /* logo */
 .header .text-box .head1 {
-  animation: bubble 3s infinite alternate;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  animation: bubble 3s infinite alternate, header-fade-right 1s forwards;
 }
 .header .text-box .head2 {
+  position: absolute;
+  top: 12vw;
+  right: -100vw;
   animation-delay: 2s;
-  animation: bubble 5s infinite alternate;
+  animation: bubble 5s infinite alternate, header-fade-left 1s 0.3s forwards;
 }
 .header .text-box .head3 {
+  position: absolute;
+  top: 24vw;
+  left: -100vw;
   animation-delay: 3s;
-  animation: bubble 4s infinite alternate;
+  animation: bubble 4s infinite alternate, header-fade-right 1s 0.6s forwards;
 }
 
 /* logo bubble animaton */
@@ -152,6 +157,27 @@
   }
   100% {
     transform: translateY(-2vh);
+  }
+}
+
+@keyframes header-fade-right {
+  0% {
+    display: block;
+    transform: translateX(0);
+  }
+  100% {
+    display: block;
+    transform: translateX(100vw);
+  }
+}
+@keyframes header-fade-left {
+  0% {
+    display: block;
+    transform: translateX(0);
+  }
+  100% {
+    display: block;
+    transform: translateX(-100vw);
   }
 }
 
@@ -178,15 +204,22 @@
 
   .header .text-box {
     width: 70vw;
-  }
-  .header .text-box .head-right {
-    text-align: right;
+    height: 75vw;
   }
   .header .text-box h2 {
     font-size: 14vw;
-    margin: 5vh 0;
   }
   .header span {
     font-size: 16vw;
+  }
+
+  .header .text-box .head1 {
+    top: 0;
+  }
+  .header .text-box .head2 {
+    top: 25vw;
+  }
+  .header .text-box .head3 {
+    top: 50vw;
   }
 }
