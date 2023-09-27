@@ -1,34 +1,39 @@
-body {
-  position: relative;
-}
-
 section {
   margin: 7vw auto;
 }
-
 .intro-section {
   position: relative;
 }
-.intro-section > h1 {
+.intro-section .deco {
   position: absolute;
-  top: 3vw;
-  left: 3vw;
-  font-size: 8vw;
+  width: 50%;
+  height: 100%;
+  border-radius: 2%;
+  z-index: 1;
 }
-.intro-section .title-margin {
-  height: 16vw;
-}
-.intro-section .left-intro {
+.intro-section .left-deco {
   background-color: #cff9f9;
 }
-.intro-section .right-intro {
+.intro-section .right-deco {
+  right: 0;
   background-color: #ced7fb;
 }
+
+.intro-section > h1 {
+  margin: 2vh;
+  position: relative;
+  z-index: 2;
+}
+.intro-section .title-margin {
+  height: 2vh;
+}
 .intro-section p {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .intro-section .text-box {
-  margin: 5vw;
+  position: relative;
+  z-index: 2;
+  margin: 3vw;
 }
 
 .sc {
@@ -38,11 +43,10 @@ section {
   padding: 20px;
 }
 .sc .text-box h2 {
-  font-size: 5vw;
   margin-bottom: 5vw;
 }
 .sc .text-box p {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .sc .text-box button {
   font-size: 3vw;
@@ -67,9 +71,18 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.img-box img {
-  width: 100%;
-  height: 25%;
+.img-box .inner-img {
+  width: 80%;
+  height: 40%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img-box .img1 {
+  background-image: url(../img/algorithm.PNG);
+}
+.img-box .img2 {
+  background-image: url(../img/data\ structure.PNG);
 }
 
 .footer {
